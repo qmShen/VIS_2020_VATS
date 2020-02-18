@@ -1,0 +1,29 @@
+%!TEX root = ../article.tex
+% \section{Introduction}
+Nowadays, the widely used location-acquisition devices lead to an explosive increase of the movement data which is recorded in the form of trajectories. 
+The analysis over these databases can be applied in many fields such as traffic management~\cite{wang2014visual}, urban planning~\cite{}, route recommendation~\cite{} and location-based services~\cite{liu2016smartadp}. 
+
+Visualizing trajectories is challenging tasks. Many visualization techniques can be applied in the presentation of the trajectories. The most popular and conventional method is to connect the passing points of trajectories by polylines, which is categorized into the line-based visualization~\cite{chen2015survey}.
+% However, there are two major difficulties: visual clutter and limited rendering speed when dealing the trajectory dataset with large volume. 
+However, when dealing with the trajectory dataset with very large volume, two major difficulties, visual clutter and limited rendering speed, hinder the abilities of human-users for interactively exploring the dataset and identifying the movement patterns. 
+In recent years, the visualization research works mainly try to address the visual clutter issue by proposing new techniques such as the spatial aggregation~\cite{}, edge bundling~\cite{} and density map~\cite{}. Instead, in this paper, we focus on the challenge of rendering in the large trajectory dataset by involving data sampling techniques. 
+
+\QM{Some experiment result to demonstrate this limitations,Fig1: two trajectory visualization, Fig2: rendering time - item number: 10, 100, 1000, 10000, 100000}
+
+In visualization domain, the sampling techniques are mostly applied for scatter plot.  
+
+
+
+
+We summarize our contribution as follows:
+\setlist{nolistsep}
+\begin{itemize}[noitemsep]
+  \item We formulate VATS as an optimization problem.
+  \item We prove VAST problem is NP-hard and offer an efficient approximation algorithms. 
+  \item We conduct several experiments using real-world data to demonstrate the effectiveness of the proposed method.
+  \item We systematically evaluate multiple sampling algorithms including the uniform random sampling techniques…….
+\end{itemize}
+
+
+The remaining parts are constructed as follows: section 2 discusses the related work. In section 3, we identify the specific problem and provide an overview of our solution. We define the problem and propose the solution in the section 4 and 5. The implementation and experiment setting are introduced in section 6. 
+In section 7, we conduct case studies and user studies to evaluate our approach. Finally, we conclude this paper and propose the possible future directions in section 8.
