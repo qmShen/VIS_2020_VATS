@@ -1,0 +1,131 @@
+\begin{thebibliography}{10}
+
+\bibitem{battle2013dynamic}
+L.~Battle, M.~Stonebraker, and R.~Chang.
+\newblock Dynamic reduction of query result sets for interactive visualizaton.
+\newblock In {\em 2013 IEEE International Conference on Big Data}, pp. 1--8.
+  IEEE, 2013.
+
+\bibitem{chen2014visual}
+H.~Chen, W.~Chen, H.~Mei, Z.~Liu, K.~Zhou, W.~Chen, W.~Gu, and K.-L. Ma.
+\newblock Visual abstraction and exploration of multi-class scatterplots.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  20(12):1683--1692, 2014.
+
+\bibitem{chen2015survey}
+W.~Chen, F.~Guo, and F.-Y. Wang.
+\newblock A survey of traffic data visualization.
+\newblock {\em IEEE Transactions on Intelligent Transportation Systems},
+  16(6):2970--2984, 2015.
+
+\bibitem{lampe2011interactive}
+O.~D. Lampe and H.~Hauser.
+\newblock Interactive visualization of streaming data with kernel density
+  estimation.
+\newblock In {\em 2011 IEEE Pacific visualization symposium}, pp. 171--178.
+  IEEE, 2011.
+
+\bibitem{liu2016smartadp}
+D.~Liu, D.~Weng, Y.~Li, J.~Bao, Y.~Zheng, H.~Qu, and Y.~Wu.
+\newblock Smartadp: Visual analytics of large-scale taxi trajectories for
+  selecting billboard locations.
+\newblock {\em IEEE transactions on visualization and computer graphics},
+  23(1):1--10, 2016.
+
+\bibitem{panagiotakis2011segmentation}
+C.~Panagiotakis, N.~Pelekis, I.~Kopanakis, E.~Ramasso, and Y.~Theodoridis.
+\newblock Segmentation and sampling of moving object trajectories based on
+  representativeness.
+\newblock {\em IEEE Transactions on Knowledge and Data Engineering},
+  24(7):1328--1343, 2011.
+
+\bibitem{park2016visualization}
+Y.~Park, M.~Cafarella, and B.~Mozafari.
+\newblock Visualization-aware sampling for very large databases.
+\newblock In {\em 2016 IEEE 32nd International Conference on Data Engineering
+  (ICDE)}, pp. 755--766. IEEE, 2016.
+
+\bibitem{pelekis2009clustering}
+N.~Pelekis, I.~Kopanakis, E.~Kotsifakos, E.~Frentzos, and Y.~Theodoridis.
+\newblock Clustering trajectories of moving objects in an uncertain world.
+\newblock In {\em 2009 Ninth IEEE international conference on data mining}, pp.
+  417--427. IEEE, 2009.
+
+\bibitem{pelekis2007similarity}
+N.~Pelekis, I.~Kopanakis, G.~Marketos, I.~Ntoutsi, G.~Andrienko, and
+  Y.~Theodoridis.
+\newblock Similarity search in trajectory databases.
+\newblock In {\em 14th International Symposium on Temporal Representation and
+  Reasoning (TIME'07)}, pp. 129--140. IEEE, 2007.
+
+\bibitem{pelekis2010unsupervised}
+N.~Pelekis, I.~Kopanakis, C.~Panagiotakis, and Y.~Theodoridis.
+\newblock Unsupervised trajectory sampling.
+\newblock In {\em Joint European Conference on Machine Learning and Knowledge
+  Discovery in Databases}, pp. 17--33. Springer, 2010.
+
+\bibitem{scheepens2011interactive}
+R.~Scheepens, N.~Willems, H.~van~de Wetering, and J.~J. van Wijk.
+\newblock Interactive visualization of multivariate trajectory data with
+  density maps.
+\newblock In {\em 2011 IEEE Pacific Visualization Symposium}, pp. 147--154.
+  IEEE, 2011.
+
+\bibitem{shneiderman1984response}
+B.~Shneiderman.
+\newblock Response time and display rate in human performance with computers.
+\newblock {\em ACM Computing Surveys (CSUR)}, 16(3):265--285, 1984.
+
+\bibitem{thony2015vector}
+M.~Th{\"o}ny and R.~Pajarola.
+\newblock Vector map constrained path bundling in 3d environments.
+\newblock In {\em Proceedings of the 6th ACM SIGSPATIAL International Workshop
+  on GeoStreaming}, pp. 33--42, 2015.
+
+\bibitem{von2015mobilitygraphs}
+T.~Von~Landesberger, F.~Brodkorb, P.~Roskosch, N.~Andrienko, G.~Andrienko, and
+  A.~Kerren.
+\newblock Mobilitygraphs: Visual analysis of mass mobility dynamics via
+  spatio-temporal graphs and clustering.
+\newblock {\em IEEE transactions on visualization and computer graphics},
+  22(1):11--20, 2015.
+
+\bibitem{wang2014visual}
+Z.~Wang, T.~Ye, M.~Lu, X.~Yuan, H.~Qu, J.~Yuan, and Q.~Wu.
+\newblock Visual exploration of sparse traffic trajectory data.
+\newblock {\em IEEE transactions on visualization and computer graphics},
+  20(12):1813--1822, 2014.
+
+\bibitem{woodruff1998constant}
+A.~Woodruff, J.~Landay, and M.~Stonebraker.
+\newblock Constant density visualizations of non-uniform distributions of data.
+\newblock In {\em Proceedings of the 11th annual ACM symposium on User
+  interface software and technology}, pp. 19--28, 1998.
+
+\bibitem{zeng2013visualizing}
+W.~Zeng, C.-W. Fu, S.~M. Arisona, and H.~Qu.
+\newblock Visualizing interchange patterns in massive movement data.
+\newblock In {\em Computer Graphics Forum}, vol.~32, pp. 271--280. Wiley Online
+  Library, 2013.
+
+\bibitem{zeng2019route}
+W.~Zeng, Q.~Shen, Y.~Jiang, and A.~Telea.
+\newblock Route-aware edge bundling for visualizing origin-destination trails
+  in urban traffic.
+\newblock In {\em Computer Graphics Forum}, vol.~38, pp. 581--593. Wiley Online
+  Library, 2019.
+
+\bibitem{zheng2010collaborative}
+V.~W. Zheng, Y.~Zheng, X.~Xie, and Q.~Yang.
+\newblock Collaborative location and activity recommendations with gps history
+  data.
+\newblock In {\em Proceedings of the 19th international conference on World
+  wide web}, pp. 1029--1038, 2010.
+
+\bibitem{zheng2011learning}
+Y.~Zheng and X.~Xie.
+\newblock Learning travel recommendations from user-generated gps traces.
+\newblock {\em ACM Transactions on Intelligent Systems and Technology (TIST)},
+  2(1):1--29, 2011.
+
+\end{thebibliography}
