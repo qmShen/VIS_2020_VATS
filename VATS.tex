@@ -46,16 +46,27 @@
 \usepackage{microtype}                 % use micro-typography (slightly more compact, better to read)
 \PassOptionsToPackage{warn}{textcomp}  % to address font issues with \textrightarrow
 \usepackage{textcomp}                  % use better special symbols
-\usepackage{mathptmx}                  % use matching math font
+\usepackage{mathptmx,amsmath,amssymb}             % use matching math font
 \usepackage{times}                     % we use Times as the main font
 \renewcommand*\ttdefault{txtt}         % a nicer typewriter font
 \usepackage{cite}                      % needed to automatically sort the references
 \usepackage{tabu}                      % only used for the table example
 \usepackage{booktabs}                  % only used for the table example
-
+\usepackage{color}
+\usepackage{algorithm, algorithmicx}
+\usepackage[noend]{algpseudocode}
 \usepackage{color}
 \usepackage{enumitem}
 
+\newtheorem{problem}{Problem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newcommand{\Bo}[1]{{\color{red} Bo: #1}}
+
+\newcommand{\D}{\mathsf{T}}
+\newcommand{\V}{\mathsf{V}}
+\newcommand{\oR}{\mathsf{R}}
+\newcommand{\U}{\mathcal{U}}
 
 %% We encourage the use of mathptmx for consistent usage of times font
 %% throughout the proceedings. However, if you encounter conflicts
@@ -81,7 +92,9 @@
 \vgtcpapertype{please specify}
 
 %% Paper title.
-\title{Visualization aware trajectory sampling for urban traffic data}
+%\title{Visualization aware trajectory sampling for urban traffic data}
+%\title{Visualization-aware Sampling for Big Trajectory Data}
+\title{Visual Quality Guaranteed Sampling for \\ Big Trajectory Data Visualization}
 
 %% This is how authors are specified in the journal style
 
