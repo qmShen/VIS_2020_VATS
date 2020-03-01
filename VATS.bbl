@@ -6,6 +6,12 @@ L.~Battle, M.~Stonebraker, and R.~Chang.
 \newblock In {\em 2013 IEEE International Conference on Big Data}, pp. 1--8.
   IEEE, 2013.
 
+\bibitem{chan2008maintaining}
+S.-M. Chan, L.~Xiao, J.~Gerth, and P.~Hanrahan.
+\newblock Maintaining interactivity while exploring massive time series.
+\newblock In {\em 2008 IEEE Symposium on Visual Analytics Science and
+  Technology}, pp. 59--66. IEEE, 2008.
+
 \bibitem{chen2014visual}
 H.~Chen, W.~Chen, H.~Mei, Z.~Liu, K.~Zhou, W.~Chen, W.~Gu, and K.-L. Ma.
 \newblock Visual abstraction and exploration of multi-class scatterplots.
@@ -17,6 +23,13 @@ W.~Chen, F.~Guo, and F.-Y. Wang.
 \newblock A survey of traffic data visualization.
 \newblock {\em IEEE Transactions on Intelligent Transportation Systems},
   16(6):2970--2984, 2015.
+
+\bibitem{guo2009flow}
+D.~Guo.
+\newblock Flow mapping and multivariate visualization of large spatial
+  interaction data.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  15(6):1041--1048, 2009.
 
 \bibitem{lampe2011interactive}
 O.~D. Lampe and H.~Hauser.
@@ -64,6 +77,13 @@ N.~Pelekis, I.~Kopanakis, C.~Panagiotakis, and Y.~Theodoridis.
 \newblock In {\em Joint European Conference on Machine Learning and Knowledge
   Discovery in Databases}, pp. 17--33. Springer, 2010.
 
+\bibitem{piringer2009multi}
+H.~Piringer, C.~Tominski, P.~Muigg, and W.~Berger.
+\newblock A multi-threading architecture to support interactive visual
+  exploration.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  15(6):1113--1120, 2009.
+
 \bibitem{scheepens2011interactive}
 R.~Scheepens, N.~Willems, H.~van~de Wetering, and J.~J. van Wijk.
 \newblock Interactive visualization of multivariate trajectory data with
@@ -95,6 +115,11 @@ Z.~Wang, T.~Ye, M.~Lu, X.~Yuan, H.~Qu, J.~Yuan, and Q.~Wu.
 \newblock Visual exploration of sparse traffic trajectory data.
 \newblock {\em IEEE transactions on visualization and computer graphics},
   20(12):1813--1822, 2014.
+
+\bibitem{wood2010visualisation}
+J.~Wood, J.~Dykes, and A.~Slingsby.
+\newblock Visualisation of origins, destinations and flows with od maps.
+\newblock {\em The Cartographic Journal}, 47(2):117--129, 2010.
 
 \bibitem{woodruff1998constant}
 A.~Woodruff, J.~Landay, and M.~Stonebraker.
