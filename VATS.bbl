@@ -1,10 +1,28 @@
 \begin{thebibliography}{10}
 
+\bibitem{andrienko2017clustering}
+G.~Andrienko, N.~Andrienko, G.~Fuchs, and J.~M.~C. Garcia.
+\newblock Clustering trajectories by relevant parts for air traffic analysis.
+\newblock {\em IEEE transactions on visualization and computer graphics},
+  24(1):34--44, 2017.
+
 \bibitem{battle2013dynamic}
 L.~Battle, M.~Stonebraker, and R.~Chang.
 \newblock Dynamic reduction of query result sets for interactive visualizaton.
 \newblock In {\em 2013 IEEE International Conference on Big Data}, pp. 1--8.
   IEEE, 2013.
+
+\bibitem{borruso2008network}
+G.~Borruso.
+\newblock Network density estimation: a gis approach for analysing point
+  patterns in a network space.
+\newblock {\em Transactions in GIS}, 12(3):377--402, 2008.
+
+\bibitem{chae2014public}
+J.~Chae, D.~Thom, Y.~Jang, S.~Kim, T.~Ertl, and D.~S. Ebert.
+\newblock Public behavior response analysis in disaster events utilizing visual
+  analytics of microblog data.
+\newblock {\em Computers \& Graphics}, 38:51--60, 2014.
 
 \bibitem{chan2008maintaining}
 S.-M. Chan, L.~Xiao, J.~Gerth, and P.~Hanrahan.
@@ -24,12 +42,47 @@ W.~Chen, F.~Guo, and F.-Y. Wang.
 \newblock {\em IEEE Transactions on Intelligent Transportation Systems},
   16(6):2970--2984, 2015.
 
+\bibitem{ferreira2013vector}
+N.~Ferreira, J.~T. Klosowski, C.~E. Scheidegger, and C.~T. Silva.
+\newblock Vector field k-means: Clustering trajectories by fitting multiple
+  vector fields.
+\newblock In {\em Computer Graphics Forum}, vol.~32, pp. 201--210. Wiley Online
+  Library, 2013.
+
+\bibitem{ferreira2013visual}
+N.~Ferreira, J.~Poco, H.~T. Vo, J.~Freire, and C.~T. Silva.
+\newblock Visual exploration of big spatio-temporal urban data: A study of new
+  york city taxi trips.
+\newblock {\em IEEE transactions on visualization and computer graphics},
+  19(12):2149--2158, 2013.
+
 \bibitem{guo2009flow}
 D.~Guo.
 \newblock Flow mapping and multivariate visualization of large spatial
   interaction data.
 \newblock {\em IEEE Transactions on Visualization and Computer Graphics},
   15(6):1041--1048, 2009.
+
+\bibitem{guo2011tripvista}
+H.~Guo, Z.~Wang, B.~Yu, H.~Zhao, and X.~Yuan.
+\newblock Tripvista: Triple perspective visual trajectory analytics and its
+  application on microscopic traffic data at a road intersection.
+\newblock In {\em 2011 IEEE Pacific Visualization Symposium}, pp. 163--170.
+  IEEE, 2011.
+
+\bibitem{hurter2009fromdady}
+C.~Hurter, B.~Tissoires, and S.~Conversy.
+\newblock Fromdady: Spreading aircraft trajectories across views to support
+  iterative queries.
+\newblock {\em IEEE transactions on visualization and computer graphics},
+  15(6):1017--1024, 2009.
+
+\bibitem{kruger2013trajectorylenses}
+R.~Kr{\"u}ger, D.~Thom, M.~W{\"o}rner, H.~Bosch, and T.~Ertl.
+\newblock Trajectorylenses--a set-based filtering and exploration technique for
+  long-term trajectory data.
+\newblock In {\em Computer Graphics Forum}, vol.~32, pp. 451--460. Wiley Online
+  Library, 2013.
 
 \bibitem{lampe2011interactive}
 O.~D. Lampe and H.~Hauser.
@@ -44,6 +97,12 @@ D.~Liu, D.~Weng, Y.~Li, J.~Bao, Y.~Zheng, H.~Qu, and Y.~Wu.
   selecting billboard locations.
 \newblock {\em IEEE transactions on visualization and computer graphics},
   23(1):1--10, 2016.
+
+\bibitem{liu2013vait}
+S.~Liu, J.~Pu, Q.~Luo, H.~Qu, L.~M. Ni, and R.~Krishnan.
+\newblock Vait: A visual analytics system for metropolitan transportation.
+\newblock {\em IEEE Transactions on Intelligent Transportation Systems},
+  14(4):1586--1596, 2013.
 
 \bibitem{panagiotakis2011segmentation}
 C.~Panagiotakis, N.~Pelekis, I.~Kopanakis, E.~Ramasso, and Y.~Theodoridis.
@@ -83,6 +142,12 @@ H.~Piringer, C.~Tominski, P.~Muigg, and W.~Berger.
   exploration.
 \newblock {\em IEEE Transactions on Visualization and Computer Graphics},
   15(6):1113--1120, 2009.
+
+\bibitem{rinzivillo2008visually}
+S.~Rinzivillo, D.~Pedreschi, M.~Nanni, F.~Giannotti, N.~Andrienko, and
+  G.~Andrienko.
+\newblock Visually driven analysis of movement data by progressive clustering.
+\newblock {\em Information Visualization}, 7(3-4):225--239, 2008.
 
 \bibitem{scheepens2011interactive}
 R.~Scheepens, N.~Willems, H.~van~de Wetering, and J.~J. van Wijk.
@@ -126,6 +191,16 @@ A.~Woodruff, J.~Landay, and M.~Stonebraker.
 \newblock Constant density visualizations of non-uniform distributions of data.
 \newblock In {\em Proceedings of the 11th annual ACM symposium on User
   interface software and technology}, pp. 19--28, 1998.
+
+\bibitem{xie2008kernel}
+Z.~Xie and J.~Yan.
+\newblock Kernel density estimation of traffic accidents in a network space.
+\newblock {\em Computers, environment and urban systems}, 32(5):396--406, 2008.
+
+\bibitem{yang2016exploring}
+X.~Yang, Z.~Zhao, and S.~Lu.
+\newblock Exploring spatial-temporal patterns of urban human mobility hotspots.
+\newblock {\em Sustainability}, 8(7):674, 2016.
 
 \bibitem{zeng2013visualizing}
 W.~Zeng, C.-W. Fu, S.~M. Arisona, and H.~Qu.
