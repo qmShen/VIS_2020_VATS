@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.9)  5 MAR 2020 02:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.9)  6 MAR 2020 18:36
 entering extended mode
 **./VATS.tex
 (VATS.tex
@@ -805,8 +805,8 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 4
 ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\ts1ptm.fd"
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ))
-(sections/RelatedWork.tex) (sections/ProblemStatementOverview.tex [2 <./picture
-s/introduction/compare.pdf>]) (sections/ProblemFormulation.tex
+(sections/RelatedWork.tex [2 <./pictures/introduction/compare.pdf>])
+(sections/ProblemStatementOverview.tex) (sections/ProblemFormulation.tex
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
@@ -819,12 +819,12 @@ LaTeX Warning: Reference `sec:app' on page 3 undefined on input line 5.
 
 LaTeX Warning: Citation `xxx' on page 3 undefined on input line 12.
 
-<pictures/chengdu_total.pdf, id=214, 845.1575pt x 835.12pt>
+<pictures/chengdu_total.pdf, id=211, 845.1575pt x 835.12pt>
 File: pictures/chengdu_total.pdf Graphic file (type pdf)
 <use pictures/chengdu_total.pdf>
 Package pdftex.def Info: pictures/chengdu_total.pdf  used on input line 21.
 (pdftex.def)             Requested size: 113.09277pt x 111.74239pt.
-<pictures/chengdu_sampling.pdf, id=215, 845.1575pt x 835.12pt>
+<pictures/chengdu_sampling.pdf, id=212, 845.1575pt x 835.12pt>
 File: pictures/chengdu_sampling.pdf Graphic file (type pdf)
 <use pictures/chengdu_sampling.pdf>
 Package pdftex.def Info: pictures/chengdu_sampling.pdf  used on input line 23.
@@ -842,19 +842,17 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `txtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 45.
 
 Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 
 
-[3 <./pictures/chengdu_total.pdf> <./pictures/chengdu_sampling.pdf>]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 45.
-)
-(sections/Implementation.tex) (sections/Evaluation.tex)
+[3]) (sections/Implementation.tex) (sections/Evaluation.tex)
 (sections/DiscussionFutureWork.tex) (VATS.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4])
+ [4 <./pictures/chengdu_total.pdf> <./pictures/chengdu_sampling.pdf>])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 208.
 
 Overfull \vbox (2.32803pt too high) has occurred while \output is active []
@@ -876,11 +874,11 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 208.
  ) 
 Here is how much of TeX's memory you used:
- 11029 strings out of 492452
- 162777 string characters out of 3129805
- 297870 words of memory out of 3000000
+ 11032 strings out of 492452
+ 162798 string characters out of 3129805
+ 296873 words of memory out of 3000000
  14805 multiletter control sequences out of 15000+200000
- 62271 words of font info for 291 fonts, out of 3000000 for 9000
+ 62390 words of font info for 293 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,12n,42p,732b,452s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
@@ -895,9 +893,9 @@ iles/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.
 urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on VATS.pdf (5 pages, 4016776 bytes).
+Output written on VATS.pdf (5 pages, 4016796 bytes).
 PDF statistics:
- 311 PDF objects out of 1000 (max. 8388607)
+ 310 PDF objects out of 1000 (max. 8388607)
  73 named destinations out of 1000 (max. 500000)
  45759 words of extra memory for PDF output out of 51595 (max. 10000000)
 
