@@ -1,32 +1,9 @@
-
 % \documentclass[journal]{vgtc}                % final (journal style)
 \documentclass[review,journal]{vgtc}         % review (journal style)
 % \documentclass[widereview]{vgtc}             % wide-spaced review
 %\documentclass[preprint,journal]{vgtc}       % preprint (journal style)
 
-%% Uncomment one of the lines above depending on where your paper is
-%% in the conference process. ``review'' and ``widereview'' are for review
-%% submission, ``preprint'' is for pre-publication, and the final version
-%% doesn't use a specific qualifier.
 
-%% Please use one of the ``review'' options in combination with the
-%% assigned online id (see below) ONLY if your paper uses a double blind
-%% review process. Some conferences, like IEEE Vis and InfoVis, have NOT
-%% in the past.
-
-%% Please note that the use of figures other than the optional teaser is not permitted on the first page
-%% of the journal version.  Figures should begin on the second page and be
-%% in CMYK or Grey scale format, otherwise, colour shifting may occur
-%% during the printing process.  Papers submitted with figures other than the optional teaser on the
-%% first page will be refused. Also, the teaser figure should only have the
-%% width of the abstract as the template enforces it.
-
-%% These few lines make a distinction between latex and pdflatex calls and they
-%% bring in essential packages for graphics and font handling.
-%% Note that due to the \DeclareGraphicsExtensions{} call it is no longer necessary
-%% to provide the the path and extension of a graphics file:
-%% \includegraphics{diamondrule} is completely sufficient.
-%%
 \ifpdf%                                % if we use pdflatex
   \pdfoutput=1\relax                   % create PDFs from pdfLaTeX
   \pdfcompresslevel=9                  % PDF Compression
@@ -40,7 +17,6 @@
   \DeclareGraphicsExtensions{.eps}     % for pure latex we expect eps files
 \fi%
 
-%% it is recomended to use ``\autoref{sec:bla}'' instead of ``Fig.~\ref{sec:bla}''
 \graphicspath{{figures/}{pictures/}{images/}{./}} % where to search for the images
 
 \usepackage{microtype}                 % use micro-typography (slightly more compact, better to read)
@@ -68,16 +44,7 @@
 \newcommand{\oR}{\mathsf{R}}
 \newcommand{\U}{\mathcal{U}}
 
-%% We encourage the use of mathptmx for consistent usage of times font
-%% throughout the proceedings. However, if you encounter conflicts
-%% with other math-related packages, you may want to disable it.
 
-%% In preprint mode you may define your own headline.
-%\preprinttext{To appear in IEEE Transactions on Visualization and Computer Graphics.}
-
-%% If you are submitting a paper to a conference for review with a double
-%% blind reviewing process, please replace the value ``0'' below with your
-%% OnlineID. Otherwise, you may safely leave it at ``0''.
 \onlineid{0}
 
 %% declare the category of your paper, only shown in review mode
@@ -94,9 +61,9 @@
 %% Paper title.
 %\title{Visualization aware trajectory sampling for urban traffic data}
 %\title{Visualization-aware Sampling for Big Trajectory Data}
-\title{Visual Quality Guaranteed Sampling for \\ Big Trajectory Data Visualization}
+\title{Visual Quality Guaranteed Sampling for \\ Large Trajectory Data Visualization}
 
-%% This is how authors are specified in the journal style
+
 
 %% indicate IEEE Member or Student Member in form indicated below
 \author{Roy G. Biv, Ed Grimley, \textit{Member, IEEE}, and Martha Stewart}
@@ -128,13 +95,12 @@ vel eum iriure dolor in hendrerit in vulputate velit esse molestie
 consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et
 accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
 delenit augue duis dolore te feugait nulla facilisi.%
-} % end of abstract
+} 
 
 %% Keywords that describe your work. Will show as 'Index Terms' in journal
-%% please capitalize first letter and insert punctuation after last keyword
 \keywords{Radiosity, global illumination, constant time}
 
-%% ACM Computing Classification System (CCS). 
+%% ACM Computing Classification System (CCS).
 %% See <http://www.acm.org/class/1998/> for details.
 %% The ``\CCScat'' command takes four arguments.
 
@@ -176,16 +142,13 @@ delenit augue duis dolore te feugait nulla facilisi.%
 
 \begin{document}
 
-%% The ``\maketitle'' command must be the first command after the
-%% ``\begin{document}'' command. It prepares and prints the title block.
 
-%% the only exception to this rule is the \firstsection command
 \firstsection{Introduction}
 
 \maketitle
 \input{sections/Introduction.tex}
 \input{sections/RelatedWork.tex}
-\input{sections/ProblemStatementOverview.tex}
+%\input{sections/ProblemStatementOverview.tex}
 \input{sections/ProblemFormulation.tex}
 \input{sections/ProblemSolving.tex}
 \input{sections/Implementation.tex}
@@ -193,10 +156,6 @@ delenit augue duis dolore te feugait nulla facilisi.%
 \input{sections/DiscussionFutureWork.tex}
 
 
-%% if specified like this the section will be committed in review mode
-\acknowledgments{
-The authors wish to thank A, B, and C. This work was supported in part by
-a grant from XYZ (\# 12345-67890).}
 
 %\bibliographystyle{abbrv}
 \bibliographystyle{abbrv-doi}

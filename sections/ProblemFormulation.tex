@@ -1,46 +1,45 @@
 \section{Problem formulation}
 Visualizing a large collection of trajectories are used frequently in map service or smart city applications.
-However, efficient and effective large-scale trajectory visualization is challenging in both academic and industry.
+However, efficient and effective large-scale trajectory visualization is challenging in both academia and industry.
 The reasons are (i) the size of trajectory data is very large (e.g., several GB in an hour),
-(ii) the limited rendering ability of existing commercial graphics device (e.g., XXX).
+and (ii) the limited rendering ability of existing commercial graphics device (e.g., XXX).
 Sampling is a delta-facto solution for the problems with big data.
 A naive solution to employ sampling idea for large-scale trajectory visualization problem is
-selecting several trajectories from the data set then visualize it by graphics device.
+randomly selecting several trajectories from the data set then visualize it by graphics device.
 However, the visualization result may be not acceptable by the user.
 In this work, we study the large-scale trajectory visualization problem.
-Specifically, we focus on visualization-aware sampling method to visualize the large-scale trajectory dataset efficiently and effectively.
-The major challenges of our research problem are:
-(i) how to define ``visualization-aware'' theoretically?
-(ii) how to solve visualization-aware sampling problem efficiently.
-
-In this work, we first formate ``visualization-aware'' formally by defining the loss function between the ground truth and sampled visualization result.
-With the loss function, we then analyze the hardness of the problem, and devise visualization result guaranteed solution for it lastly.
+In particular, we focus on visual quality guaranteed sampling method for large trajectory data visualization.
+The major challenges to design visual quality guaranteed sampling method are:
+(I) how to define visual quality theoretically? (II) how to guarantee the quality of the sampling-based visualization result?
+In this work, we first formate visual quality by defining the loss function between the visualization results of the whole dataset and sampled dataset.
+With the loss function, we analyze the hardness of the problem, and devise a visual quality guaranteed sampling algorithm for it.
 
 
-\begin{problem}\label{prob:def}
+\begin{problem}[Sampling-based trajectory visualization problem]\label{prob:def}
 Given a large-scale trajectory dataset $\D$ and an integer $k$,
-the visualization-aware sampling method for large-scale trajectory visualization problem is selecting a subset of trajectories $\oR \subseteq \D$,
-such that loss function $loss(\oR,\D)$ is minimized.
+the trajectory visualization problem is selecting a subset of trajectories $\oR \subseteq \D$, such that loss function $loss(\oR,\D)$ is minimized.
 \end{problem}
 
-
-In general, there are many ways to define the loss function $loss$ between visualization quality/utility difference between the sampled trajectory subset $\oR$ and original dataset $\D$ from the user’s perspective.
+From the user’s perspective, there are many ways to define the loss function $loss$ between the visualization result qualities of the sampled subset $\oR$ and the whole dataset $\D$.
 For example, \cite{park2016visualization} defined point-based loss function for very large scatter points visualization.
-In this paper, we define the loss function by the fact from the visualization quality from the perspective of users.
-Intuitively, the visualization quality difference of two trajectory sets visualization results depends on the user specified visualization level of details (a.k.a., LOD).
+However, it is not applicable for trajectory data visualization.
+In order to address that, we propose an novel loss function for trajectory visualization problem.
 
-Given an empty canvas (e.g., displaying device) with a user specified level of details, the visualization process is rendering the trajectories into canvas with the given level of details (e.g., the number of pixels in each row and each column).
-Considering a data objects set $\D$ and a subset of data objects $\oR \subseteq \D$,
-The visualization quality loss between $\oR$ and $\D$ is defining as the different pixels of the visualization results of $\oR$ and $\D$ in the canvas with specified LOD.
+Intuitively, the visual quality difference between the visualization results of two trajectory datasets depends on the user specified visualization level of details (a.k.a., LOD).
+Given an empty canvas (e.g., displaying device) with a user specified level of details, 
+the visualization process is rendering the trajectories into canvas with the given level of details (e.g., the number of pixels in each row and each column).
+Considering a trajectory data set $\D$ and a subset of trajectories $\oR \subseteq \D$,
+The visual quality loss between $\oR$ and $\D$ is defining as the different pixels of the visualization results about $\oR$ and $\D$ in the canvas with specified LOD.
+We then define the loss function of sampling-based trajectory visualization problem as $loss(\D, \oR) = \frac{\V(\D) - \V(\oR)}{\V(\D)}$,
+where $\V()$ measures the number of rendered pixels in the canvas of a given trajectory dataset.
 
-Given a trajectory data set $\D$ and an integer $k$,  the research objective of our visualization-aware sampling method is selecting a sized-$k$ subset of trajectories $\oR$ which minimize the visualization quality loss function $loss(\D, \oR)$.
-Formally, the loss function is defined as $loss(\D, \oR) = \V(\D) - \V(\oR)$.
-Thus, our research objective is:
-$$ \min_{\oR \subseteq \D, |\oR| = k}  loss(\D, \oR) =  \V(\D) - \V(\oR). $$ %\\ %\nonumber
+Given a trajectory data set $\D$ and an integer $k$,  our research objective is finding subset $\oR$, such that  the visualization quality loss function $loss(\D, \oR)$ is minimized,
+i.e.,
+$$ \min_{\oR \subseteq \D, |\oR| = k}  loss(\D, \oR) =  \frac{\V(\D) - \V(\oR)}{\V(\D)}. $$ %\\ %\nonumber
+
+
 %  \Leftrightarrow  & \min_{\oR \subseteq \D, |\oR| = k}  \V(\D) - \V(\oR) \\ \nonumber
 %  \Leftrightarrow  & \min_{\oR \subseteq \D, |\oR| = k}  \sum_{\forall \D_i \in \D} \V(\D_i) - \V(\oR)
-
-
 %Intuitively, the visualization quality from user's perspective highly depends on the resolution of displaying device,
 %e.g., the number of distinct pixels in each dimension that can be displayed.
 
@@ -53,28 +52,29 @@ $$ \min_{\oR \subseteq \D, |\oR| = k}  loss(\D, \oR) =  \V(\D) - \V(\oR). $$ %\\
 
 
 \subsection{Hardness analysis}
-For the sake of presentation, we analyze the hardness of our research problem with simple render manner of visualization result.
-Specifically,  the visualization result only test whether there is a trajectory in dataset on every pixel in the canvas.
-If yes, it will render that pixel in the canvas, otherwise it will not.
-However, the rendering color of each pixel on the canvas is related to the total number of trajectories on it in practice, we will elaborate shortly.
-
-With the above simple render manner,  we suppose each pixel in the canvas has an unique id, $\U$ is universal set of all pixels in the canvas.
+In real-world applications, the pixels in canvas will be rendered by different colors according to the specified visualization scheme.
+For the sake of presentation, we analyze the hardness of our research objective with a simple render manner of visualization result.
+In particular, for each pixel in the canvas, it will be rendered if there is a trajectory pass through it, otherwise it will not be rendered.
+Suppose each pixel in the canvas has an unique id, let $\U$ be the universal set of all pixels in the canvas
 For each trajectory $\D_i \in \D$, it consists of a set of pixels in the canvas, e.g., it is a subset of $\U$.
 Thus, the subset $\oR$ also is a subset of $\U$ as $\oR = \cup_{\oR_i \in \oR} \oR_i$.
 
-Our research objective is minimizing the number of different pixels between the two canvases which rendered by $\D$ and $\oR$, respectively.
-Obviously, the visualization result of $\D$ is a constant value, denotes as $\mathsf{C}$/
-Our research objective can be transformed as follows:
+Our research objective is minimizing loss function $loss(\D, \oR) =  \frac{\V(\D) - \V(\oR)}{\V(\D)}$.
+Obviously, the visualization result of $\D$ is a constant value, denotes as $\mathsf{C}$.
+Our research objective of Problem~\ref{prob:def} can be transformed as follows:
 \begin{align}\label{eqn:obj2} \nonumber
-\text{Objective}: & \min_{\oR \subseteq \D, |\oR| = k}  \V(\D) - \V(\oR) \\ \nonumber
-& \Leftrightarrow \min_{\oR \subseteq \D, |\oR| = k}  \mathsf{C} - \V(\oR) \\ \nonumber
+\text{Objective}: & \min_{\oR \subseteq \D, |\oR| = k}  \frac{\V(\D) - \V(\oR)}{\V(\D)} \\ \nonumber
+& \Leftrightarrow \min_{\oR \subseteq \D, |\oR| = k}  \frac{\mathsf{C} - \V(\oR)}{\mathsf{C}} \\ \nonumber
 & \Leftrightarrow \max_{\oR \subseteq \D, |\oR| = k}  \cup_{\oR_i \in \oR} \oR_i
 \end{align}
 
 It is equivalent to select sized-$k$ trajectory set $\oR$ from $\D$ which $\cup_{\oR_i \in \oR} \oR_i$ is maximized.
+It is a NP-hard problem as we proved in Lemma~\ref{lem:np}.
 
-\begin{lemma}[NP hard]
-Given a trajectory dataset $\D$ and an integer $k$, the visualization-aware sampling problem, i.e., $\max_{\oR \subseteq \D, |\oR| = k}  \cup_{\oR_i \in \oR} \oR_i$ is NP-hard.
+\begin{lemma}[NP hard]~\label{lem:np}
+%Given a trajectory dataset $\D$ and an integer $k$, 
+The sampling-based trajectory visualization problem (see Problem~\ref{prob:def}) is NP-hard.
 \end{lemma}
 
-\Bo{We will prove it by reducing maximal set cover problem to it. Discuss with Qiaomu about the general format in VIS.}
+We omit the proof of Lemma~\ref{lem:np} as it is a typical set cover maximization problem\footnote{\url{https://en.wikipedia.org/wiki/Maximum_coverage_problem}}, which is a well-known NP-hard problem in literature.
+
