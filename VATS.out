@@ -3,18 +3,15 @@
 \BOOKMARK [2][]{subsection.7}{Trajectory analysis}{section.6}% 3
 \BOOKMARK [2][]{subsection.8}{Interactive visualization for large dataset}{section.6}% 4
 \BOOKMARK [2][]{subsection.9}{Data sampling techniques}{section.6}% 5
-\BOOKMARK [1][]{section.10}{Problem Statement}{}% 6
-\BOOKMARK [2][]{subsection.11}{Problem Identification}{section.10}% 7
-\BOOKMARK [2][]{subsection.12}{VATS Overview}{section.10}% 8
-\BOOKMARK [1][]{section.13}{Problem formulation}{}% 9
-\BOOKMARK [2][]{subsection.15}{Hardness analysis}{section.13}% 10
-\BOOKMARK [1][]{section.17}{Problem solving}{}% 11
-\BOOKMARK [2][]{subsection.18}{Uniform Random Sampling}{section.17}% 12
-\BOOKMARK [2][]{subsection.20}{Greedy Algorithm}{section.17}% 13
-\BOOKMARK [2][]{subsection.24}{Performance Optimizations}{section.17}% 14
-\BOOKMARK [1][]{section.25}{Implementation}{}% 15
-\BOOKMARK [1][]{section.26}{Evaluation}{}% 16
-\BOOKMARK [2][]{subsection.27}{Experimental results}{section.26}% 17
-\BOOKMARK [2][]{subsection.28}{User study}{section.26}% 18
-\BOOKMARK [2][]{subsection.29}{Expert overview}{section.26}% 19
-\BOOKMARK [1][]{section.30}{Discussion and future work}{}% 20
+\BOOKMARK [1][]{section.10}{Problem formulation}{}% 6
+\BOOKMARK [2][]{subsection.12}{Hardness analysis}{section.10}% 7
+\BOOKMARK [1][]{section.15}{Problem solving}{}% 8
+\BOOKMARK [2][]{subsection.16}{Uniform Random Sampling}{section.15}% 9
+\BOOKMARK [2][]{subsection.18}{Greedy Algorithm}{section.15}% 10
+\BOOKMARK [2][]{subsection.22}{Performance Optimizations}{section.15}% 11
+\BOOKMARK [1][]{section.23}{Implementation}{}% 12
+\BOOKMARK [1][]{section.24}{Evaluation}{}% 13
+\BOOKMARK [2][]{subsection.25}{Experimental results}{section.24}% 14
+\BOOKMARK [2][]{subsection.26}{User study}{section.24}% 15
+\BOOKMARK [2][]{subsection.27}{Expert overview}{section.24}% 16
+\BOOKMARK [1][]{section.28}{Discussion and future work}{}% 17
