@@ -83,22 +83,11 @@
 %\shortauthortitle{Firstauthor \MakeLowercase{\textit{et al.}}: Paper Title}
 
 %% Abstract section.
-\abstract{Duis autem vel eum iriure dolor in hendrerit in vulputate
-velit esse molestie consequat, vel illum dolore eu feugiat nulla
-facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
-praesent luptatum zzril delenit augue duis dolore te feugait nulla
-facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem
-vel eum iriure dolor in hendrerit in vulputate velit esse molestie
-consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et
-accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
-delenit augue duis dolore te feugait nulla facilisi.%
+\abstract{Line-based visualization has been widely used to present trajectory data. However, when the data size grows very large, it will take a considerable amount of time to render the graphics. Sampling techniques can mitigate the problem by directly shrinking the dataset, thus to reduce the rendering work of graphic devices. However, the traditional sampling techniques may lead to the loss of visual information and cannot directly be applied in line-based trajectory visualization. This work presents a novel approach, visual quality guaranteed sampling(VQGTS), specifically for the data reduction of large trajectory data visualization. We first propose a loss function to measure the visual quality loss between the visualization of the sub-dataset and the whole dataset. Then we minimize the loss function by transforming it as an optimization problem and propose efficient solutions. Several parameters and color encoding which can empower the effectiveness are discussed. The experiments on several large trajectory datasets demonstrate the effectiveness of the proposed method.  The user study further shows the usability of our methods in the exploration of large trajectory data.%
 }
 
 %% Keywords that describe your work. Will show as 'Index Terms' in journal
-\keywords{Radiosity, global illumination, constant time}
+\keywords{Trajectory visualization, data sampling, visual quality}
 
 %% ACM Computing Classification System (CCS).
 %% See <http://www.acm.org/class/1998/> for details.
@@ -113,8 +102,8 @@ delenit augue duis dolore te feugait nulla facilisi.%
 %% Uncomment below to include a teaser figure.
 \teaser{
   \centering
-  \includegraphics[width=\linewidth]{CypressView}
-  \caption{In the Clouds: Vancouver from Cypress Mountain. Note that the teaser may not be wider than the abstract block.}
+  \includegraphics[width=\linewidth]{Teaser.pdf}
+  \caption{Experiment results: A and G:the ground truth at level 11 and 15; B and H: uniform random sampling at level 11 and 15; C, D, E, F and I: VAGTS with different parameters}
 	\label{fig:teaser}
 }
 

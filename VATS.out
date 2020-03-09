@@ -5,13 +5,13 @@
 \BOOKMARK [2][]{subsection.9}{Data sampling techniques}{section.6}% 5
 \BOOKMARK [1][]{section.10}{Problem formulation}{}% 6
 \BOOKMARK [2][]{subsection.12}{Hardness analysis}{section.10}% 7
-\BOOKMARK [1][]{section.15}{Problem solving}{}% 8
-\BOOKMARK [2][]{subsection.16}{Uniform Random Sampling}{section.15}% 9
-\BOOKMARK [2][]{subsection.18}{Greedy Algorithm}{section.15}% 10
-\BOOKMARK [2][]{subsection.22}{Performance Optimizations}{section.15}% 11
-\BOOKMARK [1][]{section.23}{Implementation}{}% 12
-\BOOKMARK [1][]{section.24}{Evaluation}{}% 13
-\BOOKMARK [2][]{subsection.25}{Experimental results}{section.24}% 14
-\BOOKMARK [2][]{subsection.26}{User study}{section.24}% 15
-\BOOKMARK [2][]{subsection.27}{Expert overview}{section.24}% 16
-\BOOKMARK [1][]{section.28}{Discussion and future work}{}% 17
+\BOOKMARK [1][]{section.15}{Visual Quality Guaranteed Sampling Approach}{}% 8
+\BOOKMARK [2][]{subsection.16}{Uniform Random Sampling Algorithm}{section.15}% 9
+\BOOKMARK [2][]{subsection.18}{Visual Quality Guaranteed Sampling Algorithm}{section.15}% 10
+\BOOKMARK [2][]{subsection.22}{Optimization Techniques}{section.15}% 11
+\BOOKMARK [1][]{section.28}{Implementation}{}% 12
+\BOOKMARK [1][]{section.29}{Evaluation}{}% 13
+\BOOKMARK [2][]{subsection.30}{Experimental results}{section.29}% 14
+\BOOKMARK [2][]{subsection.31}{User study}{section.29}% 15
+\BOOKMARK [2][]{subsection.32}{Expert overview}{section.29}% 16
+\BOOKMARK [1][]{section.33}{Discussion and future work}{}% 17
