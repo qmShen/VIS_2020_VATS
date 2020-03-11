@@ -56,6 +56,10 @@ N.~Ferreira, J.~Poco, H.~T. Vo, J.~Freire, and C.~T. Silva.
 \newblock {\em IEEE transactions on visualization and computer graphics},
   19(12):2149--2158, 2013.
 
+\bibitem{porto_taxi}
+L.~Geolink.
+\newblock Taxi service trajectory (tst) prediction challenge @ ecml/pkdd 2015.
+
 \bibitem{guo2009flow}
 D.~Guo.
 \newblock Flow mapping and multivariate visualization of large spatial
@@ -116,12 +120,6 @@ Y.~Park, M.~Cafarella, and B.~Mozafari.
 \newblock Visualization-aware sampling for very large databases.
 \newblock In {\em 2016 IEEE 32nd International Conference on Data Engineering
   (ICDE)}, pp. 755--766. IEEE, 2016.
-
-\bibitem{pelekis2009clustering}
-N.~Pelekis, I.~Kopanakis, E.~Kotsifakos, E.~Frentzos, and Y.~Theodoridis.
-\newblock Clustering trajectories of moving objects in an uncertain world.
-\newblock In {\em 2009 Ninth IEEE international conference on data mining}, pp.
-  417--427. IEEE, 2009.
 
 \bibitem{pelekis2007similarity}
 N.~Pelekis, I.~Kopanakis, G.~Marketos, I.~Ntoutsi, G.~Andrienko, and

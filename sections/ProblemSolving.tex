@@ -49,12 +49,13 @@ However, it does not provide any guarantee on the visual quality of the visualiz
 In this section, we present our visual quality guaranteed sampling algorithm for Problem~\ref{prob:def}.
 We start our presentation by elaborating the relationship between visual quality of sampled set $\oR$ and user zoom level. 
 Obviously, for a given sampled set $\oR \subseteq \D$, it has different loss values at different user zoom level.
-The reason is the pixel size will be updated at different zoom level.
+%The reason is the pixel size will be updated at different zoom level.
+\QM{The reason is the map are of the same canvas region will be updated at different zoom level.}
 For example, Google map\footnote{\url{https://www.google.com/maps/preview}} provides zoom levels range from 0 to 20,
 where level 0 is the lowest level (e.g., the whole world), level 20 is the highest level (e.g., individual building, if available).
 In order to devise a zoom level oblivious visualization for sampled dataset $\oR$, 
 we use the highest zoom level to define the size of each pixel in the canvas in our problem.
-For each trajectory $\D_i in \D$ is a set of pixels at highes zoom level in the canvas.
+For each trajectory $\D_i in \D$ is a set of pixels at highest zoom level in the canvas.
 
 The visual quality guaranteed sampling algorithm employs greedy paradigm.
 In particular, it finds the trajectory $\D_i$ in $\D$ which maximize the union set of $\oR \cup \D_i$ at each iteration, as Line~\ref{line:max} shown in Algorithm~\ref{alg:greedy}.
@@ -170,8 +171,9 @@ Hence, the overall cost is $O(|\D| + k \cdot m \cdot t \log |\D|)$.
 \Bo{To exemplify, Algorithm~\ref{alg:greedy} costs 2.3 hours to return the results on Lisbon taxi trajectory dataset.
 However it only takes 3.2 seconds with lazy updating manner.}
 
-
-We next elaborate an ``one-to-many'' strategy to further optimize the visual quality of our proposal.
+\subsection{One-to-many strategy}~\label{sec:one_to_many}
+Since we detect the covered pixels in the highest level, two trajectories may be very close to each other but share very few pixels, which will lead to more information loss in the low zoom view as figure~\ref{fig:one_to_many}.  
+We next elaborate a ``one-to-many'' strategy to further optimize the visual quality of our proposed technique.
 Recalling we use the highest zoom level to define the pixel size in the canvas.
 Thus, our visual quality guaranteed sampling algorithm is zoom-level oblivious, e.g., it guarantees the visual quality of result set $\oR$ at every zoom level.
 However, users always do not use/need the highest zoom level in visualization applications.
@@ -183,3 +185,11 @@ We will demonstrate the effectiveness of the visual tolerance $\delta$ in experi
 
 %https://developers.google.com/maps/documentation/maps-static/dev-guide#Zoomlevels
 
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.4\textwidth]{pictures/problemsolveing/one_to_many.pdf}
+	\vspace{-5mm}
+	\caption{Resolution inconsistency}
+	\vspace{-5mm}
+	\label{fig:one_to_many}
+\end{figure}
