@@ -177,7 +177,7 @@ We next elaborate a ``one-to-many'' strategy to further optimize the visual qual
 Recalling we use the highest zoom level to define the pixel size in the canvas.
 Thus, our visual quality guaranteed sampling algorithm is zoom-level oblivious, e.g., it guarantees the visual quality of result set $\oR$ at every zoom level.
 However, users always do not use/need the highest zoom level in visualization applications.
-For example, Google map shows city and streets at zoom level 1 and 15, respectively~\footnote{\url{https://developers.google.com/maps/documentation/}}.
+For example, Google map shows city and streets at zoom level 1 and 15,	 respectively~\footnote{\url{https://developers.google.com/maps/documentation/}}.
 Motivated by the above observation, we devise ``one-to-many'' strategy by introducing a visual tolerance parameter $\delta$ to optimize the visual quality for users.
 Specifically, suppose the pixel with location $(x,y)$ in canvas is covered by result set $\oR$, 
 the ``one-to-many'' strategy will ignore all the pixels around $(x,y)$ within $\delta$ offset distance, i.e., all pixels from $(x-\delta, y-\delta)$ to $(x+\delta, y+\delta)$ will be skipped.
