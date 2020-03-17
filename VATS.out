@@ -10,10 +10,12 @@
 \BOOKMARK [2][]{subsection.19}{Uniform Random Sampling Algorithm}{section.18}% 10
 \BOOKMARK [2][]{subsection.21}{Visual Quality Guaranteed Sampling Algorithm}{section.18}% 11
 \BOOKMARK [2][]{subsection.25}{Optimization Techniques}{section.18}% 12
-\BOOKMARK [2][]{subsection.30}{One-to-many strategy}{section.18}% 13
+\BOOKMARK [1][]{section.31}{Advance Approach: VQGTS+}{}% 13
 \BOOKMARK [1][]{section.34}{Visualization and Implementation}{}% 14
 \BOOKMARK [1][]{section.35}{Evaluation}{}% 15
 \BOOKMARK [2][]{subsection.36}{Experimental results}{section.35}% 16
-\BOOKMARK [2][]{subsection.39}{User study}{section.35}% 17
-\BOOKMARK [2][]{subsection.40}{Expert overview}{section.35}% 18
-\BOOKMARK [1][]{section.41}{Discussion and future work}{}% 19
+\BOOKMARK [3][-]{subsubsection.37}{VTGS and uniform random sampling}{subsection.36}% 17
+\BOOKMARK [3][-]{subsubsection.40}{Representativeness parameters analysis}{subsection.36}% 18
+\BOOKMARK [2][]{subsection.41}{User study}{section.35}% 19
+\BOOKMARK [2][]{subsection.42}{Expert overview}{section.35}% 20
+\BOOKMARK [1][]{section.43}{Discussion and future work}{}% 21

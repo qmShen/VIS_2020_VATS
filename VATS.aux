@@ -75,7 +75,7 @@
 \newlabel{alg:rand}{{1}{4}{Uniform Random Sampling Algorithm}{algorithm.20}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Visual Quality Guaranteed Sampling Algorithm}{4}{subsection.21}\protected@file@percent }
 \newlabel{sec:greedy}{{4.2}{4}{Visual Quality Guaranteed Sampling Algorithm}{subsection.21}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces VQGS($\mathsf  {T}$,k)}}{4}{algorithm.23}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces $\mathsf  {VQGTS}(\mathsf  {T},k)$}}{4}{algorithm.23}\protected@file@percent }
 \newlabel{alg:greedy}{{2}{4}{Visual Quality Guaranteed Sampling Algorithm}{algorithm.23}{}}
 \newlabel{line:max}{{3}{4}{Visual Quality Guaranteed Sampling Algorithm}{algorithm.23}{}}
 \newlabel{the:ratio}{{1}{4}{}{theorem.24}{}}
@@ -83,28 +83,23 @@
 \newlabel{sec:opt}{{4.3}{4}{Optimization Techniques}{subsection.25}{}}
 \newlabel{lem:cost}{{1}{4}{Time Complexity}{lemma.26}{}}
 \newlabel{lem:submodular}{{2}{4}{Submodularity}{lemma.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Detail-aware visual quality guaranteed trajectory sampling, A: $\mathsf  {VQGTS}{}$, B: advanced $\mathsf  {VQGTS}$ ($\mathsf  {VQGTS}^{+}$), C: $\mathsf  {VQGTS}^{+}$ and popularity encoded by color.}}{5}{figure.28}\protected@file@percent }
+\newlabel{fig:delta}{{4}{5}{Detail-aware visual quality guaranteed trajectory sampling, A: $\vats {}$, B: advanced $\vats $ ($\avats $), C: $\avats $ and popularity encoded by color}{figure.28}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Lazy updating manner illustration}}{5}{figure.29}\protected@file@percent }
+\newlabel{fig:heap}{{5}{5}{Lazy updating manner illustration}{figure.29}{}}
+\newlabel{lem:lazy}{{3}{5}{Optimized Time Complexity}{lemma.30}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Advance Approach: $\mathsf  {VQGTS}^{+}$}{5}{section.31}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {3}{\ignorespaces $\mathsf  {VQGTS}^{+}(\mathsf  {T},k,\delta )$}}{5}{algorithm.32}\protected@file@percent }
+\newlabel{alg:plus}{{3}{5}{Advance Approach: $\avats $}{algorithm.32}{}}
+\newlabel{line:deltamax}{{4}{5}{Advance Approach: $\avats $}{algorithm.32}{}}
+\newlabel{line:delta}{{6}{5}{Advance Approach: $\avats $}{algorithm.32}{}}
+\newlabel{line:s}{{7}{5}{Advance Approach: $\avats $}{algorithm.32}{}}
+\newlabel{line:e}{{9}{5}{Advance Approach: $\avats $}{algorithm.32}{}}
 \bibstyle{abbrv-doi}
 \bibdata{ref}
 \bibcite{andrienko2017clustering}{1}
 \bibcite{battle2013dynamic}{2}
 \bibcite{borruso2008network}{3}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Lazy updating manner illustration}}{5}{figure.28}\protected@file@percent }
-\newlabel{fig:heap}{{4}{5}{Lazy updating manner illustration}{figure.28}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Resolution inconsistency}}{5}{figure.32}\protected@file@percent }
-\newlabel{fig:one_to_many}{{5}{5}{Resolution inconsistency}{figure.32}{}}
-\newlabel{lem:lazy}{{3}{5}{Optimized Time Complexity}{lemma.29}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}One-to-many strategy}{5}{subsection.30}\protected@file@percent }
-\newlabel{sec:one_to_many}{{4.4}{5}{One-to-many strategy}{subsection.30}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Visualization and Implementation}{5}{section.34}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Motivation of delta}}{5}{figure.33}\protected@file@percent }
-\newlabel{fig:one_to_many}{{6}{5}{Motivation of delta}{figure.33}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Result evaluation between proposed method and uniform random sampling. The images in the three columns indicate the visualization results for full dataset, proposed method, and uniform random sampling respectively. The visualizations in the first row shows the overview. The visualizations in the second the third row indicate the detail level visualization of region 1 and region 2. }}{5}{figure.38}\protected@file@percent }
-\newlabel{fig:random_proposed}{{7}{5}{Result evaluation between proposed method and uniform random sampling. The images in the three columns indicate the visualization results for full dataset, proposed method, and uniform random sampling respectively. The visualizations in the first row shows the overview. The visualizations in the second the third row indicate the detail level visualization of region 1 and region 2}{figure.38}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Evaluation}{5}{section.35}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Experimental results}{5}{subsection.36}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}User study}{5}{subsection.39}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Expert overview}{5}{subsection.40}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7}Discussion and future work}{5}{section.41}\protected@file@percent }
 \bibcite{chae2014public}{4}
 \bibcite{chan2008maintaining}{5}
 \bibcite{chen2014visual}{6}
@@ -112,6 +107,18 @@
 \bibcite{ferreira2013vector}{8}
 \bibcite{ferreira2013visual}{9}
 \bibcite{porto_taxi}{10}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Zoom resolution2}}{6}{figure.33}\protected@file@percent }
+\newlabel{fig:zoom}{{6}{6}{Zoom resolution2}{figure.33}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Visualization and Implementation}{6}{section.34}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Evaluation}{6}{section.35}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Experimental results}{6}{subsection.36}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.1.1}VTGS and uniform random sampling}{6}{subsubsection.37}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Result evaluation between proposed method and uniform random sampling. The images in the three columns indicate the visualization results for full dataset, proposed method, and uniform random sampling respectively. The visualizations in the first row shows the overview. The visualizations in the second the third row indicate the detail level visualization of region 1 and region 2. }}{6}{figure.39}\protected@file@percent }
+\newlabel{fig:random_proposed}{{7}{6}{Result evaluation between proposed method and uniform random sampling. The images in the three columns indicate the visualization results for full dataset, proposed method, and uniform random sampling respectively. The visualizations in the first row shows the overview. The visualizations in the second the third row indicate the detail level visualization of region 1 and region 2}{figure.39}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {7.1.2}Representativeness parameters analysis}{6}{subsubsection.40}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}User study}{6}{subsection.41}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Expert overview}{6}{subsection.42}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Discussion and future work}{6}{section.43}\protected@file@percent }
 \bibcite{guo2009flow}{11}
 \bibcite{guo2011tripvista}{12}
 \bibcite{hurter2009fromdady}{13}
