@@ -62,7 +62,7 @@ In particular, it finds the trajectory $\D_i$ in $\D$ which maximize the union s
 It terminates after $k$ iterations and returns $\oR$ as result set for rendering.
 
 \begin{algorithm}
-    \caption{VQGS($\D$,k)} \label{alg:greedy}
+    \caption{$\vats(\D,k)$} \label{alg:greedy}
     \begin{algorithmic}[1]
     \State Initialize result set $\oR \leftarrow \emptyset$
     \While{$|\oR| < k$}
@@ -240,16 +240,72 @@ The major reason is that end users will treat the two dense regions in Figure~\r
 since the interpretation ability of human beings is limited at such level of details.
 However, the visual difference between the two sparse regions in Figure~\ref{fig:delta}(a) and (b) at that level of details is in the range of ours interpretation ability.
 
-Hence, the returning result of visual quality guaranteed sampling method $\vats$ could be further improved by delivering richer information at sparse regions, 
+Hence, the returning result of visual quality guaranteed sampling method $\vats$ could be further improved by delivering richer information at sparse regions,
 i.e., enhancing the visual details in the region where is in the range of end user's interpretation ability.
-We devise an advance approach $\avats$ by incorporating a parameter $\delta$ during trajectory selection process in $\vats$ to achieve the above objective.
+Motivated by this, we devise an advance approach $\avats$ (see Algorithm~\ref{alg:plus}) by incorporating a parameter $\delta$ during trajectory selection process in $\vats$ to achieve the above goal.
 In particular, we employ the parameter $\delta$ to model the end user's interpretation ability at the most high level of details.
-Surprisingly, our advance approach $\avats$ not only provides better visualization result when compare with $\vats$ with the same sampling rate
-(e.g., Figure~\ref{fig:delta}(a) and (b) are the returning result of $\vats$ and $\avats$ respectively
-but also reveals the trajectory popularities by encoding it with colors (e.g., Figure~\ref{fig:delta}(a) is the visual result of $\avats$ with color encoded popularity).
+Surprisingly, our advance approach $\avats$ not only provides better visualization result when comparing with $\vats$ with the same sampling rate
+(e.g., Figure~\ref{fig:delta}(a) and (b) are the returning result of $\vats$ and $\avats$ respectively),
+but also embeds the popularity of selected trajectories by encoding the rest trajectories in the dataset in them,
+e.g., Figure~\ref{fig:delta}(c) is the visual result of $\avats$ with color encoded popularity.
 
 
+Instead of measuring the contribution of each trajectory w.r.t the selected trajectories in $\oR$ directly,
+we introduce interpretation tolerance parameter $\delta$ to capture end user's interpretation ability at the highest zoom level.
+Specifically, suppose the pixel with location $(x,y)$ in canvas is covered by result set $\oR$ at the highest level,
+the pixels around $(x,y)$ are not necessary to cover as they are beyond the interpretation ability of end users.
+It means the end user cannot distinguish the visual quality difference between rendering $(x,y)$ and rendering all pixels in from $(x-\delta, y-\delta)$ to $(x+\delta, y+\delta)$) even at the highest zoom resolution.
+Fortunately, we can incorporating the interpretation tolerance parameter $\delta$ into our proposed visual quality guaranteed trajectory sampling algorithm in Algorithm~\ref{alg:greedy}
+by slightly revising it.
+As illustrated in Algorithm~\ref{alg:plus}, it measures the contribution of each trajectory w.r.t the selected trajectory set $\oR$'s augmented set $\oR^{+}$ (in Line~\ref{line:deltamax}).
+The augmented set $\oR^{+}$ will be updated by the selected trajectory $\oR_tmp$ and its tolerance pixels set (in Line~\ref{line:delta}).
 
+
+\begin{algorithm}
+    \caption{$\avats(\D,k,\delta)$} \label{alg:plus}
+    \begin{algorithmic}[1]
+    \State Initialize result set $\oR \leftarrow \emptyset$
+    \State Initialize augmented result set $\oR^{+} \leftarrow \emptyset$
+    \While{$|\oR| < k$}
+        \State $\oR_{tmp} \leftarrow argmax_{\D_i \in \D} \delta\oR \cup \D_i$ \label{line:deltamax}
+        \State $\oR \leftarrow \oR \cup \{ \oR_{tmp} \}$
+        \State $\oR^{+} \leftarrow \oR^{+} \cup \mathsf{augment}(\oR_{tmp}, \delta)$\label{line:delta}
+    \EndWhile
+    \For{each $\D_i$ in $\D - \oR$} \Comment{Popularity encoding} \label{line:s}
+        \State $\oR_j \leftarrow argmin_{\oR_{t} \in \oR}{\mathsf{augment}(\oR_{t}, \delta) - \D_i}$
+        \State $\oR_j.\mathsf{cnt}++$ \label{line:e}
+    \EndFor
+    \State Return $\oR$
+    \end{algorithmic}
+\end{algorithm}
+
+Moreover, we further exploit the result set of interpretation tolerance considered $\vats$ to address the visual clutter problem in large trajectory visualization application.
+In particular, it selects the trajectory which has largest uncovered pixels by taking end user's interpretation tolerance on visual quality into account at each iteration,
+instead of only choose the trajectory with largest uncovered pixels in $\vats$.
+During the above selection process, some trajectories will not be included into the result set $\oR$ even they have larger number of uncovered pixels.
+The reason is their uncovered pixels are too close to the pixels in the selected trajectory, i.e., within the tolerance area of selected pixels.
+Taken Figure~\ref{fig:zoom}(a) as example with $\delta=1$, suppose trajectory $a$ was selected at the first iteration,
+the trajectory selected in the second iteration is $c$, instead of $b$ as almost all pixels in $b$ is in the tolerance area of $a$'s.
+It means it embeds the popularity of each selected trajectory during the result set $\oR$ selection process naturally.
+We define the popularity of each selected trajectory as the number of close trajectories in the rest dataset, i.e., $\D-\oR$.
+Thus, we compute the popularity of trajectories in $\oR$ from Line~\ref{line:s} to Line~\ref{line:e} in Algorithm~\ref{alg:plus}.
+We then visualize the popularity of each selected trajectory by encoding its popularity by different colors.
+Figure~\ref{fig:delta}(c) shows the returning result of advance approach $\avats$ by encoding the popularities by colors.
+Obviously, the trajectories in dense region are more popular than these in sparse regions.
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=0.4\textwidth]{pictures/problemsolveing/one_to_many.pdf}
+	\caption{Zoom resolution2}
+	\label{fig:zoom}
+\end{figure}
+
+Last but not least, it is worth to point out that our advance approach $\avats$ provides more better visual quality over $\vats$ at arbitrary zooming resolutions.
+The key technique to achieve that is it considers the zooming resolutions inherently when introducing the interpretation tolerance $\delta$.
+Take Figure~\ref{fig:zoom} as an example, Figure~\ref{fig:zoom}(a) and (b) show two different zoom-levels.
+The zoom level in Figure~\ref{fig:zoom}(a) is higher than it in Figure~\ref{fig:zoom}(b).
+As our above elaboration, our advance approach $\avats$ selects trajectory $a$ and $c$ at Figure~\ref{fig:zoom}(a).
+When it zoomed-out, as shown in Figure~\ref{fig:zoom}(b), it still capture the main sketch of the underlying dataset.
 
 
 
@@ -259,5 +315,26 @@ but also reveals the trajectory popularities by encoding it with colors (e.g., F
 
 
 
+%\subsection{One-to-many strategy}~\label{sec:one_to_many}
+%Since we detect the covered pixels in the highest level, two trajectories may be very close to each other but share very few pixels, which will lead to more information loss in the low zoom view as figure~\ref{fig:one_to_many}.
+%We next elaborate a ``one-to-many'' strategy to further optimize the visual quality of our proposed technique.
+%Recalling we use the highest zoom level to define the pixel size in the canvas.
+%Thus, our visual quality guaranteed sampling algorithm is zoom-level oblivious, e.g., it guarantees the visual quality of result set $\oR$ at every zoom level.
+%However, users always do not use/need the highest zoom level in visualization applications.
+%For example, Google map shows city and streets at zoom level 1 and 15, respectively~\footnote{\url{https://developers.google.com/maps/documentation/}}.
+%Motivated by the above observation, we devise ``one-to-many'' strategy by introducing a visual tolerance parameter $\delta$ to optimize the visual quality for users.
+%Specifically, ,
+%the ``one-to-many'' strategy will ignore all the pixels around $(x,y)$ within $\delta$ offset distance, i.e., all pixels from $(x-\delta, y-\delta)$ to $(x+\delta, y+\delta)$ will be skipped.
+%We will demonstrate the effectiveness of the visual tolerance $\delta$ in experimental evaluations.
+%
+%%https://developers.google.com/maps/documentation/maps-static/dev-guide#Zoomlevels
+%\begin{figure}[t]
+%	\centering
+%	\includegraphics[width=0.4\textwidth]{pictures/problemsolveing/one_to_many.pdf}
+%	\vspace{-5mm}
+%	\caption{Resolution inconsistency}
+%	\vspace{-5mm}
+%	\label{fig:one_to_many}
+%\end{figure}
 
 
