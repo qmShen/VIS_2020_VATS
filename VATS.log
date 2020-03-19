@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.9)  17 MAR 2020 17:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.9)  19 MAR 2020 21:10
 entering extended mode
 **./VATS.tex
 (VATS.tex
@@ -870,15 +870,15 @@ Overfull \hbox (3.89787pt too wide) in paragraph at lines 150--159
 [4]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 216.
+(hyperref)                removing `math shift' on input line 227.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 216.
+(hyperref)                removing `superscript' on input line 227.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 216.
+(hyperref)                removing `math shift' on input line 227.
 
 
 Overfull \vbox (2.32803pt too high) has occurred while \output is active []
@@ -894,7 +894,7 @@ pdfTeX warning: pdflatex.exe (file ./pictures/2nd.pdf): PDF inclusion: multiple
 File: pictures/problemsolveing/one_to_many.pdf Graphic file (type pdf)
 <use pictures/problemsolveing/one_to_many.pdf>
 Package pdftex.def Info: pictures/problemsolveing/one_to_many.pdf  used on inpu
-t line 287.
+t line 298.
 (pdftex.def)             Requested size: 205.96634pt x 71.8667pt.
 ) (sections/Implementation.tex) (sections/Evaluation.tex
 Underfull \hbox (badness 10000) in paragraph at lines 6--6
@@ -910,8 +910,15 @@ pdf)
 Package pdftex.def Info: pictures/experiment_study/Mehtod_resolution_study.pdf 
  used on input line 15.
 (pdftex.def)             Requested size: 247.16118pt x 182.41466pt.
+<pictures/experiment_study/quanlity.png, id=408, 729.72626pt x 394.47375pt>
+File: pictures/experiment_study/quanlity.png Graphic file (type png)
+<use pictures/experiment_study/quanlity.png>
+Package pdftex.def Info: pictures/experiment_study/quanlity.png  used on input 
+line 29.
+(pdftex.def)             Requested size: 247.16118pt x 133.60767pt.
 ) (sections/DiscussionFutureWork.tex) (VATS.bbl [6 <./pictures/problemsolveing/
-one_to_many.pdf> <./pictures/experiment_study/Mehtod_resolution_study.pdf>]
+one_to_many.pdf> <./pictures/experiment_study/Mehtod_resolution_study.pdf> <./p
+ictures/experiment_study/quanlity.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
@@ -926,15 +933,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 158.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 158.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 158.
 Package rerunfilecheck Info: File `VATS.out' has not changed.
-(rerunfilecheck)             Checksum: E56CE6AD722D2C78C6782AE7E171DE6E;1440.
+(rerunfilecheck)             Checksum: 6AFDCE491381E9A5AFFFC6C2704F6BEA;1440.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 158.
  ) 
 Here is how much of TeX's memory you used:
- 11177 strings out of 492452
- 164905 string characters out of 3129805
- 304987 words of memory out of 3000000
- 14891 multiletter control sequences out of 15000+200000
- 67764 words of font info for 322 fonts, out of 3000000 for 9000
+ 11189 strings out of 492452
+ 165223 string characters out of 3129805
+ 305123 words of memory out of 3000000
+ 14898 multiletter control sequences out of 15000+200000
+ 67877 words of font info for 324 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,12n,42p,1210b,454s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
@@ -950,9 +957,9 @@ urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pf
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on VATS.pdf (7 pages, 8643608 bytes).
+Output written on VATS.pdf (7 pages, 8681485 bytes).
 PDF statistics:
- 534 PDF objects out of 1000 (max. 8388607)
- 88 named destinations out of 1000 (max. 500000)
- 47830 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 537 PDF objects out of 1000 (max. 8388607)
+ 89 named destinations out of 1000 (max. 500000)
+ 47835 words of extra memory for PDF output out of 51595 (max. 10000000)
 
