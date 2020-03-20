@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.9)  19 MAR 2020 21:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.9)  20 MAR 2020 00:57
 entering extended mode
 **./VATS.tex
 (VATS.tex
@@ -910,7 +910,7 @@ pdf)
 Package pdftex.def Info: pictures/experiment_study/Mehtod_resolution_study.pdf 
  used on input line 15.
 (pdftex.def)             Requested size: 247.16118pt x 182.41466pt.
-<pictures/experiment_study/quanlity.png, id=408, 729.72626pt x 394.47375pt>
+<pictures/experiment_study/quanlity.png, id=410, 729.72626pt x 394.47375pt>
 File: pictures/experiment_study/quanlity.png Graphic file (type png)
 <use pictures/experiment_study/quanlity.png>
 Package pdftex.def Info: pictures/experiment_study/quanlity.png  used on input 
@@ -918,10 +918,7 @@ line 29.
 (pdftex.def)             Requested size: 247.16118pt x 133.60767pt.
 ) (sections/DiscussionFutureWork.tex) (VATS.bbl [6 <./pictures/problemsolveing/
 one_to_many.pdf> <./pictures/experiment_study/Mehtod_resolution_study.pdf> <./p
-ictures/experiment_study/quanlity.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-)
+ictures/experiment_study/quanlity.png>])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 158.
 
 Overfull \vbox (2.32803pt too high) has occurred while \output is active []
@@ -943,7 +940,7 @@ Here is how much of TeX's memory you used:
  14898 multiletter control sequences out of 15000+200000
  67877 words of font info for 324 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,12n,42p,1210b,454s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,12n,42p,1210b,458s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
@@ -957,9 +954,9 @@ urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pf
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on VATS.pdf (7 pages, 8681485 bytes).
+Output written on VATS.pdf (7 pages, 8682435 bytes).
 PDF statistics:
- 537 PDF objects out of 1000 (max. 8388607)
+ 539 PDF objects out of 1000 (max. 8388607)
  89 named destinations out of 1000 (max. 500000)
  47835 words of extra memory for PDF output out of 51595 (max. 10000000)
 
