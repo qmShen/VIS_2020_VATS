@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.9)  20 MAR 2020 00:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.9)  23 MAR 2020 10:52
 entering extended mode
 **./VATS.tex
 (VATS.tex
@@ -720,7 +720,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 \abstractwidth=\skip63
-<pictures/Teaser.pdf, id=87, 3819.98137pt x 2630.62805pt>
+<pictures/Teaser.pdf, id=83, 3819.98137pt x 2630.62805pt>
 File: pictures/Teaser.pdf Graphic file (type pdf)
 <use pictures/Teaser.pdf>
 Package pdftex.def Info: pictures/Teaser.pdf  used on input line 140.
@@ -767,7 +767,7 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 140.
-<diamondrule.pdf, id=88, 213.79875pt x 12.045pt>
+<diamondrule.pdf, id=84, 213.79875pt x 12.045pt>
 File: diamondrule.pdf Graphic file (type pdf)
 <use diamondrule.pdf>
 Package pdftex.def Info: diamondrule.pdf  used on input line 140.
@@ -810,13 +810,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--13
 ge / dataset .
  []
 
-<pictures/introduction/timesize.png, id=153, 466.74374pt x 244.915pt>
+<pictures/introduction/timesize.png, id=149, 466.74374pt x 244.915pt>
 File: pictures/introduction/timesize.png Graphic file (type png)
 <use pictures/introduction/timesize.png>
 Package pdftex.def Info: pictures/introduction/timesize.png  used on input line
  22.
 (pdftex.def)             Requested size: 205.96634pt x 108.07683pt.
-<pictures/introduction/effectiveness.pdf, id=156, 2490.21332pt x 1717.95831pt>
+<pictures/introduction/effectiveness.pdf, id=152, 2490.21332pt x 1717.95831pt>
 File: pictures/introduction/effectiveness.pdf Graphic file (type pdf)
 <use pictures/introduction/effectiveness.pdf>
 Package pdftex.def Info: pictures/introduction/effectiveness.pdf  used on input
@@ -845,19 +845,19 @@ Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 [3]) (sections/ProblemSolving.tex
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 12.
-<pictures/problemsolveing/delta_motivation.pdf, id=287, 3755.28973pt x 923.45pt
->
+<pictures/problemsolveing/delta_motivation.pdf, id=283, 3832.37778pt x 962.9405
+5pt>
 File: pictures/problemsolveing/delta_motivation.pdf Graphic file (type pdf)
 <use pictures/problemsolveing/delta_motivation.pdf>
 Package pdftex.def Info: pictures/problemsolveing/delta_motivation.pdf  used on
  input line 141.
-(pdftex.def)             Requested size: 489.17596pt x 120.29225pt.
-<pictures/1st.pdf, id=288, 211.992pt x 169.8345pt>
+(pdftex.def)             Requested size: 489.17596pt x 122.90921pt.
+<pictures/1st.pdf, id=284, 211.992pt x 169.8345pt>
 File: pictures/1st.pdf Graphic file (type pdf)
 <use pictures/1st.pdf>
 Package pdftex.def Info: pictures/1st.pdf  used on input line 151.
 (pdftex.def)             Requested size: 115.60841pt x 92.61885pt.
-<pictures/2nd.pdf, id=289, 211.992pt x 169.8345pt>
+<pictures/2nd.pdf, id=285, 211.992pt x 169.8345pt>
 File: pictures/2nd.pdf Graphic file (type pdf)
 <use pictures/2nd.pdf>
 Package pdftex.def Info: pictures/2nd.pdf  used on input line 153.
@@ -902,45 +902,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--6
 ge / dataset .
  []
 
-<pictures/experiment_study/Mehtod_resolution_study.pdf, id=407, 3832.37778pt x 
+<pictures/experiment_study/Method_resolution_study.pdf, id=407, 3832.37778pt x 
 2828.85863pt>
-File: pictures/experiment_study/Mehtod_resolution_study.pdf Graphic file (type 
+File: pictures/experiment_study/Method_resolution_study.pdf Graphic file (type 
 pdf)
-<use pictures/experiment_study/Mehtod_resolution_study.pdf>
-Package pdftex.def Info: pictures/experiment_study/Mehtod_resolution_study.pdf 
+<use pictures/experiment_study/Method_resolution_study.pdf>
+Package pdftex.def Info: pictures/experiment_study/Method_resolution_study.pdf 
  used on input line 15.
 (pdftex.def)             Requested size: 247.16118pt x 182.41466pt.
-<pictures/experiment_study/quanlity.png, id=410, 729.72626pt x 394.47375pt>
+<pictures/experiment_study/quanlity.png, id=408, 729.72626pt x 394.47375pt>
 File: pictures/experiment_study/quanlity.png Graphic file (type png)
 <use pictures/experiment_study/quanlity.png>
 Package pdftex.def Info: pictures/experiment_study/quanlity.png  used on input 
-line 29.
+line 26.
 (pdftex.def)             Requested size: 247.16118pt x 133.60767pt.
-) (sections/DiscussionFutureWork.tex) (VATS.bbl [6 <./pictures/problemsolveing/
-one_to_many.pdf> <./pictures/experiment_study/Mehtod_resolution_study.pdf> <./p
-ictures/experiment_study/quanlity.png>])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 158.
+<pictures/experiment_study/case_study2_delta_comparison.pdf, id=411, 5281.94325
+pt x 2053.38138pt>
+File: pictures/experiment_study/case_study2_delta_comparison.pdf Graphic file (
+type pdf)
+<use pictures/experiment_study/case_study2_delta_comparison.pdf>
+Package pdftex.def Info: pictures/experiment_study/case_study2_delta_comparison
+.pdf  used on input line 37.
+(pdftex.def)             Requested size: 504.62305pt x 196.16988pt.
+[6 <./pictures/problemsolveing/one_to_many.pdf> <./pictures/experiment_study/Me
+thod_resolution_study.pdf> <./pictures/experiment_study/quanlity.png>])
+(sections/DiscussionFutureWork.tex) (VATS.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 
 
-[7]
+[7 <./pictures/experiment_study/case_study2_delta_comparison.pdf>])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 158.
+ [8
+
+]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 158.
- (VATS.aux)
+
+(VATS.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 158.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 158.
 Package rerunfilecheck Info: File `VATS.out' has not changed.
-(rerunfilecheck)             Checksum: 6AFDCE491381E9A5AFFFC6C2704F6BEA;1440.
+(rerunfilecheck)             Checksum: 415B7EC8D91F2BD2B52AC0E18040A5C1;1381.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 158.
  ) 
 Here is how much of TeX's memory you used:
- 11189 strings out of 492452
- 165223 string characters out of 3129805
- 305123 words of memory out of 3000000
- 14898 multiletter control sequences out of 15000+200000
+ 11197 strings out of 492452
+ 165668 string characters out of 3129805
+ 305199 words of memory out of 3000000
+ 14904 multiletter control sequences out of 15000+200000
  67877 words of font info for 324 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,12n,42p,1210b,458s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,12n,42p,1363b,454s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
@@ -954,9 +968,9 @@ urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pf
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on VATS.pdf (7 pages, 8682435 bytes).
+Output written on VATS.pdf (8 pages, 11230005 bytes).
 PDF statistics:
- 539 PDF objects out of 1000 (max. 8388607)
- 89 named destinations out of 1000 (max. 500000)
- 47835 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 588 PDF objects out of 1000 (max. 8388607)
+ 90 named destinations out of 1000 (max. 500000)
+ 47832 words of extra memory for PDF output out of 51595 (max. 10000000)
 
