@@ -62,8 +62,9 @@
 %% Paper title.
 %\title{Visualization aware trajectory sampling for urban traffic data}
 %\title{Visualization-aware Sampling for Big Trajectory Data}
-\title{Visual Quality Guaranteed Sampling for \\ Large Trajectory Data Visualization}
+% \title{Visual Quality Guaranteed Sampling for \\ Large Trajectory Data Visualization}
 
+\title{Visual Fidelity Maximized Sampling for \\Large Trajectory Data Visualization}
 
 
 %% indicate IEEE Member or Student Member in form indicated below
@@ -84,7 +85,17 @@
 %\shortauthortitle{Firstauthor \MakeLowercase{\textit{et al.}}: Paper Title}
 
 %% Abstract section.
-\abstract{Line-based visualization has been widely used to present trajectory data. However, when the data size grows very large, it will take a considerable amount of time to render the graphics. Sampling techniques can mitigate the problem by directly shrinking the dataset, thus to reduce the rendering work of graphic devices. However, the traditional sampling techniques may lead to the loss of visual information and cannot directly be applied in line-based trajectory visualization. This work presents a novel approach, visual quality guaranteed sampling(VQGTS), specifically for the data reduction of large trajectory data visualization. We first propose a loss function to measure the visual quality loss between the visualization of the sub-dataset and the whole dataset. Then we minimize the loss function by transforming it as an optimization problem and propose efficient solutions. Several parameters and color encoding which can empower the effectiveness are discussed. The experiments on several large trajectory datasets demonstrate the effectiveness of the proposed method.  The user study further shows the usability of our methods in the exploration of large trajectory data.%
+\abstract{
+% Line-based visualization has been widely used to present trajectory data. However, when the data size grows very large, it will take a considerable amount of time to render the graphics. Sampling techniques can mitigate the problem by directly shrinking the dataset, thus to reduce the rendering work of graphic devices. However, the traditional sampling techniques may lead to the loss of visual information and cannot directly be applied in line-based trajectory visualization. This work presents a novel approach, visual quality guaranteed sampling(VQGTS), specifically for the data reduction of large trajectory data visualization. We first propose a loss function to measure the visual quality loss between the visualization of the sub-dataset and the whole dataset. Then we minimize the loss function by transforming it as an optimization problem and propose efficient solutions. Several parameters and color encoding which can empower the effectiveness are discussed. The experiments on several large trajectory datasets demonstrate the effectiveness of the proposed method.  The user study further shows the usability of our methods in the exploration of large trajectory data.%
+\ZW{
+In this work, we present a novel sampling approach for line-based visualization of large trajectory data, targeting at maximizing the visual fidelity of sampled trajectory visualization.
+We introduce a new measurement of fidelity loss using pixel-oriented proximity between two visualization images.
+From the metric we formulate the sampling as an NP-hard optimization problem, and develop an efficient algorithm $-$ VFMS??, to approximate the optimal solution.
+VFMS encapsulates various control parameters including sampling rate and level of details (LODs), which complement with color coding to empower the effectiveness of trajectory visualization.
+We conduct a formal study to compare VFMS with state-of-the-art sampling methods on several large trajectory datasets.
+The experiments show that our approach improves visual fidelity by xxx\% (numbers?) meanwhile keeps computational efficiency.
+Qualitative user studies further demonstrate the feasibility of our approach in XXX (concrete applications?).
+}
 }
 
 %% Keywords that describe your work. Will show as 'Index Terms' in journal
@@ -125,6 +136,8 @@
 %---------------------------------------------------
 
 \newcommand{\QM}[1]{{\color{blue}{#1}}}
+
+\newcommand{\ZW}[1]{{\color{blue}{#1}}}
 
 \newcommand{\UC}[1]{{\color{red}{#1}}}
 
