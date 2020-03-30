@@ -4,17 +4,17 @@
 \BOOKMARK [2][]{subsection.11}{Interactive visualization for large dataset}{section.9}% 4
 \BOOKMARK [2][]{subsection.12}{Data sampling techniques}{section.9}% 5
 \BOOKMARK [1][]{section.13}{Problem formulation}{}% 6
-\BOOKMARK [2][]{subsection.14}{Problem description}{section.13}% 7
-\BOOKMARK [2][]{subsection.16}{Hardness analysis}{section.13}% 8
-\BOOKMARK [1][]{section.18}{Visual Quality Guaranteed Sampling Approach}{}% 9
-\BOOKMARK [2][]{subsection.19}{Uniform Random Sampling Algorithm}{section.18}% 10
-\BOOKMARK [2][]{subsection.21}{Visual Quality Guaranteed Sampling Algorithm}{section.18}% 11
-\BOOKMARK [2][]{subsection.25}{Optimization Techniques}{section.18}% 12
-\BOOKMARK [1][]{section.31}{Advance Approach: VQGTS+}{}% 13
-\BOOKMARK [1][]{section.34}{Visualization and Implementation}{}% 14
-\BOOKMARK [1][]{section.35}{Evaluation}{}% 15
-\BOOKMARK [2][]{subsection.36}{Experimental results}{section.35}% 16
-\BOOKMARK [3][-]{subsubsection.37}{VTGS and uniform random sampling}{subsection.36}% 17
-\BOOKMARK [3][-]{subsubsection.40}{Representativeness parameters analysis}{subsection.36}% 18
-\BOOKMARK [2][]{subsection.43}{Expert overview}{section.35}% 19
-\BOOKMARK [1][]{section.44}{Discussion and future work}{}% 20
+\BOOKMARK [2][]{subsection.15}{Problem description}{section.13}% 7
+\BOOKMARK [2][]{subsection.17}{Hardness analysis}{section.13}% 8
+\BOOKMARK [1][]{section.19}{Visual Quality Guaranteed Sampling Approach}{}% 9
+\BOOKMARK [2][]{subsection.20}{Uniform Random Sampling Algorithm}{section.19}% 10
+\BOOKMARK [2][]{subsection.22}{Visual Quality Guaranteed Sampling Algorithm}{section.19}% 11
+\BOOKMARK [2][]{subsection.26}{Optimization Techniques}{section.19}% 12
+\BOOKMARK [1][]{section.32}{Advance Approach: VQGTS+}{}% 13
+\BOOKMARK [1][]{section.35}{Visualization and Implementation}{}% 14
+\BOOKMARK [1][]{section.36}{Evaluation}{}% 15
+\BOOKMARK [2][]{subsection.37}{Experimental results}{section.36}% 16
+\BOOKMARK [3][-]{subsubsection.38}{VTGS and uniform random sampling}{subsection.37}% 17
+\BOOKMARK [3][-]{subsubsection.41}{Representativeness parameters analysis}{subsection.37}% 18
+\BOOKMARK [2][]{subsection.44}{Expert overview}{section.36}% 19
+\BOOKMARK [1][]{section.45}{Discussion and future work}{}% 20

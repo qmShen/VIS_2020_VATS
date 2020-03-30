@@ -10,21 +10,48 @@ To handle the big dataset, many visualization products such as Spotfire~\footnot
 The current visualization tools always don't scale well for the presentation of very large trajectory dataset due to the two challenges, visual clutter and limited rendering speed, which hinders the abilities of human-users for interactively exploring the dataset and identifying the movement patterns. 
 In recent years, most of the visualization research works mainly try to address the visual clutter issue by proposing new techniques such as the spatial aggregation~\cite{zeng2013visualizing, von2015mobilitygraphs}, edge bundling~\cite{zeng2019route, thony2015vector} and density map~\cite{lampe2011interactive, scheepens2011interactive}. Instead, in this paper, we focus on the challenge of inefficient rendering in the large trajectory dataset by involving data sampling techniques. 
 
-It is time consuming to generate very simple visualization when the data size become very large. Using Porto taxi data ~\footnote{\url{http://www.geolink.pt/ecmlpkdd2015-challenge/dataset.html}} as an example, figure~\ref{fig:rendering_time} demonstrates the rendering time at each dataset size. It shows that normal method takes more than 14 minutes to generate the graphics for 1 million trajectories, which is far beyond the human-acceptable response time for the interactive exploration~\cite{shneiderman1984response}.
+It is time consuming to generate very simple visualization when the data size become very large. Using Porto taxi data ~\footnote{\url{http://www.geolink.pt/ecmlpkdd2015-challenge/dataset.html}} as an example, Table~\ref{table:rendering_time} demonstrates the rendering time at each dataset size. It shows that normal method takes more than 14 minutes to generate the graphics for 1 million trajectories, which is far beyond the human-acceptable response time for the interactive exploration~\cite{shneiderman1984response}.
 One work closely related to ours is ScalaR~\cite{battle2013dynamic}, which adds a reduction layer between visualization layer and data management layer. The reduction layer uses an uniform random sampling method to sample data once the query results are large enough, thus to reduce the amount of data to be visualized.
 Further more, Park et al. propose VAS~\cite{park2016visualization} which implements new sampling techniques to guarantee the visual quality. However, these sampling techniques are designed for the simple dataset, and have been approved effective in scatter plot or map plot. However, the trajectory sampling is more challenge due to the complexity of data form(e.g. varying lengths, lack of compact representation, difficulty in measuring the similarity) that makes traditional density-biased sampling techniques inappropriate. 
 A naive solution to employ sampling idea for large-scale trajectory visualization problem is randomly selecting several trajectories from the data set then visualize it by graphics device.
 However, the visualization result may be not acceptable by the user because of the visual information loss in the sparse distributed regions.
 
 
-\begin{figure}[t]
+\begin{table}[h!]
 	\centering
-	\includegraphics[width=0.4\textwidth]{pictures/introduction/timesize.png}
-	\vspace{-5mm}
-	\caption{The latency time for generating line-based visualization at each datasize.}
-	\vspace{-5mm}
-	\label{fig:rendering_time}
-\end{figure}
+	\caption{The time used to generate the visualization with different trajectory amount. }
+	\begin{tabular}{m{2.5cm}|m{2.5cm}} 
+		\hline
+		   Data size & Time (ms) \\ 
+		\hline
+		100& 2\\
+		\hline
+		1,000& 16\\
+		\hline
+		10,000& 143\\
+		\hline
+		100,000& 1,416\\
+		\hline
+		1,000,000& 13,950\\
+		\hline
+	\end{tabular}
+	\label{table:rendering_time}
+\end{table}
+
+
+%
+%\begin{figure}[t]
+%	\centering
+%	\includegraphics[width=0.4\textwidth]{pictures/introduction/timesize.png}
+%	\vspace{-5mm}
+%	\caption{The latency time for generating line-based visualization at each datasize.}
+%	\vspace{-5mm}
+%	\label{fig:rendering_time}
+%\end{figure}
+
+
+
+
 
 The major challenges to design visual quality guaranteed sampling method are:
 (I) how to define visual quality theoretically? (II) how to guarantee the quality of the sampling-based visualization result?
