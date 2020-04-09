@@ -64,74 +64,67 @@
 %\title{Visualization aware trajectory sampling for urban traffic data}
 %\title{Visualization-aware Sampling for Big Trajectory Data}
 % \title{Visual Quality Guaranteed Sampling for \\ Large Trajectory Data Visualization}
+\title{Visual Fidelity Guaranteed Sampling for \\ Large Trajectory Data Visualization}
 
-\title{Visual Fidelity Maximized Sampling for \\Large Trajectory Data Visualization}
 
-
-%% indicate IEEE Member or Student Member in form indicated below
-\author{Roy G. Biv, Ed Grimley, \textit{Member, IEEE}, and Martha Stewart}
-\authorfooter{
-%% insert punctuation at end of each item
-\item
- Roy G. Biv is with Starbucks Research. E-mail: roy.g.biv@aol.com.
-\item
- Ed Grimley is with Grimley Widgets, Inc.. E-mail: ed.grimley@aol.com.
-\item
- Martha Stewart is with Martha Stewart Enterprises at Microsoft
- Research. E-mail: martha.stewart@marthastewart.com.
-}
-
-%other entries to be set up for journal
-\shortauthortitle{Biv \MakeLowercase{\textit{et al.}}: Global Illumination for Fun and Profit}
-%\shortauthortitle{Firstauthor \MakeLowercase{\textit{et al.}}: Paper Title}
+%%% indicate IEEE Member or Student Member in form indicated below
+%\author{Roy G. Biv, Ed Grimley, \textit{Member, IEEE}, and Martha Stewart}
+%\authorfooter{
+%%% insert punctuation at end of each item
+%\item
+% Roy G. Biv is with Starbucks Research. E-mail: roy.g.biv@aol.com.
+%\item
+% Ed Grimley is with Grimley Widgets, Inc.. E-mail: ed.grimley@aol.com.
+%\item
+% Martha Stewart is with Martha Stewart Enterprises at Microsoft
+% Research. E-mail: martha.stewart@marthastewart.com.
+%}
+%
+%%other entries to be set up for journal
+%\shortauthortitle{Biv \MakeLowercase{\textit{et al.}}: Global Illumination for Fun and Profit}
+%%\shortauthortitle{Firstauthor \MakeLowercase{\textit{et al.}}: Paper Title}
 
 %% Abstract section.
 \abstract{
-% Line-based visualization has been widely used to present trajectory data. However, when the data size grows very large, it will take a considerable amount of time to render the graphics. Sampling techniques can mitigate the problem by directly shrinking the dataset, thus to reduce the rendering work of graphic devices. However, the traditional sampling techniques may lead to the loss of visual information and cannot directly be applied in line-based trajectory visualization. This work presents a novel approach, visual quality guaranteed sampling(VQGTS), specifically for the data reduction of large trajectory data visualization. We first propose a loss function to measure the visual quality loss between the visualization of the sub-dataset and the whole dataset. Then we minimize the loss function by transforming it as an optimization problem and propose efficient solutions. Several parameters and color encoding which can empower the effectiveness are discussed. The experiments on several large trajectory datasets demonstrate the effectiveness of the proposed method.  The user study further shows the usability of our methods in the exploration of large trajectory data.%
-\ZW{
-In this work, we present a novel sampling approach for line-based visualization of large trajectory data, targeting at maximizing the visual fidelity of sampled trajectory visualization.
-We introduce a new measurement of fidelity loss using pixel-oriented proximity between two visualization images.
-From the metric we formulate the sampling as an NP-hard optimization problem, and develop an efficient algorithm $-$ VFMS??, to approximate the optimal solution.
-VFMS encapsulates various control parameters including sampling rate and level of details (LODs), which complement with color coding to empower the effectiveness of trajectory visualization.
-We conduct a formal study to compare VFMS with state-of-the-art sampling methods on several large trajectory datasets.
-The experiments show that our approach improves visual fidelity by xxx\% (numbers?) meanwhile keeps computational efficiency.
-Qualitative user studies further demonstrate the feasibility of our approach in XXX (concrete applications?).
-}
-}
-
-%% Keywords that describe your work. Will show as 'Index Terms' in journal
-\keywords{Trajectory visualization, data sampling, visual quality}
-
-%% ACM Computing Classification System (CCS).
-%% See <http://www.acm.org/class/1998/> for details.
-%% The ``\CCScat'' command takes four arguments.
-
-\CCScatlist{ % not used in journal version
- \CCScat{K.6.1}{Management of Computing and Information Systems}%
-{Project and People Management}{Life Cycle};
- \CCScat{K.7.m}{The Computing Profession}{Miscellaneous}{Ethics}
+%\QM{Line-based visualization has been widely used to present trajectory data. However, when the data size grows very large, it will take a considerable amount of time to render the graphics. Sampling techniques can mitigate the problem by directly shrinking the dataset, thus to reduce the rendering work of graphic devices. However, the traditional sampling techniques may lead to the loss of visual information and cannot directly be applied in line-based trajectory visualization. This work presents a novel approach, visual quality guaranteed sampling(VQGTS), specifically for the data reduction of large trajectory data visualization. We first propose a loss function to measure the visual quality loss between the visualization of the sub-dataset and the whole dataset. Then we minimize the loss function by transforming it as an optimization problem and propose efficient solutions. Several parameters and color encoding which can empower the effectiveness are discussed. The experiments on several large trajectory datasets demonstrate the effectiveness of the proposed method.  The user study further shows the usability of our methods in the exploration of large trajectory data.}
+%\ZW{
+%In this work, we present a novel sampling approach for line-based visualization of large trajectory data, targeting at maximizing the visual fidelity of sampled trajectory visualization.
+%We introduce a new measurement of fidelity loss using pixel-oriented proximity between two visualization images.
+%From the metric we formulate the sampling as an NP-hard optimization problem, and develop an efficient algorithm $-$ VFMS??, to approximate the optimal solution.
+%VFMS encapsulates various control parameters including sampling rate and level of details (LODs), which complement with color coding to empower the effectiveness of trajectory visualization.
+%We conduct a formal study to compare VFMS with state-of-the-art sampling methods on several large trajectory datasets.
+%The experiments show that our approach improves visual fidelity by xxx\% (numbers?) meanwhile keeps computational efficiency.
+%Qualitative user studies further demonstrate the feasibility of our approach in XXX (concrete applications?).}
+Visualizing large-scale line-based trajectories is the core subroutine in many smart city applications, e.g., traffic management, route recommendation.
+However, it is challenge as (i) the large trajectory data size and (ii) the limited rendering ability of graphics device.
+In this work, we propose a visual fidelity guaranteed sampling approach for the large-scale line-based trajectory visualization problem.
+Specifically, we first define a novel fidelity loss function to capture the visual difference of two visualization results.
+We then prove that it is NP-complete to select a sized-$k$ subset trajectories with minimal visual fidelity loss.
+Next, we devise an approximate algorithm $\vats$ with a suite of optimization techniques, which returns visual fidelity quality guaranteed visualization result efficiently.
+Moreover, we improve the visual effectiveness of $\vats$ by taking level of details and visual clutter issues into consideration.
+We conduct extensive experimental studies to demonstrate the effectiveness of our proposal over state-of-the-art sampling methods on real-world trajectory datasets.
+In addition, qualitative user studies further demonstrate the superiority of our approach in various applications, e.g., traffic flow detection, city commercial region center identification.
 }
 
-%% Uncomment below to include a teaser figure.
+
+\keywords{Trajectory visualization, quality guaranteed sampling, visual fidelity}
+
+
 \teaser{
   \centering
   \includegraphics[width=\linewidth]{Teaser.pdf}
-  \caption{Experiment results: A and G:the ground truth at level 11 and 15; B and H: uniform random sampling at level 11 and 15; C, D, E, F and I: VAGTS with different parameters}
+  \caption{Visualization results. (I) at zoom level 11, C is the visualization result of the whole Proto taxi trajectory dataset.
+   A and B are visualization results of uniform random sampling approach with sampling rate $0.001$ and $0.01$, respectively.
+   D, E, F are the visualization results of our proposal $\avats$ with different parameters.
+   (II) G, H, and I are the visualization results of whole dataset, uniform sampling, and our proposal at zoom level 15, respectively.}
 	\label{fig:teaser}
 }
 
-%% Uncomment below to disable the manuscript note
-%\renewcommand{\manuscriptnotetxt}{}
 
-%% Copyright space is enabled by default as required by guidelines.
-%% It is disabled by the 'review' option or via the following command:
-% \nocopyrightspace
 
 \vgtcinsertpkg
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%% START OF THE PAPER %%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \definecolor{orange}{RGB}{242, 101, 34}
 \definecolor{purple}{RGB}{197,27,125}
 %---------------------------------------------------
@@ -145,6 +138,7 @@ Qualitative user studies further demonstrate the feasibility of our approach in 
 \newcommand{\NH}[1]{{\color{purple}{#1}}}
 
 \newcommand{\TB}[1]{{\color{purple}{#1}}}
+
 \begin{document}
 
 
