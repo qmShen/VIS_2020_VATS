@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.9)  5 APR 2020 23:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.9)  8 APR 2020 19:21
 entering extended mode
 **./VATS.tex
 (VATS.tex
@@ -720,7 +720,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 \abstractwidth=\skip63
-<pictures/Teaser.pdf, id=95, 3782.82253pt x 2597.59448pt>
+<pictures/Teaser.pdf, id=91, 3782.82253pt x 2597.59448pt>
 File: pictures/Teaser.pdf Graphic file (type pdf)
 <use pictures/Teaser.pdf>
 Package pdftex.def Info: pictures/Teaser.pdf  used on input line 154.
@@ -771,7 +771,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 154.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 154.
-<diamondrule.pdf, id=96, 213.79875pt x 12.045pt>
+<diamondrule.pdf, id=92, 213.79875pt x 12.045pt>
 File: diamondrule.pdf Graphic file (type pdf)
 <use diamondrule.pdf>
 Package pdftex.def Info: diamondrule.pdf  used on input line 154.
@@ -807,7 +807,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--13
 ge / dataset .
  []
 
-<pictures/introduction/effectiveness.pdf, id=193, 2490.21332pt x 1717.95831pt>
+<pictures/introduction/effectiveness.pdf, id=189, 2490.21332pt x 1717.95831pt>
 File: pictures/introduction/effectiveness.pdf Graphic file (type pdf)
 <use pictures/introduction/effectiveness.pdf>
 Package pdftex.def Info: pictures/introduction/effectiveness.pdf  used on input
@@ -820,7 +820,7 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ))
 (sections/RelatedWork.tex [2 <./pictures/introduction/effectiveness.pdf>])
 (sections/ProblemFormulation.tex
-<pictures/framework/DBVAframework.pdf, id=273, 295.1025pt x 291.489pt>
+<pictures/framework/DBVAframework.pdf, id=269, 295.1025pt x 291.489pt>
 File: pictures/framework/DBVAframework.pdf Graphic file (type pdf)
 <use pictures/framework/DBVAframework.pdf>
 Package pdftex.def Info: pictures/framework/DBVAframework.pdf  used on input li
@@ -839,19 +839,19 @@ Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 12.
 
 [4]
-<pictures/problemsolveing/delta_motivation.pdf, id=343, 3832.37778pt x 962.9405
+<pictures/problemsolveing/delta_motivation.pdf, id=339, 3832.37778pt x 962.9405
 5pt>
 File: pictures/problemsolveing/delta_motivation.pdf Graphic file (type pdf)
 <use pictures/problemsolveing/delta_motivation.pdf>
 Package pdftex.def Info: pictures/problemsolveing/delta_motivation.pdf  used on
  input line 141.
 (pdftex.def)             Requested size: 489.17596pt x 122.90921pt.
-<pictures/1st.pdf, id=344, 211.992pt x 169.8345pt>
+<pictures/1st.pdf, id=340, 211.992pt x 169.8345pt>
 File: pictures/1st.pdf Graphic file (type pdf)
 <use pictures/1st.pdf>
 Package pdftex.def Info: pictures/1st.pdf  used on input line 151.
 (pdftex.def)             Requested size: 115.60841pt x 92.61885pt.
-<pictures/2nd.pdf, id=345, 211.992pt x 169.8345pt>
+<pictures/2nd.pdf, id=341, 211.992pt x 169.8345pt>
 File: pictures/2nd.pdf Graphic file (type pdf)
 <use pictures/2nd.pdf>
 Package pdftex.def Info: pictures/2nd.pdf  used on input line 153.
@@ -873,13 +873,13 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 227.
 
-<pictures/problemsolveing/one_to_many.pdf, id=369, 1419.24222pt x 495.25426pt>
+<pictures/problemsolveing/one_to_many.pdf, id=365, 1419.24222pt x 495.25426pt>
 File: pictures/problemsolveing/one_to_many.pdf Graphic file (type pdf)
 <use pictures/problemsolveing/one_to_many.pdf>
 Package pdftex.def Info: pictures/problemsolveing/one_to_many.pdf  used on inpu
 t line 298.
 (pdftex.def)             Requested size: 205.96634pt x 71.8667pt.
-) (sections/Implementation.tex) (sections/Evaluation.tex
+) (sections/Evaluation.tex
 Underfull \vbox (badness 2343) has occurred while \output is active []
 
 
@@ -902,25 +902,25 @@ pdfTeX warning: pdflatex.exe (file ./pictures/2nd.pdf): PDF inclusion: multiple
 pdfTeX warning: pdflatex.exe (file ./pictures/problemsolveing/one_to_many.pdf):
  PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<pictures/experiment_study/case_porto.pdf, id=503, 5294.28918pt x 4195.78528pt>
+<pictures/experiment_study/case_porto.pdf, id=499, 5294.28918pt x 4195.78528pt>
 
 File: pictures/experiment_study/case_porto.pdf Graphic file (type pdf)
 <use pictures/experiment_study/case_porto.pdf>
 Package pdftex.def Info: pictures/experiment_study/case_porto.pdf  used on inpu
-t line 20.
+t line 23.
 (pdftex.def)             Requested size: 504.62305pt x 399.8842pt.
-<pictures/experiment_study/quanlity.png, id=504, 729.72626pt x 394.47375pt>
+<pictures/experiment_study/quanlity.png, id=500, 729.72626pt x 394.47375pt>
 File: pictures/experiment_study/quanlity.png Graphic file (type png)
 <use pictures/experiment_study/quanlity.png>
 Package pdftex.def Info: pictures/experiment_study/quanlity.png  used on input 
-line 29.
+line 32.
 (pdftex.def)             Requested size: 231.7141pt x 125.25906pt.
-<pictures/experiment_study/case_shenzhen.pdf, id=516, 5033.69597pt x 2864.22072
+<pictures/experiment_study/case_shenzhen.pdf, id=512, 5033.69597pt x 2864.22072
 pt>
 File: pictures/experiment_study/case_shenzhen.pdf Graphic file (type pdf)
 <use pictures/experiment_study/case_shenzhen.pdf>
 Package pdftex.def Info: pictures/experiment_study/case_shenzhen.pdf  used on i
-nput line 47.
+nput line 50.
 (pdftex.def)             Requested size: 504.62305pt x 287.09442pt.
 ) (sections/Discussion.tex) (sections/ConclusionFutureWork.tex) (VATS.bbl
 Overfull \vbox (2.32803pt too high) has occurred while \output is active []
@@ -953,17 +953,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 173.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 173.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 173.
 Package rerunfilecheck Info: File `VATS.out' has not changed.
-(rerunfilecheck)             Checksum: 39B44ACA96A5C078D9EA4794AFCD5D9F;1540.
+(rerunfilecheck)             Checksum: 93CCEE9031F850CF93646DA98FB795EE;1472.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 173.
  ) 
 Here is how much of TeX's memory you used:
- 11212 strings out of 492452
- 165733 string characters out of 3129805
- 303773 words of memory out of 3000000
- 14910 multiletter control sequences out of 15000+200000
- 68522 words of font info for 325 fonts, out of 3000000 for 9000
+ 11203 strings out of 492452
+ 165543 string characters out of 3129805
+ 302844 words of memory out of 3000000
+ 14908 multiletter control sequences out of 15000+200000
+ 68403 words of font info for 323 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,12n,42p,2985b,456s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,12n,42p,2723b,456s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
@@ -977,9 +977,9 @@ urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pf
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on VATS.pdf (10 pages, 14324364 bytes).
+Output written on VATS.pdf (10 pages, 14324379 bytes).
 PDF statistics:
- 746 PDF objects out of 1000 (max. 8388607)
- 95 named destinations out of 1000 (max. 500000)
- 47856 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 742 PDF objects out of 1000 (max. 8388607)
+ 94 named destinations out of 1000 (max. 500000)
+ 47848 words of extra memory for PDF output out of 51595 (max. 10000000)
 
