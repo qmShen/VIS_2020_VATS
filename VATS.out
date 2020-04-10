@@ -12,10 +12,11 @@
 \BOOKMARK [2][]{subsection.26}{Optimization Techniques}{section.19}% 12
 \BOOKMARK [1][]{section.32}{Advance Approach: VQGTS+}{}% 13
 \BOOKMARK [1][]{section.35}{Evaluation}{}% 14
-\BOOKMARK [2][]{subsection.36}{Experimental results}{section.35}% 15
+\BOOKMARK [2][]{subsection.36}{Case Study}{section.35}% 15
 \BOOKMARK [3][-]{subsubsection.37}{Case of Porto Distinct}{subsection.36}% 16
 \BOOKMARK [3][-]{subsubsection.41}{Shenzhen Trajectories}{subsection.36}% 17
-\BOOKMARK [1][]{section.43}{Discussion}{}% 18
-\BOOKMARK [2][]{subsection.44}{Representative parameter}{section.43}% 19
-\BOOKMARK [2][]{subsection.45}{Approach usability}{section.43}% 20
-\BOOKMARK [1][]{section.46}{Conclusion and future work}{}% 21
+\BOOKMARK [2][]{subsection.43}{User Study}{section.35}% 18
+\BOOKMARK [3][-]{subsubsection.45}{Experiment setting}{subsection.43}% 19
+\BOOKMARK [3][-]{subsubsection.46}{Results}{subsection.43}% 20
+\BOOKMARK [1][]{section.47}{Discussion}{}% 21
+\BOOKMARK [1][]{section.48}{Conclusion and future work}{}% 22
