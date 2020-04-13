@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.9)  11 APR 2020 18:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.9)  13 APR 2020 20:25
 entering extended mode
 **./VATS.tex
 (VATS.tex
@@ -711,7 +711,7 @@ LaTeX Info: Redefining \nameref on input line 144.
 \openout3 = `VATS.out'.
 
 LaTeX Font Info:    Trying to load font information for OT1+phv on input line 1
-50.
+49.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\ot1phv.fd"
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
@@ -720,13 +720,13 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 \abstractwidth=\skip63
-<pictures/Teaser.pdf, id=87, 3782.82253pt x 1730.3546pt>
+<pictures/Teaser.pdf, id=87, 3782.82253pt x 2594.83417pt>
 File: pictures/Teaser.pdf Graphic file (type pdf)
 <use pictures/Teaser.pdf>
-Package pdftex.def Info: pictures/Teaser.pdf  used on input line 150.
-(pdftex.def)             Requested size: 467.22528pt x 213.7063pt.
+Package pdftex.def Info: pictures/Teaser.pdf  used on input line 149.
+(pdftex.def)             Requested size: 467.22528pt x 320.47327pt.
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 150.
+ 149.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\ot1ztmcm.fd"
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
@@ -735,29 +735,29 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 150.
+ 149.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\omlztmcm.fd"
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 150.
+ 149.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\omsztmcm.fd"
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 150.
+ 149.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\omxztmcm.fd"
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 150.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 149.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 150.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 149.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 150.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 149.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/microtype\mt-msa.cfg"
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
@@ -770,20 +770,20 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 150.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 149.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 150.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 149.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 150.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 149.
 <diamondrule.pdf, id=88, 213.79875pt x 12.045pt>
 File: diamondrule.pdf Graphic file (type pdf)
 <use diamondrule.pdf>
-Package pdftex.def Info: diamondrule.pdf  used on input line 150.
+Package pdftex.def Info: diamondrule.pdf  used on input line 149.
 (pdftex.def)             Requested size: 213.79822pt x 12.04495pt.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 150.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 149.
 LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <9> not available
-(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 150.
+(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 149.
 
 (sections/Introduction.tex
 LaTeX Font Info:    Trying to load font information for OT1+txtt on input line 
@@ -797,18 +797,6 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--13
-[][][][]$\OT1/txtt/m/n/8 http : / / www . geolink . pt / ecmlpkdd2015-[]challen
-ge / dataset .
- []
-
-
-Underfull \vbox (badness 1490) has occurred while \output is active []
-
-
 Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 
 
@@ -816,7 +804,12 @@ Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 
 
  <./pictures/Teaser.pdf> <./diamondrule.pdf>]
-<pictures/introduction/effectiveness.pdf, id=180, 2490.21332pt x 1717.95831pt>
+Underfull \hbox (badness 10000) in paragraph at lines 13--13
+[][][][]$\OT1/txtt/m/n/8 http : / / www . geolink . pt / ecmlpkdd2015-[]challen
+ge / dataset .
+ []
+
+<pictures/introduction/effectiveness.pdf, id=186, 2490.21332pt x 1717.95831pt>
 File: pictures/introduction/effectiveness.pdf Graphic file (type pdf)
 <use pictures/introduction/effectiveness.pdf>
 Package pdftex.def Info: pictures/introduction/effectiveness.pdf  used on input
@@ -824,13 +817,12 @@ Package pdftex.def Info: pictures/introduction/effectiveness.pdf  used on input
 (pdftex.def)             Requested size: 226.56769pt x 156.28726pt.
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 7
 8.
-
 ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\ts1ptm.fd"
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ))
 (sections/RelatedWork.tex [2 <./pictures/introduction/effectiveness.pdf>])
 (sections/ProblemFormulation.tex
-<pictures/framework/DBVAframework.pdf, id=257, 295.1025pt x 291.489pt>
+<pictures/framework/DBVAframework.pdf, id=266, 295.1025pt x 291.489pt>
 File: pictures/framework/DBVAframework.pdf Graphic file (type pdf)
 <use pictures/framework/DBVAframework.pdf>
 Package pdftex.def Info: pictures/framework/DBVAframework.pdf  used on input li
@@ -845,19 +837,19 @@ Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 12.
 
 [4]
-<pictures/problemsolveing/delta_motivation.pdf, id=323, 3832.37778pt x 962.9405
+<pictures/problemsolveing/delta_motivation.pdf, id=337, 3832.37778pt x 962.9405
 5pt>
 File: pictures/problemsolveing/delta_motivation.pdf Graphic file (type pdf)
 <use pictures/problemsolveing/delta_motivation.pdf>
 Package pdftex.def Info: pictures/problemsolveing/delta_motivation.pdf  used on
  input line 141.
 (pdftex.def)             Requested size: 489.17596pt x 122.90921pt.
-<pictures/1st.pdf, id=324, 211.992pt x 169.8345pt>
+<pictures/1st.pdf, id=338, 211.992pt x 169.8345pt>
 File: pictures/1st.pdf Graphic file (type pdf)
 <use pictures/1st.pdf>
 Package pdftex.def Info: pictures/1st.pdf  used on input line 151.
 (pdftex.def)             Requested size: 115.60841pt x 92.61885pt.
-<pictures/2nd.pdf, id=325, 211.992pt x 169.8345pt>
+<pictures/2nd.pdf, id=339, 211.992pt x 169.8345pt>
 File: pictures/2nd.pdf Graphic file (type pdf)
 <use pictures/2nd.pdf>
 Package pdftex.def Info: pictures/2nd.pdf  used on input line 153.
@@ -879,27 +871,24 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 227.
 
-<pictures/problemsolveing/one_to_many.pdf, id=349, 1419.24222pt x 495.25426pt>
+<pictures/problemsolveing/one_to_many.pdf, id=363, 1419.24222pt x 495.25426pt>
 File: pictures/problemsolveing/one_to_many.pdf Graphic file (type pdf)
 <use pictures/problemsolveing/one_to_many.pdf>
 Package pdftex.def Info: pictures/problemsolveing/one_to_many.pdf  used on inpu
 t line 298.
 (pdftex.def)             Requested size: 205.96634pt x 71.8667pt.
-) (sections/Evaluation.tex
+
+Overfull \vbox (2.32803pt too high) has occurred while \output is active []
+
+
+[5]) (sections/Evaluation.tex
 Underfull \hbox (badness 10000) in paragraph at lines 6--6
 [][][][]$\OT1/txtt/m/n/8 http : / / www . geolink . pt / ecmlpkdd2015-[]challen
 ge / dataset .
  []
 
-
-Underfull \vbox (badness 1412) has occurred while \output is active []
-
-
-Overfull \vbox (2.32803pt too high) has occurred while \output is active []
-
-
-[5] [6 <./pictures/problemsolveing/delta_motivation.pdf> <./pictures/1st.pdf> <
-./pictures/2nd.pdf
+[6 <./pictures/problemsolveing/delta_motivation.pdf> <./pictures/1st.pdf> <./pi
+ctures/2nd.pdf
 
 pdfTeX warning: pdflatex.exe (file ./pictures/2nd.pdf): PDF inclusion: multiple
  pdfs with page group included in a single page
@@ -908,44 +897,41 @@ pdfTeX warning: pdflatex.exe (file ./pictures/2nd.pdf): PDF inclusion: multiple
 pdfTeX warning: pdflatex.exe (file ./pictures/problemsolveing/one_to_many.pdf):
  PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<pictures/experiment_study/case_porto.pdf, id=478, 5294.28918pt x 4195.78528pt>
+<pictures/experiment_study/case_porto.pdf, id=494, 5294.28918pt x 4195.78528pt>
 
 File: pictures/experiment_study/case_porto.pdf Graphic file (type pdf)
 <use pictures/experiment_study/case_porto.pdf>
 Package pdftex.def Info: pictures/experiment_study/case_porto.pdf  used on inpu
 t line 42.
 (pdftex.def)             Requested size: 504.62305pt x 399.8842pt.
-<pictures/experiment_study/quanlity.png, id=479, 729.72626pt x 394.47375pt>
+<pictures/experiment_study/quanlity.png, id=495, 729.72626pt x 394.47375pt>
 File: pictures/experiment_study/quanlity.png Graphic file (type png)
 <use pictures/experiment_study/quanlity.png>
 Package pdftex.def Info: pictures/experiment_study/quanlity.png  used on input 
 line 51.
 (pdftex.def)             Requested size: 231.7141pt x 125.25906pt.
-<pictures/experiment_study/case_shenzhen.pdf, id=492, 5033.69597pt x 2864.22072
+<pictures/experiment_study/case_shenzhen.pdf, id=508, 5033.69597pt x 2864.22072
 pt>
 File: pictures/experiment_study/case_shenzhen.pdf Graphic file (type pdf)
 <use pictures/experiment_study/case_shenzhen.pdf>
 Package pdftex.def Info: pictures/experiment_study/case_shenzhen.pdf  used on i
 nput line 73.
 (pdftex.def)             Requested size: 504.62305pt x 287.09442pt.
-<pictures/user_study/interface.jpg, id=493, 2890.8pt x 1806.75pt>
+<pictures/user_study/interface.jpg, id=509, 2890.8pt x 1806.75pt>
 File: pictures/user_study/interface.jpg Graphic file (type jpg)
 <use pictures/user_study/interface.jpg>
 Package pdftex.def Info: pictures/user_study/interface.jpg  used on input line 
 86.
 (pdftex.def)             Requested size: 226.56769pt x 141.5931pt.
-) (sections/ConclusionFutureWork.tex
+
 Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 
 
-[7]
-Underfull \vbox (badness 3557) has occurred while \output is active []
+[7]) (sections/ConclusionFutureWork.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-) (VATS.bbl
-Underfull \vbox (badness 1924) has occurred while \output is active []
-
- [8 <./pictures/experiment_study/case_porto.pdf> <./pictures/experiment_study/q
-uanlity.png>]
+) [8 <./pictures/experiment_study/case_porto.pdf> <./pictures/experiment_study/
+quanlity.png>] (VATS.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -954,17 +940,21 @@ Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 
 [9 <./pictures/experiment_study/case_shenzhen.pdf> <./pictures/user_study/inter
 face.jpg>])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 169.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 168.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [10
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 169.
- (VATS.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 169.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 169.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 168.
+
+(VATS.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 168.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 168.
 Package rerunfilecheck Info: File `VATS.out' has not changed.
 (rerunfilecheck)             Checksum: C4D7A360E6086694E868004E30B671B4;1408.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 169.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 168.
  ) 
 Here is how much of TeX's memory you used:
  11228 strings out of 492452
@@ -987,9 +977,9 @@ urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pf
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on VATS.pdf (10 pages, 14369385 bytes).
+Output written on VATS.pdf (10 pages, 15062109 bytes).
 PDF statistics:
- 725 PDF objects out of 1000 (max. 8388607)
+ 741 PDF objects out of 1000 (max. 8388607)
  94 named destinations out of 1000 (max. 500000)
  47845 words of extra memory for PDF output out of 51595 (max. 10000000)
 
