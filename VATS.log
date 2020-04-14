@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.9)  14 APR 2020 17:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.9)  14 APR 2020 18:03
 entering extended mode
 **./VATS.tex
 (VATS.tex
@@ -922,14 +922,11 @@ Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 
 
 [7]
-Underfull \vbox (badness 3557) has occurred while \output is active []
+Underfull \vbox (badness 1052) has occurred while \output is active []
 
 )
-(sections/ConclusionFutureWork.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [8 <./pictures/experiment_study/case_porto.pdf> <./pictures/experiment_study/q
-uanlity.png>]) (VATS.bbl
+(sections/ConclusionFutureWork.tex [8 <./pictures/experiment_study/case_porto.p
+df> <./pictures/experiment_study/quanlity.png>]) (VATS.bbl
 Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 
 
@@ -970,7 +967,7 @@ urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pf
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on VATS.pdf (10 pages, 13655737 bytes).
+Output written on VATS.pdf (10 pages, 13655978 bytes).
 PDF statistics:
  743 PDF objects out of 1000 (max. 8388607)
  91 named destinations out of 1000 (max. 500000)
