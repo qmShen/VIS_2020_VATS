@@ -1,42 +1,142 @@
-%!TEX root = ../article.tex
-% \section{Introduction}
-Nowadays, the widely used location-acquisition devices lead to an explosive increase of the movement data which is recorded in the form of trajectories. 
-For example, the taxis trajectory is one of the common studied movement data which is always considered as the representative of human movement trace in a city. Using the taxi dataset in Shenzhen as an example, more than 1 million trajectory data can be collected every day, which are recorded by the sampling locations.
-The analysis over these databases can be applied in many fields such as traffic management~\cite{wang2014visual}, urban planning, route recommendation~\cite{zheng2011learning} and location-based services~\cite{liu2016smartadp, zheng2010collaborative}. 
+\section{Introduction}
+Nowadays, the widely used location-acquisition devices lead to an explosive increase of the movement data (i.e., GPS trajectories) from urban moving objects, e.g., cars, sharing bikes, and pedestrians.
+Trajectory visual analysis have been employed in many smart city applications, e.g.,  traffic management~\cite{wang2014visual}, urban planning, route recommendation~\cite{zheng2011learning} and location-based services~\cite{liu2016smartadp, zheng2010collaborative}.
+The most popular and conventional trajectory visualization method is the line-based visualization~\cite{chen2015survey}, i.e., connecting the GPS points of movement objects by polylines.
+%we should focus on line-based trajectory visualization here.
+However, efficient and effective large-scale line-based trajectory visualization is very challenge.
+The reasons are (i) large data size of trajectories, (ii) limited rendering ability of graphics device and (iii) visual clutter issue.
+We elaborate them as follows:
 
-\TB{Visualizing a large collection of trajectories are used frequently in map service or smart city applications.}
-The most popular and conventional method is the line-based visualization~\cite{chen2015survey}: connecting the passing points of movement objects by polylines. 
-To handle the big dataset, many visualization products such as Spotfire~\footnote{\url{https://www.tibco.com/products/tibco-spotfire}} and Tableau~\footnote{\url{https://www.tableau.com/}} support advanced database management systems as a ``backend'' for the efficient data processing the query. 
-The current visualization tools always don't scale well for the presentation of very large trajectory dataset due to the two challenges, visual clutter and limited rendering speed, which hinders the abilities of human-users for interactively exploring the dataset and identifying the movement patterns. 
-In recent years, most of the visualization research works mainly try to address the visual clutter issue by proposing new techniques such as the spatial aggregation~\cite{zeng2013visualizing, von2015mobilitygraphs}, edge bundling~\cite{zeng2019route, thony2015vector} and density map~\cite{lampe2011interactive, scheepens2011interactive}. Instead, in this paper, we focus on the challenge of inefficient rendering in the large trajectory dataset by involving data sampling techniques. 
+\stitle{Large data size of trajectories} The trajectory data size is extremely huge.
+For example, Shenzhen has 24,237 taxis and generates more than 82.8 millions GPS locations (e.g., taxi trajectories) in each day\footnote{\url{http://jtys.sz.gov.cn/}}.
+In New York City, it has 13,000 taxis, averagely, they carry over 1.0 million passengers and make 500,000 trips per day~\cite{ferreira2013visual}.
 
-It is time consuming to generate very simple visualization when the data size become very large. Using Porto taxi data ~\footnote{\url{http://www.geolink.pt/ecmlpkdd2015-challenge/dataset.html}} as an example, Table~\ref{table:rendering_time} demonstrates the rendering time at each dataset size. \ZW{shall also mention which rendering toolkit is used here.} It shows that normal method takes more than 14 minutes (\ZW{seconds?}) to generate the graphics for 1 million trajectories, which is far beyond the human-acceptable response time for the interactive exploration~\cite{shneiderman1984response}.
-One work closely related to ours is ScalaR~\cite{battle2013dynamic}, which adds a reduction layer between visualization layer and data management layer. The reduction layer uses an uniform random sampling method to sample data once the query results are large enough, thus to reduce the amount of data to be visualized.
-Further more, Park et al. propose VAS~\cite{park2016visualization} which implements new sampling techniques to guarantee the visual quality. However, these sampling techniques are designed for the simple dataset, and have been approved effective in scatter plot or map plot. However, the trajectory sampling is more challenge due to the complexity of data form(e.g. varying lengths, lack of compact representation, difficulty in measuring the similarity) that makes traditional density-biased sampling techniques inappropriate. 
-A naive solution to employ sampling idea for large-scale trajectory visualization problem is randomly selecting several trajectories from the data set then visualize it by graphics device.
-However, the visualization result may be not acceptable by the user because of the visual information loss in the sparse distributed regions.
+\stitle{Limited rendering ability of graphics device}
+Rendering refers to the use of hardware device (e.g., Graphics Processing Unit) in the automatic generation of visualization result.
+However, due to the hardware limitation, the rendering ability of current Graphics Processing Unit is limited.
+We did a benchmark experiment to evaluate the rendering ability of NVIDIA GeForce GTX 1080 with 8GB video memory.
+We vary the number of trajectories from 1,000 to 1 millions, which are randomly selected from the Porto taxi trajectory dataset\footnote{\url{http://www.geolink.pt/ecmlpkdd2015-challenge/dataset.html}}.
+The experimental results are summarized in Table~\ref{tab:gpu}.
+Obviously, it cannot support interactive visual exploration in large-scale trajectory dataset, e.g.,
+it needs 13.95 seconds to render 1 million trajectories with 32.67 millions GPS points (almost 40\% of Shenzhen taxi trajectory GPS points in one day).
+Moreover, the render cost is linear with the input data trajectories.
+Thus, it is impractical to visualize billion-level GPS points via the commodity GPUs.
 
-
-\begin{table}[h!]
+\begin{table}
 	\centering
-	\caption{The time used to generate the visualization with different trajectory amount. \ZW{shall add a column of number of line segments or number of nodes. } }
-	\begin{tabular}{m{2.5cm}|m{2.5cm}} 
-		\hline
-		   Data size & Time (ms) \\ 
-		\hline
-		100& 2\\
-		\hline
-		1,000& 16\\
-		\hline
-		10,000& 143\\
-		\hline
-		100,000& 1,416\\
-		\hline
-		1,000,000& 13,950\\
+    \small
+	\caption{Visualization rendering cost of GTX 1080}
+	\begin{tabular}{|c|c|c|} \hline
+		No. of trajectories & No. of GPS points & Rendering time (s) \\ \hline
+		%100& 2,862 & 0.002\\ \hline
+		1,000& 32,648 & 0.016\\ \hline
+		10,000& 331,583 & 0.143\\ \hline
+		100,000& 3,262,278 & 1.416\\ \hline
+		1,000,000& 32,660,845 & 13.950\\
 		\hline
 	\end{tabular}
-	\label{table:rendering_time}
+	\label{tab:gpu}
 \end{table}
+
+\stitle{Visual clutter issue}
+Visual clutter is a common issue in big data visualization.
+Figure~\ref{fig:teaser} C is the visualization result of the whole Porto taxi trajectory dataset.
+Intuitively, the region shown in the embedded figure of C suffers visual clutter issue seriously, 
+i.e., the road network almost cannot be recognized in it,
+which hinders the abilities of human-users to explore the dataset and identify the underlying data insights.
+
+
+
+To overcome the above challenges, several visualization approaches have been proposed in literature.
+Unfortunately, none of them could address these three challenges simultaneously and perfectly. 
+In particular, the spatial aggregation based approaches~\cite{zeng2013visualizing,von2015mobilitygraphs} preprocess the massive movement data, and visualize the results after preprocessing. 
+These approaches alleviate the large data size and limited rendering ability issues in large-scale spatial data visualization.
+Nevertheless, they ignored the visual clutter issue in raw spatial data as they only visualize the aggregated/preprocessed results.
+In other words, the visualization result may lose many information in raw data.
+In recent years, many the visualization research proposed to address the visual clutter issue,
+e.g., edge bundling~\cite{zeng2019route, thony2015vector} and density map~\cite{lampe2011interactive, scheepens2011interactive}. 
+However, these works neither focus on line-based trajectory visualization nor designed for large-scale trajectory dataset.
+
+Sampling techniques is a de-facto standard for large-scale data analysis in both database and visualization community.
+In general, it samples a subset of data from the raw large-scale dataset, then it could be rendered efficiently by the graphics device.
+For example, ScalaR~\cite{battle2013dynamic} employs a reduction layer between visualization layer and data management layer. 
+The reduction layer embedded an uniform random sampling algorithm to sample data randomly if the query results are large enough. 
+It then reduces the amount of data to be visualized.
+However, the uniform random sampling method does not work well in our large trajectory data visualization problem as it does not have any guarantees about the sampling results.
+Take Figure~\ref{fig:teaser} A and B as an example, 
+they are the visualization results of uniform random sampling method on Porto taxi trajectory dataset with sampling rate 0.001 and 0.01, respectively.
+Visually, both visualized figures cannot capture the overview of the input data, as illustrated in Figure~\ref{fig:teaser} C.
+%Visually, both are quite different from the visualization result of the whole data set, as illustrated in Figure~\ref{fig:teaser} C.
+
+In database community,  Park et al. devised a visualization-aware sampling algorithm (VAS) for large-scale scatter points visualization problem in ~\cite{park2016visualization},
+which offers theoretical quality guarantee on the visualization result.
+However, the VAS techniques cannot be adapted to our problem as  (i) trajectory data is  more complex than scatter points (e.g., varying lengths, lack of compact representation), 
+and  (ii) the formulated visualization quality measure function in~\cite{park2016visualization} is only for scatter points, it cannot be used to measure the quality of trajectory visualization results.
+
+In this work, we propose a visual fidelity guaranteed sampling approach ($\vats{}$) for the line-based trajectory visualization problem,
+which kills three birds (i.e., the above three challenges) by one stone.
+The technical challenges of our proposal $\vats{}$ are 
+(i) how to define visual fidelity guarantee theoretically?
+(ii) how to devise an efficient sampling algorithm which offers visual fidelity guarantee on the visualization result,
+and (iii) how to overcome the visual clutter issue.
+Specifically, we first define a novel the visual fidelity loss function between two visualization results formally.
+With the visual fidelity loss function, we then prove it is NP-complete to select a sized-$k$ subset of trajectories which has the minimal visual fidelity loss.
+Next, we devise an approximate algorithm ($\vats$) which returns a sized-$k$ subset of trajectories and provides the visual fidelity guarantees of it.
+Last but not least, we settle the visual clutter issue explicitly and overcome it by taking the level of details and human interpretation ability into consideration in the improved algorithm (i.e., $\avats$).
+Figure~\ref{fig:teaser} D and E show the visualization result of our proposal $\avats{}$ on Porto taxi trajectory dataset with sampling rate 0.001 and 0.01, respectively.
+Obviously, the visualization fidelity of them (comparing with the visualization result of whole data set in Figure~\ref{fig:teaser} C) is much better than 
+the uniform sampling visualization results with the same sampling rate  (see A and B in Figure~\ref{fig:teaser}).
+Figure~\ref{fig:teaser} F is the returning result of our proposal which colors the trajectories with different popularity.
+It has the same input parameters of Figure~\ref{fig:teaser} E. 
+Intuitively, the visual clutter issue in Figure~\ref{fig:teaser} E is almost removed in Figure~\ref{fig:teaser} F.
+In addition, our proposal scales the multi zoom resolution very well.
+Figure~\ref{fig:teaser} G, H and I depict the visualization result of the whole dataset, uniform random sampling and our $\avats$ at zoom-level 15,
+e.g., we can obtain them by zooming in the visualization result in Figure~\ref{fig:teaser} C, B and F.
+Intuitively, the visualization result of our proposal (Figure~\ref{fig:teaser} F) outperforms the uniform random sampling method significantly (Figure~\ref{fig:teaser} H).
+It even performs better than Figure~\ref{fig:teaser} G, the visualized result of the whole dataset, as it reduces visual clutter in G by encoding the popularity of different roads by different colors.
+
+The contributions of this paper are:
+\setlist{nolistsep}
+\begin{itemize}[noitemsep]
+  \item We formulate the visual fidelity guaranteed sampling problem for large trajectory data visualization, and prove it is NP-complete (see Section~\ref{sec:pro}).
+  \item We devise an approximation algorithm for it with a suite of optimization techniques, e.g., lazy updating, result heap maintaining (see Section~\ref{sec:sol}).
+  \item We propose an advanced approach to further enhance the effectiveness of our approximate algorithm, which address the visual clutter issue by introducing human interpretation ability parameter,
+  and encodes the popularity of each road by different colors (see Section~\ref{sec:aa}). 
+  \item We conduct extensive experiments on real-world trajectory dataset to demonstrate the effectiveness of our proposal, and conduct qualitative user studies to show their superiorities in various applications
+  (see Section~\ref{sec:exp}).
+\end{itemize}
+
+%Our proposal demonstrates their superiority over existing methods 
+%With the same sampling set size($1\%$), the proposed method generates a higher-fidelity visualization and .
+
+%With the loss function, we analyze the hardness of the problem, and devise a visual quality guaranteed sampling algorithm for it.
+%Figure~\ref{fig:compare} depicts an comparison among the ground truth,  uniform random sampling and our proposed method. 
+%With the same sampling set size($1\%$), the proposed method generates a higher-fidelity visualization and support the multi-resolution very well.
+%At last, color encoding are applied to enhance the distribution of trajectories.
+
+%
+
+
+%\TB{Visualizing a large collection of trajectories are used frequently in map service or smart city applications.}
+%The most popular and conventional method is the line-based visualization~\cite{chen2015survey}: connecting the passing points of movement objects by polylines.
+%To handle the big dataset, many visualization products such as Spotfire~\footnote{\url{https://www.tibco.com/products/tibco-spotfire}} 
+%and Tableau~\footnote{\url{https://www.tableau.com/}} support advanced database management systems as a ``backend'' for the efficient data processing the query.
+%The current visualization tools always don't scale well for the presentation of very large trajectory dataset due to the two challenges, 
+%visual clutter and limited rendering speed, which hinders the abilities of human-users for interactively exploring the dataset and identifying the movement patterns.
+%In recent years, most of the visualization research works mainly try to address the visual clutter issue by proposing new techniques such as the 
+%spatial aggregation~\cite{zeng2013visualizing, von2015mobilitygraphs}, edge bundling~\cite{zeng2019route, thony2015vector} and density map~\cite{lampe2011interactive, scheepens2011interactive}. 
+%Instead, in this paper, we focus on the challenge of inefficient rendering in the large trajectory dataset by involving data sampling techniques.
+
+%It is time consuming to generate very simple visualization when the data size become very large. Using Porto taxi data ~\footnote{\url{http://www.geolink.pt/ecmlpkdd2015-challenge/dataset.html}} as an example, Table~\ref{table:rendering_time} demonstrates the rendering time at each dataset size. \ZW{shall also mention which rendering toolkit is used here.} It shows that normal method takes more than 14 minutes (\ZW{seconds?}) to generate the graphics for 1 million trajectories, which is far beyond the human-acceptable response time for the interactive exploration~\cite{shneiderman1984response}.
+%One work closely related to ours is ScalaR~\cite{battle2013dynamic}, which adds a reduction layer between visualization layer and data management layer. The reduction layer uses an uniform random sampling method to sample data once the query results are large enough, thus to reduce the amount of data to be visualized.
+%Further more, Park et al. propose VAS~\cite{park2016visualization} which implements new sampling techniques to guarantee the visual quality. 
+%However, these sampling techniques are designed for the simple dataset, and have been approved effective in scatter plot or map plot. 
+%However, the trajectory sampling is more challenge due to the complexity of data form(e.g. varying lengths, lack of compact representation, difficulty in measuring the similarity) that makes traditional density-biased sampling techniques inappropriate.
+%A naive solution to employ sampling idea for large-scale trajectory visualization problem is randomly selecting several trajectories from the data set then visualize it by graphics device.
+%However, the visualization result may be not acceptable by the user because of the visual information loss in the sparse distributed regions.
+
+
+
 
 
 %
@@ -52,34 +152,33 @@ However, the visualization result may be not acceptable by the user because of t
 
 
 
+%The major challenges to design visual quality guaranteed sampling method are:
+%(I) how to define visual quality theoretically? (II) how to guarantee the quality of the sampling-based visualization result?
+%\TB{In this work, we study how to reduce the rendering time and preserve the visual quality for the large-scale trajectory visualization.}
+%We extend the motivation of visualization-aware sampling to trajectory dataset and propose a novel sampling strategy, \textbf{v}isualization \textbf{a}ware \textbf{t}rajectory \textbf{s}ampling(VATS), that produces high-visual-quality line-based trajectory visualization at different zooming resolutions.
+%%\QM{In this paper, we first proposed the visual fidelity loss function which effectively evaluates the visual loss of the sampling method. Then we minimize the loss function by transforming this problem to an optimization problem. Several solutions for efficiently solving the optimization problem are discussed.}
+%We first format visual quality by defining the loss function between the visualization results of the whole dataset and sampled dataset.
+%With the loss function, we analyze the hardness of the problem, and devise a visual quality guaranteed sampling algorithm for it.
+%Figure~\ref{fig:compare} depicts an comparison among the ground truth,  uniform random sampling and our proposed method. 
+%With the same sampling set size($1\%$), the proposed method generates a higher-fidelity visualization and support the multi-resolution very well.
+%At last, color encoding are applied to enhance the distribution of trajectories.
+%
+%\begin{figure}[t]
+%	\centering
+%	\includegraphics[width=0.44\textwidth]{pictures/introduction/effectiveness.pdf}
+%	\vspace{-3mm}
+%	\caption{Trajectory sampling generated by uniform random sampling(A,C) and VQGTS(B,D) at same sampling rate. In both high-level(A,B) and low level(C,D) view, our approach preserved more detail information about the trajectories especially for the sparse regions.}
+%	\vspace{-5mm}
+%	\label{fig:compare}
+%\end{figure}
+%
 
-The major challenges to design visual quality guaranteed sampling method are:
-(I) how to define visual quality theoretically? (II) how to guarantee the quality of the sampling-based visualization result?
-\TB{In this work, we study how to reduce the rendering time and preserve the visual quality for the large-scale trajectory visualization.}
-We extend the motivation of visualization-aware sampling to trajectory dataset and propose a novel sampling strategy, \textbf{v}isualization \textbf{a}ware \textbf{t}rajectory \textbf{s}ampling(VATS), that produces high-visual-quality line-based trajectory visualization at different zooming resolutions. 
-%\QM{In this paper, we first proposed the visual fidelity loss function which effectively evaluates the visual loss of the sampling method. Then we minimize the loss function by transforming this problem to an optimization problem. Several solutions for efficiently solving the optimization problem are discussed.}
-We first format visual quality by defining the loss function between the visualization results of the whole dataset and sampled dataset.
-With the loss function, we analyze the hardness of the problem, and devise a visual quality guaranteed sampling algorithm for it.
-Figure~\ref{fig:compare} depicts an comparison among the ground truth,  uniform random sampling and our proposed method. With the same sampling set size($1\%$), the proposed method generates a higher-fidelity visualization and support the multi-resolution very well.   
-At last, color encoding are applied to enhance the distribution of trajectories. 
-
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=0.44\textwidth]{pictures/introduction/effectiveness.pdf}
-	\vspace{-3mm}
-	\caption{Trajectory sampling generated by uniform random sampling(A,C) and VQGTS(B,D) at same sampling rate. In both high-level(A,B) and low level(C,D) view, our approach preserved more detail information about the trajectories especially for the sparse regions.}
-	\vspace{-5mm}
-	\label{fig:compare}
-\end{figure}
-
-We summarize our contribution as follows:
-\setlist{nolistsep}
-\begin{itemize}[noitemsep]
-  \item We formulate VATS as an optimization problem.
-  \item We prove VAST problem is NP-hard and offer an efficient approximation algorithms. 
-  \item We conduct several experiments using real-world data to demonstrate the effectiveness of the proposed method in comparison with random uniform sampling.
-\end{itemize}
-
-
-The remaining parts are constructed as follows: section 2 discusses the related work. In section 3, we identify the specific problem and provide an overview of our solution. We define the problem and propose the solution in the section 4 and 5. The implementation and experiment setting are introduced in section 6. 
-In section 7, we conduct case studies and user studies to evaluate our approach. Finally, we conclude this paper and propose the possible future directions in section 8.
+%
+%
+The remainder of this paper is organized as follows.
+Section~\ref{sec:rel} discusses the related work. 
+Section~\ref{sec:pro} formulate our problem and analyze its hardness.
+Section~\ref{sec:sol} provides an approximate solution for it, together with a suite of optimization techniques.
+Section~\ref{sec:aa} proposes an advanced solution for our problem.
+Section~\ref{sec:exp} elaborates our extensive experimental studies and our findings in detail.
+Section~\ref{sec:con} concludes this work and highlights the promising future directions.
