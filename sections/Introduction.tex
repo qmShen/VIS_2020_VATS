@@ -40,8 +40,8 @@ Thus, it is impractical to visualize billion-level GPS points via the commodity 
 
 \stitle{Visual clutter issue}
 Visual clutter is a common issue in big data visualization.
-Figure~\ref{fig:teaser} C is the visualization result of the whole Porto taxi trajectory dataset.
-Intuitively, the region shown in the embedded figure of C suffers visual clutter issue seriously, 
+Figure~\ref{fig:teaser}A is the visualization result of the whole Porto taxi trajectory dataset.
+Intuitively, the region shown in the embedded figure of A suffers visual clutter issue seriously, 
 i.e., the road network almost cannot be recognized in it,
 which hinders the abilities of human-users to explore the dataset and identify the underlying data insights.
 
@@ -63,9 +63,9 @@ For example, ScalaR~\cite{battle2013dynamic} employs a reduction layer between v
 The reduction layer embedded an uniform random sampling algorithm to sample data randomly if the query results are large enough. 
 It then reduces the amount of data to be visualized.
 However, the uniform random sampling method does not work well in our large trajectory data visualization problem as it does not have any guarantees about the sampling results.
-Take Figure~\ref{fig:teaser} A and B as an example, 
+Take Figure~\ref{fig:teaser}B,C as an example, 
 they are the visualization results of uniform random sampling method on Porto taxi trajectory dataset with sampling rate 0.001 and 0.01, respectively.
-Visually, both visualized figures cannot capture the overview of the input data, as illustrated in Figure~\ref{fig:teaser} C.
+Visually, both visualized figures cannot capture the overview of the input data, as illustrated in Figure~\ref{fig:teaser}A.
 %Visually, both are quite different from the visualization result of the whole data set, as illustrated in Figure~\ref{fig:teaser} C.
 
 In database community,  Park et al. devised a visualization-aware sampling algorithm (VAS) for large-scale scatter points visualization problem in ~\cite{park2016visualization},
@@ -83,17 +83,17 @@ Specifically, we first define a novel the visual fidelity loss function between 
 With the visual fidelity loss function, we then prove it is NP-complete to select a sized-$k$ subset of trajectories which has the minimal visual fidelity loss.
 Next, we devise an approximate algorithm ($\vats$) which returns a sized-$k$ subset of trajectories and provides the visual fidelity guarantees of it.
 Last but not least, we settle the visual clutter issue explicitly and overcome it by taking the level of details and human interpretation ability into consideration in the improved algorithm (i.e., $\avats$).
-Figure~\ref{fig:teaser} D and E show the visualization result of our proposal $\avats{}$ on Porto taxi trajectory dataset with sampling rate 0.001 and 0.01, respectively.
-Obviously, the visualization fidelity of them (comparing with the visualization result of whole data set in Figure~\ref{fig:teaser} C) is much better than 
-the uniform sampling visualization results with the same sampling rate  (see A and B in Figure~\ref{fig:teaser}).
-Figure~\ref{fig:teaser} F is the returning result of our proposal which colors the trajectories with different popularity.
-It has the same input parameters of Figure~\ref{fig:teaser} E. 
-Intuitively, the visual clutter issue in Figure~\ref{fig:teaser} E is almost removed in Figure~\ref{fig:teaser} F.
+Figure~\ref{fig:teaser}D,E show the visualization result of our proposal $\avats{}$ on Porto taxi trajectory dataset with sampling rate 0.001 and 0.01, respectively.
+Obviously, the visualization fidelity of them (comparing with the visualization result of whole data set in Figure~\ref{fig:teaser}A) is much better than 
+the uniform sampling visualization results with the same sampling rate  (see B and C in Figure~\ref{fig:teaser}).
+Figure~\ref{fig:teaser}F is the returning result of our proposal which colors the trajectories with different popularity.
+It has the same input parameters of Figure~\ref{fig:teaser}E. 
+Intuitively, the visual clutter issue in Figure~\ref{fig:teaser}E is \UC{almost} removed in Figure~\ref{fig:teaser}F.
 In addition, our proposal scales the multi zoom resolution very well.
-Figure~\ref{fig:teaser} G, H and I depict the visualization result of the whole dataset, uniform random sampling and our $\avats$ at zoom-level 15,
-e.g., we can obtain them by zooming in the visualization result in Figure~\ref{fig:teaser} C, B and F.
-Intuitively, the visualization result of our proposal (Figure~\ref{fig:teaser} F) outperforms the uniform random sampling method significantly (Figure~\ref{fig:teaser} H).
-It even performs better than Figure~\ref{fig:teaser} G, the visualized result of the whole dataset, as it reduces visual clutter in G by encoding the popularity of different roads by different colors.
+Figure~\ref{fig:teaser}G,H,I depict the visualization result of the whole dataset, uniform random sampling and our $\avats$ at zoom-level 15,
+e.g., we can obtain them by zooming in the visualization result in Figure~\ref{fig:teaser}A,C,F.
+Intuitively, the visualization result of our proposal (Figure~\ref{fig:teaser}F) outperforms the uniform random sampling method significantly (Figure~\ref{fig:teaser}H).
+It even performs better than Figure~\ref{fig:teaser}G, the visualized result of the whole dataset, as it reduces visual clutter in G by encoding the popularity of different roads by different colors.
 
 The contributions of this paper are:
 \setlist{nolistsep}
