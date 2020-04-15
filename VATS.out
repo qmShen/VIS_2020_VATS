@@ -2,19 +2,19 @@
 \BOOKMARK [1][]{section.6}{Related work}{}% 2
 \BOOKMARK [2][]{subsection.7}{Trajectory visual analysis}{section.6}% 3
 \BOOKMARK [2][]{subsection.8}{Interactive visualization for large dataset}{section.6}% 4
-\BOOKMARK [1][]{section.10}{Problem formulation}{}% 5
-\BOOKMARK [2][]{subsection.11}{Problem description}{section.10}% 6
-\BOOKMARK [2][]{subsection.13}{Hardness analysis}{section.10}% 7
-\BOOKMARK [1][]{section.15}{Visual Quality Guaranteed Sampling Approach}{}% 8
-\BOOKMARK [2][]{subsection.16}{Uniform Random Sampling Algorithm}{section.15}% 9
-\BOOKMARK [2][]{subsection.18}{Visual Quality Guaranteed Sampling Algorithm}{section.15}% 10
-\BOOKMARK [2][]{subsection.22}{Optimization Techniques}{section.15}% 11
-\BOOKMARK [1][]{section.28}{Advance Approach: VQGTS+}{}% 12
-\BOOKMARK [1][]{section.31}{Evaluation}{}% 13
-\BOOKMARK [2][]{subsection.32}{Case Study}{section.31}% 14
-\BOOKMARK [3][-]{subsubsection.33}{Case of Porto Distinct}{subsection.32}% 15
-\BOOKMARK [3][-]{subsubsection.37}{Shenzhen Trajectories}{subsection.32}% 16
-\BOOKMARK [2][]{subsection.39}{User Study}{section.31}% 17
-\BOOKMARK [3][-]{subsubsection.41}{Experiment setting}{subsection.39}% 18
-\BOOKMARK [3][-]{subsubsection.42}{Results}{subsection.39}% 19
-\BOOKMARK [1][]{section.43}{Conclusion and future work}{}% 20
+\BOOKMARK [1][]{section.14}{Problem formulation}{}% 5
+\BOOKMARK [2][]{subsection.15}{Problem description}{section.14}% 6
+\BOOKMARK [2][]{subsection.17}{Hardness analysis}{section.14}% 7
+\BOOKMARK [1][]{section.19}{Visual Quality Guaranteed Sampling Approach}{}% 8
+\BOOKMARK [2][]{subsection.20}{Uniform Random Sampling Algorithm}{section.19}% 9
+\BOOKMARK [2][]{subsection.22}{Visual Quality Guaranteed Sampling Algorithm}{section.19}% 10
+\BOOKMARK [2][]{subsection.26}{Optimization Techniques}{section.19}% 11
+\BOOKMARK [1][]{section.32}{Advance Approach: VQGTS+}{}% 12
+\BOOKMARK [1][]{section.35}{Evaluation}{}% 13
+\BOOKMARK [2][]{subsection.36}{Case Study}{section.35}% 14
+\BOOKMARK [3][-]{subsubsection.37}{Case of Porto Distinct}{subsection.36}% 15
+\BOOKMARK [3][-]{subsubsection.41}{Shenzhen Trajectories}{subsection.36}% 16
+\BOOKMARK [2][]{subsection.43}{User Study}{section.35}% 17
+\BOOKMARK [3][-]{subsubsection.45}{Experiment setting}{subsection.43}% 18
+\BOOKMARK [3][-]{subsubsection.46}{Results}{subsection.43}% 19
+\BOOKMARK [1][]{section.47}{Conclusion and future work}{}% 20
