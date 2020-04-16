@@ -1,42 +1,55 @@
-\section{Problem formulation}\label{sec:pro}
+\section{Problem Statement}\label{sec:pro}
+In this section, we first define the research problem in Section~\ref{sec:def} formally.
+Section~\ref{sec:hard} analyzes its hardness.
+%Visualizing a large collection of trajectories are used frequently in map service or smart city applications.
+%When exploring a large collection of trajectories, efficient and effective large-scale trajectory visualization is challenging in both academia and industry.
+%The reasons are (i) the size of trajectory data is very large (e.g., several GB in an hour),
+%and (ii) the limited rendering ability of existing commercial graphics device (e.g., XXX).
+%
+%A naive solution to employ sampling idea for large-scale trajectory visualization problem is randomly selecting several trajectories from the data set then visualize it by graphics device.
+%However, the visualization result may be not acceptable by the user.
+%In this work, we study the 
+%In particular, we focus on visual quality guaranteed sampling method for large trajectory data visualization.
+%The major challenges to design visual quality guaranteed sampling method are:
+%(I) how to define visual quality theoretically? (II) how to guarantee the quality of the sampling-based visualization result?
+%In this work, we first formate visual quality by defining the loss function between the visualization results of the whole dataset and sampled dataset.
+%With the loss function, we analyze the hardness of the problem, and devise a visual quality guaranteed sampling algorithm for it.
 
-Visualizing a large collection of trajectories are used frequently in map service or smart city applications.
-When exploring a large collection of trajectories, efficient and effective large-scale trajectory visualization is challenging in both academia and industry.
-The reasons are (i) the size of trajectory data is very large (e.g., several GB in an hour),
-and (ii) the limited rendering ability of existing commercial graphics device (e.g., XXX).
 
-A naive solution to employ sampling idea for large-scale trajectory visualization problem is randomly selecting several trajectories from the data set then visualize it by graphics device.
-However, the visualization result may be not acceptable by the user.
-In this work, we study the large-scale trajectory visualization problem.
-In particular, we focus on visual quality guaranteed sampling method for large trajectory data visualization.
-The major challenges to design visual quality guaranteed sampling method are:
-(I) how to define visual quality theoretically? (II) how to guarantee the quality of the sampling-based visualization result?
-In this work, we first formate visual quality by defining the loss function between the visualization results of the whole dataset and sampled dataset.
-With the loss function, we analyze the hardness of the problem, and devise a visual quality guaranteed sampling algorithm for it.
+\subsection{Problem Definition}\label{sec:def}
+As we analyzed in Section~\ref{sec:intro}, the large-scale (e.g., billions or millions) line-based trajectory visualization problem is very challenge due to the large data size and limited rendering ability of graphics devices.
+To make matters worse, the visualization result of large-scale trajectory dataset suffers visual clutter seriously.
+In this work, we focus on how to visualize large-scale trajectory dataset efficiently and effectively.
+In particular, our objective is to devise a visual fidelity guaranteed sampling method for large trajectory data visualization.
+The major challenges to achieve this goal are:
+(I) how to define visual fidelity theoretically? (II) how to guarantee the visual fidelity of the sampling-based visualization result?
+We commence our presentation by define our research problem formally as follows.
 
-
-\subsection{Problem description}
-\begin{problem}[Sampling-based trajectory visualization problem]\label{prob:def}
-Given a large-scale trajectory dataset $\D$ and an integer $k$,
-the trajectory visualization problem is selecting a subset of trajectories $\oR \subseteq \D$, such that loss function $loss(\oR,\D)$ is minimized.
+\begin{problem}[Large-scale trajectory visualization problem]\label{prob:def}
+Given a large-scale trajectory dataset $\D$ and a sampling rate $\alpha$,
+the trajectory visualization problem is selecting a subset of trajectories $\oR \subseteq \D$ with $|\oR| \leq \alpha |\D|$, 
+such that visual fidelity loss function $loss(\oR,\D)$ is minimized.
 \end{problem}
 
-From the user’s perspective, there are many ways to define the loss function $loss$ between the visualization result qualities of the sampled subset $\oR$ and the whole dataset $\D$.
-For example, \cite{park2016visualization} defined point-based loss function for very large scatter points visualization.
-However, it is not applicable for trajectory data visualization.
-In order to address that, we propose an novel loss function for trajectory visualization problem.
+%From the user’s perspective, there are many ways to define the loss function $loss$ between the visualization result qualities of the sampled subset $\oR$ and the whole dataset $\D$.
+%For example, \cite{park2016visualization} defined point-based loss function for very large scatter points visualization.
+%However, it is not applicable for trajectory data visualization.
+%In order to address that, we propose an novel loss function for trajectory visualization problem.
 
-Intuitively, the visual quality difference between the visualization results of two trajectory datasets depends on the user specified visualization level of details (a.k.a., LOD).
+
+The key to solve the large-scale trajectory visualization problem (see Problem~\ref{prob:def}) is defining the visual fidelity loss function properly.
+Intuitively, the visual fidelity of the sampled visualization results $\oR$ w.r.t. to the original dataset $\D$ depends on the user specified visualization level of details (a.k.a., LOD).
 Given an empty canvas (e.g., displaying device) with a user specified level of details,
 the visualization process is rendering the trajectories into canvas with the given level of details (e.g., the number of pixels in each row and each column).
 Considering a trajectory data set $\D$ and a subset of trajectories $\oR \subseteq \D$,
-The visual quality loss between $\oR$ and $\D$ is defining as the different pixels of the visualization results about $\oR$ and $\D$ in the canvas with specified LOD.
-We then define the loss function of sampling-based trajectory visualization problem as $loss(\D, \oR) = \frac{\V(\D) - \V(\oR)}{\V(\D)}$,
-where $\V()$ measures the number of rendered pixels in the canvas of a given trajectory dataset.
+The visual fidelity loss between $\oR$ and $\D$ is defining as the different pixels of the visualization results about $\oR$ and $\D$ in the canvas with specified LOD.
+We then define the visual fidelity loss function of sampling-based trajectory visualization problem as $loss(\D, \oR) = \frac{\V(\D) - \V(\oR)}{\V(\D)}$,
+where $\V()$ measures the number of rendered pixels in the canvas of the input trajectory dataset.
 
-Given a trajectory data set $\D$ and an integer $k$,  our research objective is finding subset $\oR$, such that  the visualization quality loss function $loss(\D, \oR)$ is minimized,
-i.e.,
-$$ \min_{\oR \subseteq \D, |\oR| = k}  loss(\D, \oR) =  \frac{\V(\D) - \V(\oR)}{\V(\D)}. $$ %\\ %\nonumber
+Thus, given a trajectory data set $\D$ and a sampling rate $\alpha$, 
+our research objective is finding subset $\oR$, such that  the visualization fidelity loss function $loss(\D, \oR)$ is minimized,
+i.e., 
+$$ \min_{\oR \subseteq \D, |\oR| \leq \alpha |\D|}  loss(\D, \oR) =  \frac{\V(\D) - \V(\oR)}{\V(\D)}. $$ %\\ %\nonumber
 
 
 %  \Leftrightarrow  & \min_{\oR \subseteq \D, |\oR| = k}  \V(\D) - \V(\oR) \\ \nonumber
@@ -52,7 +65,7 @@ $$ \min_{\oR \subseteq \D, |\oR| = k}  loss(\D, \oR) =  \frac{\V(\D) - \V(\oR)}{
 
 
 
-\subsection{Hardness analysis}
+\subsection{Hardness analysis}\label{sec:hard}
 In real-world applications, the pixels in canvas will be rendered by different colors according to the specified visualization scheme.
 For the sake of presentation, we analyze the hardness of our research objective with a simple render manner of visualization result.
 In particular, for each pixel in the canvas, it will be rendered if there is a trajectory pass through it, otherwise it will not be rendered.
