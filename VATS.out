@@ -2,15 +2,15 @@
 \BOOKMARK [1][]{section.6}{Related work}{}% 2
 \BOOKMARK [2][]{subsection.7}{Trajectory visual analysis}{section.6}% 3
 \BOOKMARK [2][]{subsection.8}{Interactive visualization for large dataset}{section.6}% 4
-\BOOKMARK [1][]{section.14}{Problem formulation}{}% 5
-\BOOKMARK [2][]{subsection.15}{Problem description}{section.14}% 6
+\BOOKMARK [1][]{section.14}{Problem Statement}{}% 5
+\BOOKMARK [2][]{subsection.15}{Problem Definition}{section.14}% 6
 \BOOKMARK [2][]{subsection.17}{Hardness analysis}{section.14}% 7
 \BOOKMARK [1][]{section.19}{Visual Quality Guaranteed Sampling Approach}{}% 8
 \BOOKMARK [2][]{subsection.20}{Uniform Random Sampling Algorithm}{section.19}% 9
 \BOOKMARK [2][]{subsection.22}{Visual Quality Guaranteed Sampling Algorithm}{section.19}% 10
 \BOOKMARK [2][]{subsection.26}{Optimization Techniques}{section.19}% 11
 \BOOKMARK [1][]{section.32}{Advance Approach: VQGTS+}{}% 12
-\BOOKMARK [1][]{section.35}{Evaluation}{}% 13
+\BOOKMARK [1][]{section.35}{Experimental Evaluation}{}% 13
 \BOOKMARK [2][]{subsection.36}{Case Study}{section.35}% 14
 \BOOKMARK [3][-]{subsubsection.37}{Case of Porto Distinct}{subsection.36}% 15
 \BOOKMARK [3][-]{subsubsection.41}{Shenzhen Trajectories}{subsection.36}% 16

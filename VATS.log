@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.9)  16 APR 2020 11:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.9)  16 APR 2020 22:50
 entering extended mode
 **./VATS.tex
 (VATS.tex
@@ -838,19 +838,19 @@ Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 12.
  [4]
-<pictures/problemsolveing/delta_motivation.pdf, id=364, 3832.37778pt x 962.9405
+<pictures/problemsolveing/delta_motivation.pdf, id=368, 3832.37778pt x 962.9405
 5pt>
 File: pictures/problemsolveing/delta_motivation.pdf Graphic file (type pdf)
 <use pictures/problemsolveing/delta_motivation.pdf>
 Package pdftex.def Info: pictures/problemsolveing/delta_motivation.pdf  used on
  input line 141.
 (pdftex.def)             Requested size: 489.17596pt x 122.90921pt.
-<pictures/1st.pdf, id=365, 211.992pt x 169.8345pt>
+<pictures/1st.pdf, id=369, 211.992pt x 169.8345pt>
 File: pictures/1st.pdf Graphic file (type pdf)
 <use pictures/1st.pdf>
 Package pdftex.def Info: pictures/1st.pdf  used on input line 151.
 (pdftex.def)             Requested size: 115.60841pt x 92.61885pt.
-<pictures/2nd.pdf, id=366, 211.992pt x 169.8345pt>
+<pictures/2nd.pdf, id=370, 211.992pt x 169.8345pt>
 File: pictures/2nd.pdf Graphic file (type pdf)
 <use pictures/2nd.pdf>
 Package pdftex.def Info: pictures/2nd.pdf  used on input line 153.
@@ -877,7 +877,7 @@ Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 
 
 [5]
-<pictures/problemsolveing/one_to_many.pdf, id=402, 1419.24222pt x 495.25426pt>
+<pictures/problemsolveing/one_to_many.pdf, id=405, 1419.24222pt x 495.25426pt>
 File: pictures/problemsolveing/one_to_many.pdf Graphic file (type pdf)
 <use pictures/problemsolveing/one_to_many.pdf>
 Package pdftex.def Info: pictures/problemsolveing/one_to_many.pdf  used on inpu
@@ -899,44 +899,54 @@ pdfTeX warning: pdflatex.exe (file ./pictures/2nd.pdf): PDF inclusion: multiple
 pdfTeX warning: pdflatex.exe (file ./pictures/problemsolveing/one_to_many.pdf):
  PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<pictures/experiment_study/case_porto.pdf, id=522, 5294.28918pt x 4195.78528pt>
+<pictures/experiment_study/case_porto.pdf, id=525, 5294.28918pt x 4195.78528pt>
 
 File: pictures/experiment_study/case_porto.pdf Graphic file (type pdf)
 <use pictures/experiment_study/case_porto.pdf>
 Package pdftex.def Info: pictures/experiment_study/case_porto.pdf  used on inpu
 t line 42.
 (pdftex.def)             Requested size: 504.62305pt x 399.8842pt.
-<pictures/experiment_study/quanlity.png, id=523, 729.72626pt x 394.47375pt>
+<pictures/experiment_study/quanlity.png, id=526, 729.72626pt x 394.47375pt>
 File: pictures/experiment_study/quanlity.png Graphic file (type png)
 <use pictures/experiment_study/quanlity.png>
 Package pdftex.def Info: pictures/experiment_study/quanlity.png  used on input 
 line 51.
 (pdftex.def)             Requested size: 231.7141pt x 125.25906pt.
-<pictures/experiment_study/case_shenzhen.pdf, id=536, 5033.69597pt x 2864.22072
+<pictures/experiment_study/case_shenzhen.pdf, id=539, 5033.69597pt x 2864.22072
 pt>
 File: pictures/experiment_study/case_shenzhen.pdf Graphic file (type pdf)
 <use pictures/experiment_study/case_shenzhen.pdf>
 Package pdftex.def Info: pictures/experiment_study/case_shenzhen.pdf  used on i
 nput line 73.
 (pdftex.def)             Requested size: 504.62305pt x 287.09442pt.
-<pictures/user_study/interface.pdf, id=537, 693.10341pt x 542.71355pt>
+ (sections/Evaluation_user_study.tex
+<pictures/user_study/interface.pdf, id=540, 2670.54721pt x 1938.2111pt>
 File: pictures/user_study/interface.pdf Graphic file (type pdf)
 <use pictures/user_study/interface.pdf>
 Package pdftex.def Info: pictures/user_study/interface.pdf  used on input line 
-86.
-(pdftex.def)             Requested size: 247.16118pt x 193.53003pt.
+7.
+(pdftex.def)             Requested size: 247.16118pt x 179.37044pt.
 
 Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 
 
-[7] [8 <./pictures/experiment_study/case_porto.pdf> <./pictures/experiment_stud
-y/quanlity.png>]) (sections/ConclusionFutureWork.tex
+[7]
+Underfull \vbox (badness 3557) has occurred while \output is active []
+
+
+Underfull \vbox (badness 6995) has occurred while \output is active []
+
+ [8 <./pictures/experiment_study/case_porto.pdf> <./pictures/experiment_study/q
+uanlity.png>])) (sections/ConclusionFutureWork.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+)
 Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 
 
 [9 <./pictures/experiment_study/case_shenzhen.pdf> <./pictures/user_study/inter
-face.pdf>]) (VATS.bbl
-Underfull \vbox (badness 1728) has occurred while \output is active []
+face.pdf>] (VATS.bbl
+Underfull \vbox (badness 2547) has occurred while \output is active []
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 170.
@@ -947,15 +957,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 170.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 170.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 170.
 Package rerunfilecheck Info: File `VATS.out' has not changed.
-(rerunfilecheck)             Checksum: C9B99A1897FFEAC061D320B25C1C84AD;1341.
+(rerunfilecheck)             Checksum: 978FA9965999D56F48AD2DBD135E5D2C;1351.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 170.
  ) 
 Here is how much of TeX's memory you used:
- 11215 strings out of 492452
- 165507 string characters out of 3129805
- 305275 words of memory out of 3000000
- 14915 multiletter control sequences out of 15000+200000
- 69411 words of font info for 328 fonts, out of 3000000 for 9000
+ 11216 strings out of 492452
+ 165652 string characters out of 3129805
+ 310411 words of memory out of 3000000
+ 14919 multiletter control sequences out of 15000+200000
+ 69009 words of font info for 324 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,12n,42p,1205b,438s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
@@ -971,9 +981,9 @@ urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pf
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on VATS.pdf (10 pages, 14223159 bytes).
+Output written on VATS.pdf (10 pages, 14220893 bytes).
 PDF statistics:
- 788 PDF objects out of 1000 (max. 8388607)
+ 799 PDF objects out of 1000 (max. 8388607)
  95 named destinations out of 1000 (max. 500000)
  47832 words of extra memory for PDF output out of 51595 (max. 10000000)
 
