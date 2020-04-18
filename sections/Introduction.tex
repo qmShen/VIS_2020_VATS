@@ -82,7 +82,7 @@ and (iii) how to overcome the visual clutter issue.
 Specifically, we first define a novel the visual fidelity loss function between two visualization results formally.
 With the visual fidelity loss function, we then prove it is NP-complete to select a sized-$k$ subset of trajectories which has the minimal visual fidelity loss.
 Next, we devise an approximate algorithm ($\vats$) which returns a sized-$k$ subset of trajectories and provides the visual fidelity guarantees of it.
-Last but not least, we settle the visual clutter issue explicitly and overcome it by taking the level of details and human interpretation ability into consideration in the improved algorithm (i.e., $\avats$).
+Last but not least, we settle the visual clutter issue explicitly and overcome it by taking the level of details and human perception ability into consideration in the improved algorithm (i.e., $\avats$).
 Figure~\ref{fig:teaser}(D,E) show the visualization result of our proposal $\avats{}$ on Porto taxi trajectory dataset with sampling rate 0.001 and 0.01, respectively.
 Obviously, the visualization fidelity of them (comparing with the visualization result of whole data set in Figure~\ref{fig:teaser}(A)) is much better than
 the uniform sampling visualization results with the same sampling rate  (see B and C in Figure~\ref{fig:teaser}).
@@ -100,7 +100,7 @@ The contributions of this paper are:
 \begin{itemize}[noitemsep]
   \item We formulate the visual fidelity guaranteed sampling problem for large trajectory data visualization, and prove it is NP-complete (see Section~\ref{sec:pro}).
   \item We devise an approximation algorithm for it with a suite of optimization techniques, e.g., lazy updating, result heap maintaining (see Section~\ref{sec:sol}).
-  \item We propose an advanced approach to further enhance the effectiveness of our approximate algorithm, which address the visual clutter issue by introducing human interpretation ability parameter,
+  \item We propose an advanced approach to further enhance the effectiveness of our approximate algorithm, which address the visual clutter issue by introducing human perception ability parameter,
   and encodes the popularity of each road by different colors (see Section~\ref{sec:aa}).
   \item We conduct extensive experiments on real-world trajectory dataset to demonstrate the effectiveness of our proposal, and conduct qualitative user studies to show their superiorities in various applications
   (see Section~\ref{sec:exp}).
