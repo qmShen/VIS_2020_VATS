@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.9)  17 APR 2020 12:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.9)  18 APR 2020 11:31
 entering extended mode
 **./VATS.tex
 (VATS.tex
@@ -934,40 +934,52 @@ Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 Underfull \vbox (badness 3557) has occurred while \output is active []
 
 
-Underfull \vbox (badness 6995) has occurred while \output is active []
+Underfull \vbox (badness 2073) has occurred while \output is active []
 
  [8 <./pictures/experiment_study/case_porto.pdf> <./pictures/experiment_study/q
-uanlity.png>])) (sections/ConclusionFutureWork.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
+uanlity.png>]
+Underfull \vbox (badness 2735) has occurred while \output is active []
 
-)
+<pictures/user_study/accuracy.pdf, id=635, 638.385pt x 465.62556pt>
+File: pictures/user_study/accuracy.pdf Graphic file (type pdf)
+<use pictures/user_study/accuracy.pdf>
+Package pdftex.def Info: pictures/user_study/accuracy.pdf  used on input line 5
+9.
+(pdftex.def)             Requested size: 226.56769pt x 165.25204pt.
+))
+(sections/ConclusionFutureWork.tex
 Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 
 
 [9 <./pictures/experiment_study/case_shenzhen.pdf> <./pictures/user_study/inter
-face.pdf>] (VATS.bbl
-Underfull \vbox (badness 2547) has occurred while \output is active []
+face.pdf> <./pictures/user_study/accuracy.pdf>]) (VATS.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-)
+ [10])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 170.
- [10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 170.
 
-(VATS.aux)
+Overfull \vbox (2.32803pt too high) has occurred while \output is active []
+
+
+[11
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 170.
+ (VATS.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 170.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 170.
 Package rerunfilecheck Info: File `VATS.out' has not changed.
-(rerunfilecheck)             Checksum: 978FA9965999D56F48AD2DBD135E5D2C;1351.
+(rerunfilecheck)             Checksum: A455CADB667D740407AD437927F21D16;1351.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 170.
  ) 
 Here is how much of TeX's memory you used:
- 11216 strings out of 492452
- 165652 string characters out of 3129805
- 310411 words of memory out of 3000000
- 14919 multiletter control sequences out of 15000+200000
+ 11226 strings out of 492452
+ 165933 string characters out of 3129805
+ 310551 words of memory out of 3000000
+ 14926 multiletter control sequences out of 15000+200000
  69009 words of font info for 324 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,12n,42p,1205b,438s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,12n,42p,1205b,452s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
@@ -981,9 +993,9 @@ urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pf
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on VATS.pdf (10 pages, 14220893 bytes).
+Output written on VATS.pdf (11 pages, 14266942 bytes).
 PDF statistics:
- 799 PDF objects out of 1000 (max. 8388607)
- 95 named destinations out of 1000 (max. 500000)
- 47832 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 816 PDF objects out of 1000 (max. 8388607)
+ 97 named destinations out of 1000 (max. 500000)
+ 47837 words of extra memory for PDF output out of 51595 (max. 10000000)
 
