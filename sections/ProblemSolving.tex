@@ -1,27 +1,27 @@
-\section{Visual Quality Guaranteed Sampling Approach}\label{sec:sol}
-Due to the hardness of the Problem~\ref{prob:def}, we first introduce a straight-forward solution for it in Section~\ref{sec:random}.
-Then, we propose a visual quality guaranteed sampling approach in Section~\ref{sec:greedy}.
+\section{Visual Fidelity Guaranteed Sampling Approach}\label{sec:sol}
+Due to the hardness of the Problem~\ref{prob:def}, we first introduce a straight-forward solution (i.e., uniform random sampling) for it in Section~\ref{sec:random}.
+Then, we propose a visual fidelity guaranteed sampling approach in Section~\ref{sec:greedy}.
 Last, we devise several optimizations to improve the efficiency and effectiveness of our proposal in Section~\ref{sec:opt}.
 
 
-\subsection{Uniform Random Sampling Algorithm}~\label{sec:random}
+\subsection{Uniform Random Sampling Algorithm}\label{sec:random}
 The straight forward solution for Problem~\ref{prob:def} is uniform random sampling.
-As the pseudocode in Algorithm~\ref{alg:rand} shown, it randomly selecting $k$ trajectories from $\D$, then render these selected $k$ trajectories into the canvas.
+As the pseudocode in Algorithm~\ref{alg:rand} shown, it selects $k$ trajectories from $\D$ randomly, which store in $\oR$, then render these selected trajectories in $\oR$ as the visualization result.
 
 \begin{algorithm}
-    \caption{RandSampling($\D$,k)} \label{alg:rand}
+    \caption{RandomSampling($\D$,$k=\alpha |\D|$)} \label{alg:rand}
     \begin{algorithmic}[1]
     \State Initialize result set $\oR \leftarrow \emptyset$
     \While{$|\oR| < k$}
-        \State $\oR_{tmp} \leftarrow \mathsf{RAND(\D-\oR)}$
-        \State $\oR \leftarrow \oR \cup \{ \oR_{tmp} \}$
+        \State $tmp \leftarrow \mathsf{RAND(\D-\oR)}$
+        \State $\oR \leftarrow \oR \cup \{ tmp \}$
     \EndWhile
     \State Return $\oR$
     \end{algorithmic}
 \end{algorithm}
 
 Obviously, the uniform random sampling algorithm has good performance.
-However, it does not provide any guarantee on the visual quality of the visualization result.
+However, it does not provide any guarantee on the visual fidelity of the sampled visualization result.
 
 
 %Trajectory data $\D$\cite{xxx} consists of almost 10K trajectories which collected by Didi company.
@@ -45,45 +45,46 @@ However, it does not provide any guarantee on the visual quality of the visualiz
 % \label{fig:demo}
 %\end{figure}
 
-\subsection{Visual Quality Guaranteed Sampling Algorithm}~\label{sec:greedy}
-In this section, we present our visual quality guaranteed sampling algorithm for Problem~\ref{prob:def}.
-We start our presentation by elaborating the relationship between visual quality of sampled set $\oR$ and user zoom level.
-Obviously, for a given sampled set $\oR \subseteq \D$, it has different loss values at different user zoom level.
+\subsection{Visual Fidelity Guaranteed Sampling Algorithm}\label{sec:greedy}
+In this section, we present our visual fidelity guaranteed sampling algorithm for Problem~\ref{prob:def}.
+We start our presentation by elaborating the correlation between visual fidelity of sampled set $\oR$ and user zoom level.
+For a given sampled set $\oR \subseteq \D$, it has different visual fidelity loss values at different user zoom levels.
+The reason is the resolutions of $\oR$'s visualized result are different at different zoom levels.
 %The reason is the pixel size will be updated at different zoom level.
-\QM{The reason is the map are of the same canvas region will be updated at different zoom level.}
+%\QM{The reason is the map are of the same canvas region will be updated at different zoom level.}
 For example, Google map\footnote{\url{https://www.google.com/maps/preview}} provides zoom levels range from 0 to 20,
 where level 0 is the lowest level (e.g., the whole world), level 20 is the highest level (e.g., individual building, if available).
 In order to devise a zoom level oblivious visualization for sampled dataset $\oR$,
 we use the highest zoom level to define the size of each pixel in the canvas in our problem.
-For each trajectory $\D_i in \D$ is a set of pixels at highest zoom level in the canvas.
+It means for each trajectory $t_i \in \D$, it is a set of pixels in the canvas at the highest zoom level.
 
-The visual quality guaranteed sampling algorithm employs greedy paradigm.
-In particular, it finds the trajectory $\D_i$ in $\D$ which maximize the union set of $\oR \cup \D_i$ at each iteration, as Line~\ref{line:max} shown in Algorithm~\ref{alg:greedy}.
-It terminates after $k$ iterations and returns $\oR$ as result set for rendering.
+The visual fidelity guaranteed sampling algorithm employs greedy paradigm.
+In particular, it finds the trajectory $t$ in $\D$ which maximize the result set of $|\oR \cup t|$ at each iteration, as Line~\ref{line:max} shown in Algorithm~\ref{alg:greedy}.
+It terminates after $k=\alpha |\D|$ iterations and returns $\oR$ as result set for rendering.
 
 \begin{algorithm}
-    \caption{$\vats(\D,k)$} \label{alg:greedy}
+    \caption{$\vats(\D,k=\alpha |\D|)$} \label{alg:greedy}
     \begin{algorithmic}[1]
     \State Initialize result set $\oR \leftarrow \emptyset$
     \While{$|\oR| < k$}
-        \State $\oR_{tmp} \leftarrow argmax_{\D_i \in \D} \oR \cup \D_i$ \label{line:max}
-        \State $\oR \leftarrow \oR \cup \{ \oR_{tmp} \}$
+        \State $tmp \leftarrow argmax_{t_i \in \D} |\oR \cup t_i|$ \label{line:max}
+        \State $\oR \leftarrow \oR \cup \{ tmp \}$
     \EndWhile
     \State Return $\oR$
     \end{algorithmic}
 \end{algorithm}
 
-Interestingly, Algorithm~\ref{alg:greedy} has a nice theoretical property, i.e., it guarantees the visual quality of the returning set $\oR$, as proved in Theorem~\ref{the:ratio}.
+Interestingly, Algorithm~\ref{alg:greedy} offers theoretical visual fidelity guarantee of the returning result $\oR$, as proved in Theorem~\ref{the:ratio}.
 
 \begin{theorem}~\label{the:ratio}
-Algorithm~\ref{alg:greedy} provides $1-(1-1/k)^k \geq (1-1/e) \approx 0.632$ approximation result for large trajectory visualization problem (i.e., Problem~\ref{prob:def}).
+Algorithm~\ref{alg:greedy} provides $1-(1-1/k)^k \geq (1-1/e) \approx 0.632$ approximation result for large-scale trajectory visualization problem (i.e., Problem~\ref{prob:def}).
 \end{theorem}
 
 \begin{proof}
-The optimal solution of Problem~\ref{prob:def} covers $OPT$ elements in $k$ iterations.
-Let $a_i$ be the number of newly covered elements at the $i$-th iteration, $b_i$ is the total number of covered elements up to the $i$-th iteration (i.e., $b_i = \sum_{j=1}^{i}a_i$),
-and $c_i$ be the uncovered elements after $i$-th iteration (i.e., $c_i = OPT-b_i$).
-According to greedy paradigm, we can conclude the number of newly covered elements at the $(i+1)$-th iteration is always greater than or equal to $\frac{1}{k}$ of the number of uncovered elements after the $i$-th iteration, i.e., $a_{i+1} \geq \frac{c_i}{k}$.
+The optimal solution of Problem~\ref{prob:def} covers $OPT$ pixels in $k$ iterations.
+Let $a_i$ be the number of newly covered pixels at the $i$-th iteration, $b_i$ is the total number of covered pixels up to the $i$-th iteration (i.e., $b_i = \sum_{j=1}^{i}a_i$),
+and $c_i$ be the uncovered pixels after $i$-th iteration (i.e., $c_i = OPT-b_i$).
+According to greedy paradigm, we can conclude the number of newly covered pixels at the $(i+1)$-th iteration is always greater than or equal to $\frac{1}{k}$ of the number of uncovered pixels after the $i$-th iteration, i.e., $a_{i+1} \geq \frac{c_i}{k}$.
 We prove Theorem~\ref{the:ratio} by proving $c_{i+1} \leq (1-1/k)^{i+1} \cdot OPT$.
 It holds $c_1 \leq (1-1/k) \cdot OPT$ as follows.
 \begin{align} \nonumber
@@ -101,48 +102,41 @@ It is equivalent to $b_k \geq (1 - (1-1/k)^{k}) \cdot OPT \geq (1-1/e) \cdot OPT
 \end{proof}
 
 
-\subsection{Optimization Techniques}~\label{sec:opt}
-With the above analysis, Algorithm~\ref{alg:greedy} provides a visual quality guaranteed sampling algorithm for large trajectory data visualization problem.
-However, it is impractical for (very) large trajectory dataset (i.e., billions of trajectories) as the time complexity analyzed in the following Lemma~\ref{lem:cost}.
+\subsection{Optimization Techniques}\label{sec:opt}
+With the above analysis, Algorithm~\ref{alg:greedy} provides a visual fidelity guaranteed sampling algorithm for large-scale trajectory data visualization problem.
+However, it is inefficient for (very) large trajectory dataset (e.g., billions of trajectories) as the time complexity analyzed in the following Lemma~\ref{lem:cost}.
 
 \begin{lemma}[Time Complexity]~\label{lem:cost}
-Given trajectory dataset $\D$ and an integer $k$, the time complexity of Algorithm~\ref{alg:greedy} is $O(k \cdot m \cdot |\D|)$, where $m$ is the maximum length of the trajectory in dataset $\D$.
+Given trajectory dataset $\D$ and an integer $k = \alpha |\D|$, the time complexity of Algorithm~\ref{alg:greedy} is $O(\alpha \cdot m \cdot |\D|^2)$, where $m$ is the maximum length of all trajectories in dataset $\D$.
 \end{lemma}
 
 \begin{proof}
-The complexity analysis is straight forward as all trajectories (i.e., $|\D|$) will be updated (i.e., $O(m)$ for each one) and the trajectory with maximum number of uncovered pixels will be selected at each iteration ($k$ iterations in total). Thus, it is  $O(k \cdot m \cdot |\D|)$.
+At each iteration ($k = \alpha |\D|$ iterations in total),
+it computes the uncovered pixels of each trajectory in dataset $\D$ with $O(m)$ cost.
+The dataset $\D$ has $O(|D|)$ trajectories.
+Thus, the total cost is $O(k \cdot m \cdot |\D|)=O(\alpha \cdot m \cdot |\D|^2)$.
 \end{proof}
 
-Motivated by this, we devise an lazy updating manner to accelerate the running time performance of our proposed visual quality guaranteed sampling algorithm.
-The core idea is the submodularity of the covered pixels of result set $\oR$ as shown in Lemma~\ref{lem:submodular}.
+\stitle{Example} Given the Porto trajectory dataset, it has 2.39 millions trajectories, the maximum length in it is 3,490.
+It takes 2,430 seconds to return a subset $\oR$ with sampling rate $1\%$.
+\TB{Obviously, it is impractical for interactive trajectory explorations.}
+
+Due to the inefficient of our visual fidelity guaranteed sampling algorithm in Algorithm~\ref{alg:greedy},
+we then propose several performance optimizations  to accelerate its running time.
+The core idea is utilizing the submodularity of the covered pixels of result set $\oR$, as shown in Lemma~\ref{lem:submodular}.
 
 \begin{lemma}[Submodularity]\label{lem:submodular}
-Given a trajectory $\D_i$ and two result sets $\mathsf{S},\mathsf{S}^{'}$, where $\mathsf{S} \subset \mathsf{S}^{'}$ and $\D_i \notin \mathsf{S}^{'}$,
-it holds $|\mathsf{S} \cup \D_i| - |\mathsf{S}| \geq |\mathsf{S}^{'} \cup \D_i| - |\mathsf{S}^{'}|$.
+Suppose the contribution of trajectory $t$ to the result set $\oR$ is $\Delta(\oR, t) = |\oR \cup t| - |\oR|$.
+Given a trajectory $t$ and two result sets $\oR,\oR^{'}$, where $\oR \subset \oR^{'}$ and $t \notin \oR$,
+it holds $ \Delta(\oR, t) \geq \Delta(\oR^{'}, t)$.
 \end{lemma}
 
 \begin{proof}
-Let the contribution value of trajectory $\D_i$ to a given result set $\mathsf{S}$ as $|\mathsf{S} \cup \D_i| - |\mathsf{S}|$.
-It is the new covered pixels of $|\D_i|$, i.e., $|\D_i| - |\D_i \cap \mathsf{S}|$.
-It holds $\D_i \cap \mathsf{S} \subseteq  \D_i \cap \mathsf{S}^{'}$ as $\mathsf{S}^{'}$ is a superset of $\mathsf{S}$.
-Thus, we have $|\D_i| - |\D_i \cap \mathsf{S}| \geq |\D_i| - |\D_i \cap \mathsf{S}^{'}|$,
-it is equivalent to $|\mathsf{S} \cup \D_i| - |\mathsf{S}| \geq |\mathsf{S}^{'} \cup \D_i| - |\mathsf{S}^{'}|$.
+The contribution value of trajectory $t$ to a given result set $\oR$ (e.g., $\Delta(\oR, t) = |\oR \cup t| - |\oR|$) is the new covered pixels of $t$ w.r.t. result set $\oR$, i.e., $|t| - |\oR \cap t|$.
+It holds $t \cap \oR \subseteq  t \cap \oR^{'}$ as $\oR^{'}$ is a superset of $\oR$.
+Thus, we have $|t| - |t \cap \oR| \geq |t| - |t \cap \oR^{'}|$.
+Hence, it holds $\Delta(\oR, t) = |\oR \cup t| - |\oR| \geq |\oR^{'} \cup t| - |\oR^{'}|= \Delta(\oR^{'}, t)$.
 \end{proof}
-
-With the help of submodularity property, it reduces a lot of unnecessary trajectory updating computations.
-In particular, we maintains a max-heap for the number of uncovered pixels of each trajectory w.r.t., result set $\oR$.
-Figure~\ref{fig:heap}(a) shows a tiny max-heap example about the numbers of uncovered pixels of each trajectory from $\D_1$ to $\D_7$ with result set $\oR=\emptyset$.
-At the 1st iteration, the root node of the max-heap will be selected, i.e., $\D_3$ in Figure~\ref{fig:heap}(a).
-At the 2nd iteration, the number of uncovered pixels of the root node $\D_1$ is updated to 7 w.r.t. result set $\oR = \{\D_3 \}$ (see gray node at Figure~\ref{fig:heap}(b)).
-$\D_1$ will be selected at the 2nd iteration without updating the number of uncovered pixels in other trajectories, i.e., all white nodes at Figure~\ref{fig:heap}(b) as the submodularity property holds.
-
-\begin{figure*}[t]
-	\centering
-	\includegraphics[width=0.95\textwidth]{pictures/problemsolveing/delta_motivation.pdf}
-	\caption{Detail-aware visual quality guaranteed trajectory sampling, A: $\vats{}$, B: advanced $\vats$ ($\avats$), C: $\avats$ and popularity encoded by color.}
-	\label{fig:delta}
-\end{figure*}
-
 
 \begin{figure}
  \centering
@@ -161,24 +155,43 @@ $\D_1$ will be selected at the 2nd iteration without updating the number of unco
 \end{figure}
 
 
+With the help of submodularity property in Lemma~\ref{lem:submodular}, it reduces many unnecessary trajectory contribution value computations.
+In particular, we maintains a max-heap for the number of uncovered pixels of each trajectory,
+we employ lazy computing manner, i.e., only compute the contributions of a given trajectory when it is necessary.
+Figure~\ref{fig:heap}(a) shows a tiny max-heap example about the numbers of uncovered pixels of each trajectory from $t_1$ to $t_7$ with result set $\oR=\emptyset$.
+At the 1st iteration, the root node of the max-heap will be selected, i.e., $t_3$ in Figure~\ref{fig:heap}(a).
+At the 2nd iteration, the number of uncovered pixels of the root node $t_1$ is updated to 7 w.r.t. result set $\oR = \{t_3 \}$ (see gray node at Figure~\ref{fig:heap}(b)).
+$t_1$ will be selected at the 2nd iteration without computing the number of uncovered pixels in other trajectories, i.e., all white nodes at Figure~\ref{fig:heap}(b).
+The reason is their contributions will be less than 7 via the submodularity property in Lemma~\ref{lem:submodular}.
 
-In summary, in the lazy updating manner, the number of uncovered pixels in each trajectory will only be computed with the latest result set $\oR$ when it is necessary,
-e.g., only $\D_1$ will be updated at the 2nd iteration in Figure~\ref{fig:heap}.
-It reduces many unnecessary computations through the lazy updating manner, e.g., all white nodes did not update at the 2nd iteration in the above example.
-We analyze the time complexity of Algorithm~\ref{alg:greedy} with lazy updating manner in Theorem~\ref{lem:lazy}.
+%In summary, the number of uncovered pixels in each trajectory will only be computed with the latest result set $\oR$ when it is necessary in the lazy computing manner,
+%e.g., only $t_1$ will be updated at the 2nd iteration in Figure~\ref{fig:heap}.
+%It reduces many unnecessary computations through the lazy updating manner, e.g., all white nodes did not update at the 2nd iteration in the above example.
 
-\begin{lemma}[Optimized Time Complexity]~\label{lem:lazy}
-Given trajectory dataset $\D$ and an integer $k$, the time complexity of Algorithm~\ref{alg:greedy} with lazy updating manner is $O(|\D| + k \cdot m \cdot t \log |\D|)$, where $t$ is the maximum number of updating among all $k$ iterations and $t \ll |\D|$.
-\end{lemma}
+%We then analyze the time complexity of Algorithm~\ref{alg:greedy} with lazy computing manner in Theorem~\ref{lem:lazy}.
+%
+%\begin{lemma}[Optimized Time Complexity]~\label{lem:lazy}
+%Given trajectory dataset $\D$ and an integer $k= \alpha |\D|$, the time complexity of Algorithm~\ref{alg:greedy} with lazy computing manner is $O(\alpha \cdot m \cdot x |\D| \log |\D|)$, where $x$ is the number of contribution computations among all $k$ iterations and $x \ll |\D|$.
+%\end{lemma}
+%
+%\begin{proof}
+%It first takes $O(|\D|)$ time to construct the max-heap~\cite{cormen2009introduction}.
+%It incurs $O( m \cdot x \log |\D|)$ cost to select the trajectory with maximum uncovered pixels at each iteration ($k$ iterations in total).
+%Hence, the overall cost is $O(|\D| + k \cdot m \cdot t \log |\D|)$.
+%\end{proof}
+The performance of Algorithm~\ref{alg:greedy} is improved significantly as we only compute its contribution values when it is necessary.
+\TB{To exemplify, Algorithm~\ref{alg:greedy} costs 2430 seconds to return the results with sampling rate $1\%$ on Porto taxi trajectory dataset.
+However, it only needs 3.2 seconds via lazy computing manner.}
 
-\begin{proof}
-It first takes $O(|\D|)$ time to construct the max-heap.
-Then, it incurs $O( m \cdot t \log |\D|)$ cost to select the trajectory with maximum uncovered pixels at each iteration ($k$ iterations in total).
-Hence, the overall cost is $O(|\D| + k \cdot m \cdot t \log |\D|)$.
-\end{proof}
 
-\Bo{To exemplify, Algorithm~\ref{alg:greedy} costs 2.3 hours to return the results on Lisbon taxi trajectory dataset.
-However it only takes 3.2 seconds with lazy updating manner.}
+
+\begin{figure*}[t]
+	\centering
+	\includegraphics[width=0.95\textwidth]{pictures/problemsolveing/delta_motivation.pdf}
+	\caption{Advance Approach $\avats$ with Porto trajectory dataset (sampling rate is $0.5\%$): (A) $\vats{}$, (B) $\avats$, (C) $\avats$ and color encoding.}
+	\label{fig:delta}
+\end{figure*}
+
 
 %https://developers.google.com/maps/documentation/maps-static/dev-guide#Zoomlevels
 
@@ -224,88 +237,84 @@ However it only takes 3.2 seconds with lazy updating manner.}
 
 
 
-\section{Advance Approach: $\avats$}~\label{sec:aa}
+\section{Advance Approach: $\avats$}\label{sec:aa}
+Until now, Algorithm~\ref{alg:greedy} offers a visual fidelity guaranteed sampling approach for large-scale trajectory visualization problem (see Problem~\ref{prob:def}),
+which returns the visual fidelity guaranteed result efficiently via the optimization techniques in Section~\ref{sec:opt}.
+It means that the challenges (i) large trajectory dataset and (ii) limited rendering ability of graphics device (see Section~\ref{sec:intro}) have been addressed.
+In this section, we focus on the third challenge of it, i.e.,  visual clutter.
+In particular, we devise an advance approach $\avats$ to alleviate it by considering
+(i) trajectory data distribution, and (ii) human perception ability.
+We elaborate (i) and (ii) by the examples in Figure~\ref{fig:delta} shortly.
+
+\stitle{Trajectory data distribution} Considering Porto trajectory dataset, Figure~\ref{fig:delta}(A) is the visualization result of $\vats$ with sampling ratio $1\%$.
+Obviously, the real-world trajctory dataset is non-uniform distributed.
+For example, the trajectories in the dense region is much more than these in the sparse region, as illustrated by the rectangles in Figure~\ref{fig:delta}(A).
+
+\stitle{Human perception ability} Intuitively, it is much easier for humans to distinguish the difference between sparse regions rather than dense regions in Figure~\ref{fig:delta}(A) and (B).
+The core reason is the perception ability of human beings is limited.
+In particular, the visual difference of human beings will be diminished when the visualized trajectories is large enough with a given level of details,
+i.e., the difference between two dense regions in Figure~\ref{fig:delta}(A) and (B).
+
+%instead of measuring the contribution of each trajectory w.r.t the selected trajectories in $\oR$ directly,
+Taking the above two observations into consideration, the returning result of visual fidelity guaranteed sampling approach $\vats$ could be further improved by
+delivering richer information at sparse regions and reducing visual clutter in dense regions.
+In this section, we devise an advance approach $\avats$ (see Algorithm~\ref{alg:plus}) to achieve the above two objectives.
+Specifically, we introduce perception tolerance parameter $\delta$ in $\avats$, which models human's perception ability at the most highest level of details.
+In other words, suppose the pixel $(x,y)$ in canvas is covered by result set $\oR$ at the highest level,
+the pixels around $(x,y)$, i.e., from $(x-\delta, y-\delta)$ to $(x+\delta, y+\delta)$, are not necessary to cover as they are beyond the perception ability of human beings.
 
 
-Even though our proposed visual quality guaranteed sampling $\vats$ produces good quality visualization result for large trajectory dataset when comparing with random sampling method.
-In this section, we devise an advanced $\vats$ (i.e., $\avats$) to further enhance the visual quality of $\vats$ by exploiting
-(i) the inherent characteristic in the large trajectory dataset, and (ii) the interpretation ability of human beings.
-
-We then elaborate (i) and (ii) by the examples in Figure~\ref{fig:delta}.
-Considering Lisbon trajectory dataset, Figure~\ref{fig:delta}(a) shows its visualization result of $\vats$ with sampling ratio $1\%$.
-The distribution of real-world trajectory dataset is non-uniform inherently.
-For example, the dense region (Lisbon downtown) has much more trajectories than the sparse region in Figure~\ref{fig:delta}(a).
-Obviously, it is much easier for us to distinguish the difference between sparse regions rather than dense regions in Figure~\ref{fig:delta}(a) and (b).
-The major reason is that end users will treat the two dense regions in Figure~\ref{fig:delta}(a) and (b) as identical
-since the interpretation ability of human beings is limited at such level of details.
-However, the visual difference between the two sparse regions in Figure~\ref{fig:delta}(a) and (b) at that level of details is in the range of ours interpretation ability.
-
-Hence, the returning result of visual quality guaranteed sampling method $\vats$ could be further improved by delivering richer information at sparse regions,
-i.e., enhancing the visual details in the region where is in the range of end user's interpretation ability.
-Motivated by this, we devise an advance approach $\avats$ (see Algorithm~\ref{alg:plus}) by incorporating a parameter $\delta$ during trajectory selection process in $\vats$ to achieve the above goal.
-In particular, we employ the parameter $\delta$ to model the end user's interpretation ability at the most high level of details.
-Surprisingly, our advance approach $\avats$ not only provides better visualization result when comparing with $\vats$ with the same sampling rate
-(e.g., Figure~\ref{fig:delta}(a) and (b) are the returning result of $\vats$ and $\avats$ respectively),
-but also embeds the popularity of selected trajectories by encoding the rest trajectories in the dataset in them,
-e.g., Figure~\ref{fig:delta}(c) is the visual result of $\avats$ with color encoded popularity.
-
-
-Instead of measuring the contribution of each trajectory w.r.t the selected trajectories in $\oR$ directly,
-we introduce interpretation tolerance parameter $\delta$ to capture end user's interpretation ability at the highest zoom level.
-Specifically, suppose the pixel with location $(x,y)$ in canvas is covered by result set $\oR$ at the highest level,
-the pixels around $(x,y)$ are not necessary to cover as they are beyond the interpretation ability of end users.
-It means the end user cannot distinguish the visual quality difference between rendering $(x,y)$ and rendering all pixels in from $(x-\delta, y-\delta)$ to $(x+\delta, y+\delta)$) even at the highest zoom resolution.
-Fortunately, we can incorporating the interpretation tolerance parameter $\delta$ into our proposed visual quality guaranteed trajectory sampling algorithm in Algorithm~\ref{alg:greedy}
-by slightly revising it.
-As illustrated in Algorithm~\ref{alg:plus}, it measures the contribution of each trajectory w.r.t the selected trajectory set $\oR$'s augmented set $\oR^{+}$ (in Line~\ref{line:deltamax}).
-The augmented set $\oR^{+}$ will be updated by the selected trajectory $\oR_tmp$ and its tolerance pixels set (in Line~\ref{line:delta}).
+Fortunately, we can slightly revise Algorithm~\ref{alg:greedy} to incorporate the perception tolerance parameter $\delta$ in advance approach $\avats$, as shown in Algorithm~\ref{alg:plus}.
+It measures the contribution of each trajectory $t_i$ w.r.t the selected trajectory set $\oR$'s augmented set $\oR^{+}$ (in Line~\ref{line:deltamax}).
+The augmented set $\oR^{+}$ will be updated by the selected trajectory $tmp$ and its tolerance pixels set (in Line~\ref{line:delta}).
 
 
 \begin{algorithm}
-    \caption{$\avats(\D,k,\delta)$} \label{alg:plus}
+    \caption{$\avats(\D,k=\alpha |\D|,\delta)$} \label{alg:plus}
     \begin{algorithmic}[1]
     \State Initialize result set $\oR \leftarrow \emptyset$
     \State Initialize augmented result set $\oR^{+} \leftarrow \emptyset$
     \While{$|\oR| < k$}
-        \State $\oR_{tmp} \leftarrow argmax_{\D_i \in \D} \delta\oR \cup \D_i$ \label{line:deltamax}
-        \State $\oR \leftarrow \oR \cup \{ \oR_{tmp} \}$
-        \State $\oR^{+} \leftarrow \oR^{+} \cup \mathsf{augment}(\oR_{tmp}, \delta)$\label{line:delta}
+        \State $tmp \leftarrow argmax_{t_i \in \D} \oR^{+} \cup t_i$ \label{line:deltamax}
+        \State $\oR \leftarrow \oR \cup \{ tmp \}$
+        \State $\oR^{+} \leftarrow \oR^{+} \cup \mathsf{augment}(tmp, \delta)$\label{line:delta}
     \EndWhile
-    \For{each $\D_i$ in $\D - \oR$} \Comment{Popularity encoding} \label{line:s}
-        \State $\oR_j \leftarrow argmin_{\oR_{t} \in \oR}{\mathsf{augment}(\oR_{t}, \delta) - \D_i}$
-        \State $\oR_j.\mathsf{cnt}++$ \label{line:e}
+    \For{each $t$ in $\D$} \Comment{Representative encoding} \label{line:s}
+        \State $tr \leftarrow argmin_{t_i \in \oR}{\mathsf{augment}(t_i, \delta) - t}$
+        \State $tr.\mathsf{cnt}++$ \label{line:e}
     \EndFor
     \State Return $\oR$
     \end{algorithmic}
 \end{algorithm}
 
-Moreover, we further exploit the result set of interpretation tolerance considered $\vats$ to address the visual clutter problem in large trajectory visualization application.
-In particular, it selects the trajectory which has largest uncovered pixels by taking end user's interpretation tolerance on visual quality into account at each iteration,
-instead of only choose the trajectory with largest uncovered pixels in $\vats$.
-During the above selection process, some trajectories will not be included into the result set $\oR$ even they have larger number of uncovered pixels.
-The reason is their uncovered pixels are too close to the pixels in the selected trajectory, i.e., within the tolerance area of selected pixels.
-Taken Figure~\ref{fig:zoom}(a) as example with $\delta=1$, suppose trajectory $a$ was selected at the first iteration,
-the trajectory selected in the second iteration is $c$, instead of $b$ as almost all pixels in $b$ is in the tolerance area of $a$'s.
-It means it embeds the popularity of each selected trajectory during the result set $\oR$ selection process naturally.
-We define the popularity of each selected trajectory as the number of close trajectories in the rest dataset, i.e., $\D-\oR$.
-Thus, we compute the popularity of trajectories in $\oR$ from Line~\ref{line:s} to Line~\ref{line:e} in Algorithm~\ref{alg:plus}.
-We then visualize the popularity of each selected trajectory by encoding its popularity by different colors.
-Figure~\ref{fig:delta}(c) shows the returning result of advance approach $\avats$ by encoding the popularities by colors.
-Obviously, the trajectories in dense region are more popular than these in sparse regions.
+Interestingly, the visual clutter large trajectory visualization problem can be further reduced
+by encoding representative trajectories in $\oR$ (the returning result of the advance approach $\avats$) with colors.
+In particular, $\avats$ selects the trajectory which has largest uncovered pixels by taking human's perception tolerance ability into account at each iteration,
+instead of only choosing the trajectory with largest uncovered pixels in $\vats$ (see Algorithm~\ref{alg:greedy}).
+During its selection process, some of trajectories will not be included into the result set $\oR$ even they have more uncovered pixels w.r.t. $\oR$.
+The reason is their uncovered pixels are too close to the pixels in the selected trajectories, i.e., within the tolerance area of selected pixels.
+Taken Figure~\ref{fig:zoom}(A) as example, suppose $\delta=1$ and trajectory $a$ was selected at the first iteration,
+the selected trajectory in the second iteration is $c$ instead of $b$ as almost all pixels in $b$ is in the tolerance area of $a$'s.
+
+Inherently, the selection process in $\avats$ embeds the representativeness of each trajectory in the result set $\oR$.
+We define the representativeness of a trajectory as the number of influenced trajectories in the dataset $\D$.
+We compute the representativeness of each trajectory in $\oR$ from Line~\ref{line:s} to Line~\ref{line:e} in Algorithm~\ref{alg:plus}, then visualize them by encoding with different colors.
+Figure~\ref{fig:delta}(C) shows the visualized result of the  advance approach $\avats$ by encoding the trajectory representativeness with colors.
+Obviously, the trajectories in dense region are more representative than these in sparse regions.
 
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=0.4\textwidth]{pictures/problemsolveing/one_to_many.pdf}
-	\caption{Zoom resolution2}
+	\caption{An illustration of $\avats$ with different zoom levels}
 	\label{fig:zoom}
 \end{figure}
 
-Last but not least, it is worth to point out that our advance approach $\avats$ provides more better visual quality over $\vats$ at arbitrary zooming resolutions.
-The key technique to achieve that is it considers the zooming resolutions inherently when introducing the interpretation tolerance $\delta$.
-Take Figure~\ref{fig:zoom} as an example, Figure~\ref{fig:zoom}(a) and (b) show two different zoom-levels.
-The zoom level in Figure~\ref{fig:zoom}(a) is higher than it in Figure~\ref{fig:zoom}(b).
-As our above elaboration, our advance approach $\avats$ selects trajectory $a$ and $c$ at Figure~\ref{fig:zoom}(a).
-When it zoomed-out, as shown in Figure~\ref{fig:zoom}(b), it still capture the main sketch of the underlying dataset.
+Last but not least, it is worth to point out that our advance approach $\avats$ provides excellent visual fidelity over $\vats$ at arbitrary zooming resolutions naturally.
+The key technique to achieve that is it considers the zooming resolutions inherently when introducing the perception tolerance $\delta$.
+Take Figure~\ref{fig:zoom} as an example, %Figure~\ref{fig:zoom}(A) and (B) show two different zoom-levels.
+the zoom level in Figure~\ref{fig:zoom}(A) is higher than it in Figure~\ref{fig:zoom}(B).
+As our above elaboration, our advance approach $\avats$ selects trajectory $a$ and $c$ at Figure~\ref{fig:zoom}(A).
+When it zoomed-out, as shown in Figure~\ref{fig:zoom}(b), it still capture the main sketch of the underlying dataset (as gray cells shown).
 
 
 
@@ -336,5 +345,13 @@ When it zoomed-out, as shown in Figure~\ref{fig:zoom}(b), it still capture the m
 %	\vspace{-5mm}
 %	\label{fig:one_to_many}
 %\end{figure}
+
+
+%Specifically, $\avats$ incorporates a parameter $\delta$ during trajectory selection process in $\vats$ .
+%In particular, we employ the parameter $\delta$ to model the end user's perception ability at the most high level of details.
+%Surprisingly, our advance approach $\avats$ not only provides better visualization result when comparing with $\vats$ with the same sampling rate
+%(e.g., Figure~\ref{fig:delta}(a) and (b) are the returning result of $\vats$ and $\avats$ respectively),
+%but also embeds the popularity of selected trajectories by encoding the rest trajectories in the dataset in them,
+%e.g., Figure~\ref{fig:delta}(c) is the visual result of $\avats$ with color encoded popularity.
 
 

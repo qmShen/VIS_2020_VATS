@@ -43,7 +43,7 @@
 \newcommand{\D}{\mathsf{T}}
 \newcommand{\V}{\mathsf{V}}
 \newcommand{\oR}{\mathsf{R}}
-\newcommand{\U}{\mathcal{U}}
+\newcommand{\U}{\mathsf{U}}
 \newcommand{\vats}{\mathsf{VQGTS}}
 \newcommand{\avats}{\mathsf{VQGTS}^{+}}
 
@@ -102,9 +102,9 @@ Visualizing large-scale trajectories is the core subroutine in many smart city a
 However, it is very challenge as (i) the large trajectory data size, (ii) the limited rendering ability of graphics device, and (iii) visual clutter issue in big data visualization.
 In this work, we propose a visual fidelity guaranteed sampling approach for the large-scale line-based trajectory visualization problem.
 Specifically, we first define a novel fidelity loss function to capture the visual difference between two visualization results.
-We then prove that it is NP-complete to select a sized-$k$ subset trajectories with minimal visual fidelity loss.
+We then prove that it is NP-hardness to select a sized-$k$ subset trajectories with minimal visual fidelity loss.
 Next, we devise an approximate algorithm $\vats$ with a suite of optimization techniques, which returns visual fidelity quality guaranteed visualization result efficiently.
-Moreover, we improve the visual effectiveness of $\vats$ by taking human interpretation ability and visual clutter issue into consideration.
+Moreover, we improve the visual effectiveness of $\vats$ by taking human perception ability and visual clutter issue into consideration.
 We conduct extensive experimental studies to demonstrate the effectiveness of our proposal on real-world trajectory datasets.
 In addition, qualitative user studies further illustrate the superiority of our approach in various applications, e.g., traffic flow detection, reachable route discovery.
 }
@@ -116,8 +116,8 @@ In addition, qualitative user studies further illustrate the superiority of our 
 \teaser{
   \centering
   \includegraphics[width=\linewidth]{Teaser.pdf}
-  \caption{Visualization results. (I) at zoom level 11, A is the visualization result of the whole Proto taxi trajectory dataset.
-   B and C are visualization results of uniform random sampling approach with sampling rate $0.001$ and $0.01$, respectively.
+  \caption{Visualization results. (I) at zoom level 11, C is the visualization result of the whole Proto taxi trajectory dataset.
+   A and B are visualization results of uniform random sampling approach with sampling rate $0.001$ and $0.01$, respectively.
    D, E, F are the visualization results of our proposal $\avats$ with different parameters.
    (II) G, H, and I are the visualization results of whole dataset, uniform sampling, and our proposal at zoom level 15, respectively.}
 	\label{fig:teaser}
