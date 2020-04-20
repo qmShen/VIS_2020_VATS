@@ -2,3 +2,19 @@
 \BOOKMARK [1][]{section.6}{Related work}{}% 2
 \BOOKMARK [2][]{subsection.7}{Trajectory Visual Analysis}{section.6}% 3
 \BOOKMARK [2][]{subsection.8}{Interactive Visualization for Large Dataset}{section.6}% 4
+\BOOKMARK [1][]{section.14}{Problem Statement}{}% 5
+\BOOKMARK [2][]{subsection.15}{Problem Definition}{section.14}% 6
+\BOOKMARK [2][]{subsection.17}{Hardness analysis}{section.14}% 7
+\BOOKMARK [1][]{section.19}{Visual Fidelity Guaranteed Sampling Approach}{}% 8
+\BOOKMARK [2][]{subsection.20}{Uniform Random Sampling Algorithm}{section.19}% 9
+\BOOKMARK [2][]{subsection.22}{Visual Fidelity Guaranteed Sampling Algorithm}{section.19}% 10
+\BOOKMARK [2][]{subsection.26}{Optimization Techniques}{section.19}% 11
+\BOOKMARK [1][]{section.31}{Advance Approach: VFGS+}{}% 12
+\BOOKMARK [1][]{section.34}{Experimental Evaluation}{}% 13
+\BOOKMARK [2][]{subsection.35}{Case Study}{section.34}% 14
+\BOOKMARK [3][-]{subsubsection.36}{Case of Porto Distinct}{subsection.35}% 15
+\BOOKMARK [3][-]{subsubsection.40}{Shenzhen Trajectories}{subsection.35}% 16
+\BOOKMARK [2][]{subsection.42}{User Study}{section.34}% 17
+\BOOKMARK [3][-]{subsubsection.44}{Experiment setting}{subsection.42}% 18
+\BOOKMARK [3][-]{subsubsection.45}{Results}{subsection.42}% 19
+\BOOKMARK [1][]{section.47}{Conclusion and future work}{}% 20
