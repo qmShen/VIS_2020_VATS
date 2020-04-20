@@ -23,6 +23,10 @@ Through this, it preserves the continuous information of moving objects~\cite{gu
 However, the line-based visualization methods suffer serious visual clutter due to the cross of the polylines in the large amount trajectories.
 To alleviate this problem, many clustering techniques are proposed for the visual analysis with various trajectory datasets, e.g., flight ~\cite{ferreira2013vector}, taxi trips~\cite{rinzivillo2008visually} and hurricane trajectories~\cite{andrienko2017clustering}.
 \TB{In addition, advanced interaction techniques~\cite{kruger2013trajectorylenses, ferreira2013visual} and edge bundling techniques~\cite{zeng2019route} are devised to detect the movement patterns.}
+\QM{To tackle this problem, several techniques have emerged. 
+	Such as the clustering-based techniques~\cite{ferreira2013vector, rinzivillo2008visually, von2015mobilitygraphs} and advanced interaction techniques~\cite{kruger2013trajectorylenses, ferreira2013visual}, which alleviate the visual clutter by reducing the number of items to be visualized; 
+	the edge bundling techniques~\cite{zeng2019route,thony2015vector} wraps up the similar trajectories into bundles, generating a clear visualization result.
+}
 Unlike existing line-based visualization techniques, we propose a visual fidelity  guaranteed sampling approach for line-based trajectory visualization with large-scale input data.
 To the best of our knowledge, it is the first work which offers theoretical visual fidelity guarantee on the sampling result for large-scale line-based trajectory visualization problem.
 
@@ -66,6 +70,9 @@ Instead of using static predefined spatial partitions in ~\cite{wood2010visualis
 \TB{MobilityGraph~\cite{von2015mobilitygraphs} visualizes the aggregated tweet post locations in these regions which are returned by a spatial graph clustering algorithm dynamically.}
 Our problem and solutions are different from these research works as we focus on visualizing the raw input data, instead of the aggregated results.
 % by the movement patterns.
+
+
+\QM{Aggregating-based optimization techniques contribute to the interactive visual analytics system by aggregating similar data into bins, thus to reduce the rendering data. \cite{guo2009flow} employs the hierarchical administrative regions as basic units and visualize the flow by linking different units. OD Map~\cite{wood2010visualisation} divides the whole map into a nested uniform grid, and uses the color of a grid to present the flow magnitude. Furthermore, dynamic strategies such as graph clustering~\cite{von2015mobilitygraphs} are applied to achieve a flexible aggregation results. However, aggregation-based methods may cause unexpected information loss. For instance, the continuous spatial traces of the moving objects are always missing, and the abnormal trajectories are easily ignored since they can be aggregated with the normal trajectories. Our problem and solutions are different from these research works as we focus on visualizing the raw input data, instead of the aggregated results.}
 
 
 \stitle{Sampling-based techniques}

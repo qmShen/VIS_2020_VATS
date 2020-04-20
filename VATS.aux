@@ -21,7 +21,7 @@
 \citation{liu2016smartadp,zheng2010collaborative}
 \citation{chen2015survey}
 \citation{ferreira2013visual}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Visualization results. (I) at zoom level 11, C is the visualization result of the whole Proto taxi trajectory dataset. A and B are visualization results of uniform random sampling approach with sampling rate $0.001$ and $0.01$, respectively. D, E, F are the visualization results of our proposal $\mathsf  {VQGTS}^{+}$ with different parameters. (II) G, H, and I are the visualization results of whole dataset, uniform sampling, and our proposal at zoom level 15, respectively.}}{1}{figure.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Visualization results. (I) at zoom level 11, C is the visualization result of the whole Proto taxi trajectory dataset. A and B are visualization results of uniform random sampling approach with sampling rate $0.001$ and $0.01$, respectively. D, E, F are the visualization results of our proposal $\mathsf  {VFGS}^{+}$ with different parameters. (II) G, H, and I are the visualization results of whole dataset, uniform sampling, and our proposal at zoom level 15, respectively.}}{1}{figure.1}\protected@file@percent }
 \newlabel{fig:teaser}{{1}{1}{Visualization results. (I) at zoom level 11, C is the visualization result of the whole Proto taxi trajectory dataset. A and B are visualization results of uniform random sampling approach with sampling rate $0.001$ and $0.01$, respectively. D, E, F are the visualization results of our proposal $\avats $ with different parameters. (II) G, H, and I are the visualization results of whole dataset, uniform sampling, and our proposal at zoom level 15, respectively}{figure.1}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.2}\protected@file@percent }
 \newlabel{sec:intro}{{1}{1}{Introduction}{section.2}{}}
@@ -46,11 +46,17 @@
 \citation{andrienko2017clustering}
 \citation{kruger2013trajectorylenses,ferreira2013visual}
 \citation{zeng2019route}
+\citation{ferreira2013vector,rinzivillo2008visually,von2015mobilitygraphs}
+\citation{kruger2013trajectorylenses,ferreira2013visual}
+\citation{zeng2019route,thony2015vector}
 \citation{park2016visualization}
 \citation{zeng2013visualizing,von2015mobilitygraphs}
 \citation{wood2010visualisation}
 \citation{guo2009flow}
 \citation{wood2010visualisation,guo2009flow}
+\citation{von2015mobilitygraphs}
+\citation{guo2009flow}
+\citation{wood2010visualisation}
 \citation{von2015mobilitygraphs}
 \citation{battle2013dynamic,chen2014visual,park2016visualization}
 \citation{chen2014visual}
@@ -59,70 +65,15 @@
 \citation{pelekis2010unsupervised}
 \citation{pelekis2007similarity}
 \citation{panagiotakis2011segmentation,agarwal2018subtrajectory}
-\citation{xu2015diversified}
-\citation{chan2008maintaining}
-\citation{piringer2009multi}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Interactive visualization system architecture for large dataset}}{3}{figure.9}\protected@file@percent }
 \newlabel{fig:framework}{{2}{3}{Interactive visualization system architecture for large dataset}{figure.9}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Trajectory Visual Analysis}{3}{subsection.7}\protected@file@percent }
 \newlabel{sec:trajvisana}{{2.1}{3}{Trajectory Visual Analysis}{subsection.7}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Interactive Visualization for Large Dataset}{3}{subsection.8}\protected@file@percent }
 \newlabel{sec:interactive}{{2.2}{3}{Interactive Visualization for Large Dataset}{subsection.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Problem Statement}{4}{section.14}\protected@file@percent }
-\newlabel{sec:pro}{{3}{4}{Problem Statement}{section.14}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Problem Definition}{4}{subsection.15}\protected@file@percent }
-\newlabel{sec:def}{{3.1}{4}{Problem Definition}{subsection.15}{}}
-\newlabel{prob:def}{{1}{4}{Large-scale trajectory visualization problem}{problem.16}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Hardness analysis}{4}{subsection.17}\protected@file@percent }
-\newlabel{sec:hard}{{3.2}{4}{Hardness analysis}{subsection.17}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Visual Fidelity Guaranteed Sampling Approach}{4}{section.19}\protected@file@percent }
-\newlabel{sec:sol}{{4}{4}{Visual Fidelity Guaranteed Sampling Approach}{section.19}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Uniform Random Sampling Algorithm}{4}{subsection.20}\protected@file@percent }
-\newlabel{sec:random}{{4.1}{4}{Uniform Random Sampling Algorithm}{subsection.20}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces RandomSampling($\mathsf  {T}$,$k=\alpha |\mathsf  {T}|$)}}{4}{algorithm.21}\protected@file@percent }
-\newlabel{alg:rand}{{1}{4}{Uniform Random Sampling Algorithm}{algorithm.21}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Visual Fidelity Guaranteed Sampling Algorithm}{4}{subsection.22}\protected@file@percent }
-\newlabel{sec:greedy}{{4.2}{4}{Visual Fidelity Guaranteed Sampling Algorithm}{subsection.22}{}}
-\newlabel{the:ratio}{{1}{4}{}{theorem.25}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces $\mathsf  {VQGTS}(\mathsf  {T},k=\alpha |\mathsf  {T}|)$}}{5}{algorithm.24}\protected@file@percent }
-\newlabel{alg:greedy}{{2}{5}{Visual Fidelity Guaranteed Sampling Algorithm}{algorithm.24}{}}
-\newlabel{line:max}{{3}{5}{Visual Fidelity Guaranteed Sampling Algorithm}{algorithm.24}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Optimization Techniques}{5}{subsection.26}\protected@file@percent }
-\newlabel{sec:opt}{{4.3}{5}{Optimization Techniques}{subsection.26}{}}
-\newlabel{lem:cost}{{1}{5}{Time Complexity}{lemma.27}{}}
-\newlabel{lem:submodular}{{2}{5}{Submodularity}{lemma.28}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Lazy updating manner illustration}}{5}{figure.29}\protected@file@percent }
-\newlabel{fig:heap}{{3}{5}{Lazy updating manner illustration}{figure.29}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Advance Approach: $\mathsf  {VQGTS}^{+}$}{5}{section.31}\protected@file@percent }
-\newlabel{sec:aa}{{5}{5}{Advance Approach: $\avats $}{section.31}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Advance Approach $\mathsf  {VQGTS}^{+}$ with Porto trajectory dataset (sampling rate is $0.5\%$): (A) $\mathsf  {VQGTS}{}$, (B) $\mathsf  {VQGTS}^{+}$, (C) $\mathsf  {VQGTS}^{+}$ and color encoding.}}{6}{figure.30}\protected@file@percent }
-\newlabel{fig:delta}{{4}{6}{Advance Approach $\avats $ with Porto trajectory dataset (sampling rate is $0.5\%$): (A) $\vats {}$, (B) $\avats $, (C) $\avats $ and color encoding}{figure.30}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {3}{\ignorespaces $\mathsf  {VQGTS}^{+}(\mathsf  {T},k=\alpha |\mathsf  {T}|,\delta )$}}{6}{algorithm.32}\protected@file@percent }
-\newlabel{alg:plus}{{3}{6}{Advance Approach: $\avats $}{algorithm.32}{}}
-\newlabel{line:deltamax}{{4}{6}{Advance Approach: $\avats $}{algorithm.32}{}}
-\newlabel{line:delta}{{6}{6}{Advance Approach: $\avats $}{algorithm.32}{}}
-\newlabel{line:s}{{7}{6}{Advance Approach: $\avats $}{algorithm.32}{}}
-\newlabel{line:e}{{9}{6}{Advance Approach: $\avats $}{algorithm.32}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces An illustration of $\mathsf  {VQGTS}^{+}$ with different zoom levels}}{6}{figure.33}\protected@file@percent }
-\newlabel{fig:zoom}{{5}{6}{An illustration of $\avats $ with different zoom levels}{figure.33}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Experimental Evaluation}{6}{section.34}\protected@file@percent }
-\newlabel{sec:exp}{{6}{6}{Experimental Evaluation}{section.34}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Case Study}{6}{subsection.35}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.1}Case of Porto Distinct}{6}{subsubsection.36}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.2}Shenzhen Trajectories}{7}{subsubsection.40}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}User Study}{7}{subsection.42}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.1}Experiment setting}{7}{subsubsection.44}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Visualization at dense and sparse region respectively.}}{8}{figure.38}\protected@file@percent }
-\newlabel{fig:porto}{{6}{8}{Visualization at dense and sparse region respectively}{figure.38}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Visual quality chart. X axis indicates map scale from detail view to overview; y axis indicate the visual quality. }}{8}{figure.39}\protected@file@percent }
-\newlabel{fig:quality_chart}{{7}{8}{Visual quality chart. X axis indicates map scale from detail view to overview; y axis indicate the visual quality}{figure.39}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Case study of Shenzhen.}}{9}{figure.41}\protected@file@percent }
-\newlabel{fig:shenzhen}{{8}{9}{Case study of Shenzhen}{figure.41}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces The interface of user study platform.}}{9}{figure.43}\protected@file@percent }
-\newlabel{fig:user_study}{{9}{9}{The interface of user study platform}{figure.43}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.2.2}Results}{9}{subsubsection.45}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Average accuracy of three types of tasks. X axis indicates the task types and methods. Y axis indicate the accuracy.}}{9}{figure.46}\protected@file@percent }
-\newlabel{fig:accuracy}{{10}{9}{Average accuracy of three types of tasks. X axis indicates the task types and methods. Y axis indicate the accuracy}{figure.46}{}}
+\citation{xu2015diversified}
+\citation{chan2008maintaining}
+\citation{piringer2009multi}
 \bibstyle{abbrv-doi}
 \bibdata{ref}
 \bibcite{agarwal2018subtrajectory}{1}
@@ -152,8 +103,6 @@
 \bibcite{thony2015vector}{25}
 \bibcite{von2015mobilitygraphs}{26}
 \bibcite{wang2014visual}{27}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion and future work}{10}{section.47}\protected@file@percent }
-\newlabel{sec:con}{{7}{10}{Conclusion and future work}{section.47}{}}
 \bibcite{wood2010visualisation}{28}
 \bibcite{woodruff1998constant}{29}
 \bibcite{xie2008kernel}{30}
