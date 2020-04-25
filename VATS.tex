@@ -44,17 +44,16 @@
 \newcommand{\V}{\mathsf{V}}
 \newcommand{\oR}{\mathsf{R}}
 \newcommand{\U}{\mathsf{U}}
-
-%\newcommand{\vats}{\mathsf{VQGTS}}
-%\newcommand{\avats}{\mathsf{VQGTS}^{+}}
 \newcommand{\vats}{\mathsf{VFGS}}
+\newcommand{\rand}{\mathsf{RAND}}
+\newcommand{\full}{\mathsf{FULL}}
 \newcommand{\avats}{\mathsf{VFGS}^{+}}
-
-%\newcommand{\vats}{\mathsf{VFGTS}}
-%\newcommand{\avats}{\mathsf{VFGTS}^{+}}
-
+\newcommand{\cavats}{\mathsf{VFGS}^{+}\mathsf{CE}}
+\newcommand{\sz}{\textsf{Shenzhen}}
+\newcommand{\pt}{\textsf{Porto}}
 
 \newcommand{\stitle}[1]{\vspace*{0.4em}\noindent{\bf #1:\/}}
+\newcommand{\sstitle}[1]{\vspace*{0.4em}\noindent{\bf #1\/.}}
 
 
 \onlineid{0}
@@ -105,40 +104,28 @@
 %We conduct a formal study to compare VFMS with state-of-the-art sampling methods on several large trajectory datasets.
 %The experiments show that our approach improves visual fidelity by xxx\% (numbers?) meanwhile keeps computational efficiency.
 %Qualitative user studies further demonstrate the feasibility of our approach in XXX (concrete applications?).}
-%VVV2
-%Visualizing large-scale trajectories is the core subroutine in many smart city applications, e.g., traffic management, route recommendation.
-%However, it is very challenging due to (i) large trajectory data size, (ii) limited rendering capability of graphics device, and (iii) visual clutter issue.
-%In this work, we propose a visual fidelity guaranteed sampling approach for the large-scale line-based trajectory visualization problem.
-%Specifically, we first define a novel fidelity loss function to capture the visual difference between two visualization results.
-%We then prove that it is NP-hardness to select a sized-$k$ subset trajectories with minimal visual fidelity loss.
-%Next, we devise an approximate algorithm $\vats$ with a suite of optimization techniques, which returns visual fidelity quality guaranteed visualization result efficiently.
-%Moreover, we improve the visual effectiveness of $\vats$ by taking human perception ability and visual clutter issue into consideration.
-%We conduct extensive experimental studies to demonstrate the effectiveness of our proposal on real-world trajectory datasets.
-%In addition, qualitative user studies further illustrate the superiority of our approach in various applications, e.g., traffic flow detection, reachable route discovery.
-% Trajectory visualization is a core subroutine in many smart city applications, e.g., traffic management, and route recommendation.
-%\QM{submit version}Visualizing large-scale trajectories is the core subroutine in many smart city applications, e.g., traffic management, route recommendation. However, it is very challenging as (i) the large trajectory data size, (ii) the limited rendering capability of graphics device, and (iii) visual clutter in large data visualization. In this work, we propose a visual fidelity guaranteed sampling approach for the large-scale line-based trajectory visualization. Specifically, we first define a novel fidelity loss function to capture the visual difference between two visualization results. We then prove that it is NP-hardness to select a sized-$k$ subset of trajectories with minimal visual fidelity loss. Next, we devise an approximate algorithm with a suite of optimization techniques, which returns visual fidelity quality guaranteed visualization result efficiently. Moreover, we improve the visual effectiveness of our proposal by taking human perception ability and visual clutter into consideration. We conduct extensive experimental studies to demonstrate the effectiveness of our proposal on real-world trajectory datasets. In addition, qualitative user studies further illustrate the superiority of our approach in various applications, e.g., region center identification, reachable route inspection, traffic flow detection.
-Visualizing large trajectory data surfers from limited rendering capability and visual clutter issues.
-Sampling can effectively mitigate the issues, yet existing methods generally adopt random sampling strategy that has an attenuating effect on visual fidelity.
-In this work, we propose a visual fidelity guaranteed sampling algorithm for line-based visualization of large trajectory data.
-We first define a novel fidelity loss function to capture the visual difference between two visualizations.
-We prove that it is NP-hard to select a sized-$k$ subset of trajectories with minimal visual fidelity loss.
-Next, we devise an approximation algorithm $\vats$ with a suite of optimization techniques, which returns fidelity-guaranteed visualizations efficiently.
-Moreover, we improve the effectiveness of $\vats$ by taking human perception and cluttering degree into consideration.
-We conduct extensive experimental studies to demonstrate the effectiveness of our method on real-world trajectory datasets.
-Qualitative user studies further illustrate the superiority of $\vats$ in various applications, e.g., traffic flow detection, and reachable route discovery.
+Visualizing large-scale trajectories is the core subroutine in many smart city applications, e.g., traffic management, route recommendation.
+However, it is very challenging as (i) the large trajectory data size, (ii) the limited rendering capability of graphics device, and (iii) visual clutter in data visualization.
+In this work, we propose a visual fidelity guaranteed sampling approach for large-scale line-based trajectory visualization.
+Specifically, we first define a novel fidelity loss function to capture the visual difference between two visualization results.
+We then prove that it is NP-hardness to select a sized-$k$ subset of trajectories with minimal visual fidelity loss.
+Next, we devise an approximate algorithm $\vats$ with a suite of optimization techniques, which returns visual fidelity quality guaranteed visualization result efficiently.
+Moreover, we further improve the visual effectiveness of $\vats$ by reduce visual clutter in large data visualization.%taking human perception ability and visual clutter issue into consideration.
+We conduct extensive experimental studies to demonstrate the effectiveness of our proposal on real-world trajectory datasets.
+In addition, qualitative user studies further illustrate the superiority of our approach in various applications, e.g., region center identification, reachable route inspection, traffic flow comparison.
 }
 
 
-\keywords{Trajectory visualization, visual fidelity, data sampling}
+\keywords{Trajectory visualization, quality guaranteed sampling, visual fidelity}
 
 
 \teaser{
   \centering
   \includegraphics[width=\linewidth]{Teaser.pdf}
-  \caption{Comparison of random sampling and $\avats$. (i) A is the visualization of the whole Porto taxi trajectory dataset at zoom level 11.
-   B and C are visualizations of random sampling with sampling rate $0.001$ and $0.01$, respectively.
-   D, E, F are visualizations of our proposed $\avats$ with different parameters.
-   (II) G, H, and I are visualizations of the whole dataset, random sampling with sampling rate 0.01, and $\avats$ with sampling rate 0.01 at zoom level 15, respectively.}
+  \caption{Visualization results. (I) at zoom level 11, (A) is the visualization result of the \pt{} taxi trajectory dataset.
+   B and C are visualization results of uniform random sampling approach with sampling rate $0.1\%$ and $1\%$, respectively.
+   D, E, F are the visualization results of our advance visual fidelity guaranteed sampling approach $\avats$ with different parameters.
+   (II) G, H, and I are the visualization results of full \pt{} dataset, uniform random sampling $\rand$ result set, and our proposal $\avats$ result set at zoom level 15, respectively.}
 	\label{fig:teaser}
 }
 

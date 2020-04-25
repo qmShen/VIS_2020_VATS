@@ -1,5 +1,5 @@
 \section{Problem Statement}\label{sec:pro}
-In this section, we first define the research problem in Section~\ref{sec:def} formally.
+In this section, we first define our research problem in Section~\ref{sec:def} formally.
 Section~\ref{sec:hard} analyzes its hardness.
 %Visualizing a large collection of trajectories are used frequently in map service or smart city applications.
 %When exploring a large collection of trajectories, efficient and effective large-scale trajectory visualization is challenging in both academia and industry.
@@ -17,13 +17,12 @@ Section~\ref{sec:hard} analyzes its hardness.
 
 
 \subsection{Problem Definition}\label{sec:def}
-As we analyzed in Section~\ref{sec:intro}, the large-scale (e.g., billions or millions GPS points) line-based trajectory visualization problem is very challenge due to the large data size and limited rendering ability of graphics devices.
+As we analyzed in Section~\ref{sec:intro}, the large-scale (e.g., hundreds of millions GPS points) line-based trajectory visualization problem is very challenging due to the large data size and limited rendering ability of graphics devices.
 To make matters worse, the visualization result of large-scale trajectory dataset suffers visual clutter seriously.
 In this work, we focus on how to visualize large-scale trajectory dataset efficiently and effectively.
 In particular, our objective is to devise a visual fidelity guaranteed sampling method for large trajectory data visualization.
 The major challenges to achieve this goal are:
 (I) how to define visual fidelity theoretically? (II) how to guarantee the visual fidelity of the sampling-based visualization result?
-
 We commence our presentation by define our research problem formally as follows.
 
 \begin{problem}[Large-scale trajectory visualization problem]\label{prob:def}
@@ -72,7 +71,7 @@ We are aware there exists complex rendering scheme, e.g., different pixels has d
 In particular, for each pixel in the canvas with simple render manner, it will be rendered if there is a trajectory pass through it, otherwise it will not be rendered.
 Suppose each pixel in the canvas has an unique id, let $\U$ be the universal set of all pixels in the canvas.
 For each trajectory $t_i \in \D$, it consists of a set of pixels in the canvas.
-In other words, the pixel set of each trajectory $t_i \in \D$ a subset of $\U$.
+In other words, the pixel set of each trajectory $t_i \in \D$ is a subset of $\U$.
 Consequently, the pixel set of the selected trajectory set $\oR$ is also a subset of $\U$ as $\oR = \cup_{t_i \in \oR} t_i$.
 
 
@@ -86,10 +85,10 @@ Hence, our research objective of Problem~\ref{prob:def} can be transformed as fo
 & \Leftrightarrow \max_{\oR \subseteq \D, |\oR| = \alpha |\D|} | \cup_{t_i \in \oR} t_i |
 \end{align}
 
-It is equivalent to the typical set cover maximization problem\footnote{\url{https://en.wikipedia.org/wiki/Maximum\_coverage\_problem}}.
-It is shown to be NP-hard.
+It is equivalent to the typical set cover maximization problem.
 Specifically, given an integer $k = \alpha |\D|$, and a collection trajectory pixel set $\D = \{t_1, t_2, \cdots, t_n \}$ with $\forall t_i \subset \U$,
 the objective of the set cover maximization problem is finding a subset $\oR \subset \D$ such that $|\oR| \leq k$ and the number of covered pixels in $|\cup_{t_i \in \oR} t_i|$ is maximized.
+We omit the proof of its NP-hardness, as it has been shown in~\cite{setcover}.
 
 
 %It is equivalent to select sized-$k$ trajectory set $\oR$ from $\D$ which $\cup_{\oR_i \in \oR} \oR_i$ is maximized.

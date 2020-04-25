@@ -3,7 +3,7 @@ In this section, we survey previous work and focus on the most relevant pieces.
 Section~\ref{sec:trajvisana} and ~\ref{sec:interactive} summarize the related works in trajectory visual analysis and interactive data visualization for large dataset, respectively.
 
 \subsection{Trajectory Visual Analysis}\label{sec:trajvisana}
-Trajectory is the most common representation of the object movement.
+Trajectory is the most common representation of the object movements.
 Each trajectory consists of a sequence of spatial locations (i.e., GPS points).
 To support the understanding and analyzing of the trajectory dataset,
 many visualization and visual analytic systems are proposed in the literature.
@@ -14,29 +14,21 @@ We briefly introduce the research works in these three categories, and refer the
 The point-based visualization captures the spatial distribution overview of the GPS points in the moving object trajectories.
 Many density-based methods, e.g., kernel density estimation, are applied in point-based visualization methods~\cite{liu2013vait,yang2016exploring,chae2014public,xie2008kernel, borruso2008network}.
 These point-based visualization methods reduce the visual clutter in large amount data by sacrificing the detail information of trajectories, e.g., the sequence order of GPS points.
-However, the point-based visualization result cannot identify the movement of the individual object and reveal the moving details, e.g.,  direction and path ~\cite{chen2015survey}.
+However, the point-based visualization result cannot identify the movement of the individual object and reveal the moving details~\cite{chen2015survey}, e.g.,  direction and path.
 The region based visualization approaches divide the whole region into sub-regions in advance, then visualize the aggregated information in each sub-region~\cite{guo2009flow,wood2010visualisation,von2015mobilitygraphs}.
 These methods demonstrated their effectiveness to capture the macro-patterns.
 In this work, we focus on the line-based visualization methods, which are widely used in visual analysis applications.
 It uses polylines to show the trace of the object movements.
 Through this, it preserves the continuous information of moving objects~\cite{guo2011tripvista,hurter2009fromdady}.
 However, the line-based visualization methods suffer serious visual clutter due to the cross of the polylines in the large amount trajectories.
-<<<<<<< HEAD
-To alleviate this problem, many clustering techniques are proposed for the visual analysis with various trajectory datasets, e.g., flight ~\cite{ferreira2013vector}, taxi trips~\cite{rinzivillo2008visually} and hurricane trajectories~\cite{andrienko2017clustering}.
-\TB{In addition, advanced interaction techniques~\cite{kruger2013trajectorylenses, ferreira2013visual} and edge bundling techniques~\cite{zeng2019route} are devised to detect the movement patterns.}
-\QM{To tackle this problem, several techniques have emerged. 
-	Such as the clustering-based techniques~\cite{ferreira2013vector, rinzivillo2008visually, von2015mobilitygraphs} and advanced interaction techniques~\cite{kruger2013trajectorylenses, ferreira2013visual}, which alleviate the visual clutter by reducing the number of items to be visualized; 
-	the edge bundling techniques~\cite{zeng2019route,thony2015vector} wraps up the similar trajectories into bundles, generating a clear visualization result.
-}
-=======
 To alleviate this problem, several techniques have been proposed, such as the clustering-based techniques~\cite{ferreira2013vector, rinzivillo2008visually, von2015mobilitygraphs} and advanced interaction techniques~\cite{kruger2013trajectorylenses, ferreira2013visual}.
-These works alleviate the visual clutter by reducing the number of visualized items.
-In addition, the edge bundling techniques~\cite{zeng2019route,thony2015vector} wrap up the similar trajectories into bundles, then generate clear visualization results.
+%These works alleviate the visual clutter by reducing the number of visualized items.
+In addition, the edge bundling techniques~\cite{zeng2019route,thony2015vector} are designed to reduce visual clutter.
+Specifically, they wrap up the similar trajectories into bundles, then generate clear visualization results.
 %To alleviate this problem, many clustering techniques are proposed for the visual analysis with various trajectory datasets, e.g., flight ~\cite{ferreira2013vector}, taxi trips~\cite{rinzivillo2008visually} and hurricane trajectories~\cite{andrienko2017clustering}.
 %\TB{In addition, advanced interaction techniques~\cite{kruger2013trajectorylenses, ferreira2013visual} and edge bundling techniques~\cite{zeng2019route} are devised to detect the movement patterns.}
->>>>>>> ead7077cfa12991014e92f5bd4d9de947b96a4cd
-Unlike existing line-based visualization techniques, we propose a visual fidelity  guaranteed sampling approach for line-based trajectory visualization with large-scale input data.
-To the best of our knowledge, it is the first work which offers theoretical visual fidelity guarantee on the sampling result for large-scale line-based trajectory visualization problem.
+Unlike existing line-based visualization techniques, we propose visual fidelity  guaranteed sampling approaches for line-based trajectory visualization with large-scale input data.
+To the best of our knowledge, it is the first work which offers theoretical visual fidelity guarantee on the sampling result for large-scale line-based trajectory visualization.
 
 
 
@@ -47,22 +39,23 @@ To the best of our knowledge, it is the first work which offers theoretical visu
 With the recent advance of location-acquisition technology, the size of available trajectory dataset becomes extremely huge.
 For example, the operating taxis in Shenzhen generate 9.3GB trajectory data per day.
 Due to the limited rendering ability of modern commodity graphics device, generating visualizations for such scale of dataset always take considerable amount of time,
-or even impractical in practice~\cite{park2016visualization}.
-In literature, many works are proposed to achieve interactive visualization in large dataset (not only for trajectory dataset), we briefly elaborate the most representative pieces in this subsection.
+or even impractical~\cite{park2016visualization}.
+In the literature, many works are proposed to achieve interactive visualization in large dataset (not only for trajectory dataset), we briefly elaborate the most representative pieces in this subsection.
 
 \begin{figure}
 	\centering
 	\includegraphics[width=0.45\textwidth]{pictures/framework/framework.pdf}
-	\caption{Interactive visualization system architecture for large dataset}
-	\label{fig:framework}
+	\caption{Interactive visualization system architecture for large dataset} \label{fig:framework}
+    \vspace{-4mm}
 \end{figure}
 
-Figure~\ref{fig:framework} illustrates the architecture of interactive visualization systems (e.g., Spotfire~\footnote{\url{https://www.tibco.com/products/tibco-spotfire}}, Tableau~\footnote{\url{https://www.tableau.com/}}) for large-scale datasets.
+Figure~\ref{fig:framework} illustrates the architecture of interactive visualization systems for large-scale datasets,
+e.g., Spotfire~\cite{Spotfire}, Tableau~\cite{Tableau}, ATLAS~\cite{chan2008maintaining}, Viate~\cite{yang2019vaite}.
 It consists of three layers: the user interface in front-end, the optimization techniques in middle-layer, and the (cloud-based) database management system in the back-end.
 Typically, the researchers in visualization community focused on improving the information visualization effectiveness at the front-end,
-e.g., designing novel visualization methods to assist data analysts to obtain data insights effectively (D3~\footnote{\url{https://d3js.org/}}).
+e.g., designing novel visualization methods to assist data analysts to obtain data insights effectively (D3~\cite{d3}).
 For the researchers in database community, they are working on the efficiency aspect for large data processing,
-e.g., devising big data processing systems and techniques for efficient query processing at back-end (Spark~\footnote{\url{https://spark.apache.org/}}).
+e.g., devising big data processing systems and techniques for efficient query processing at back-end (Spark~\cite{spark}).
 In recent year, both visualization and database communities are dedicating to advance the techniques in interactive visual analysis for large-scale dataset,
 e.g., the optimizations in the middle-layer (see Figure~\ref{fig:framework}).
 We briefly elaborate these optimization techniques in middle-layer in subsequent. %as they are relevant to our technqiues in this work.
@@ -71,11 +64,11 @@ We briefly elaborate these optimization techniques in middle-layer in subsequent
 Aggregating-based optimization techniques~\cite{zeng2013visualizing,von2015mobilitygraphs} in the middle-layer provide interactive visual analysis for large-scale data by
 reducing the number of rendering data.
 It achieves by preprocessing the raw data with aggregation techniques (e.g., clustering).
-Returning to the trajectory visual analysis, 
+Returning to the trajectory visual analysis,
 many works~\cite{wood2010visualisation,guo2009flow,von2015mobilitygraphs} partition the spatial space into basic units,
 then visualize the information upon them by aggregation algorithms.
 For more details of other aggregating-based techniques, we refer the reader to surveys~\cite{xxx}.
-However, aggregating-based methods will cause information loss definitely. 
+However, aggregating-based methods will cause information loss definitely.
 For instance, the continuous spatial traces of the moving objects are always missing and the rarely appeared trajectories are easily to be ignored.
 %the aggregating techniques can be further distinguished by how to generate the spatial partitions.
 %For example, OD Map~\cite{wood2010visualisation} divides the whole map into nested uniform grid, and uses the color of a grid to present the flow magnitude.
@@ -86,11 +79,8 @@ Our problem and solutions are different from these research works as we focus on
 % by the movement patterns.
 
 
-\QM{Aggregating-based optimization techniques contribute to the interactive visual analytics system by aggregating similar data into bins, thus to reduce the rendering data. \cite{guo2009flow} employs the hierarchical administrative regions as basic units and visualize the flow by linking different units. OD Map~\cite{wood2010visualisation} divides the whole map into a nested uniform grid, and uses the color of a grid to present the flow magnitude. Furthermore, dynamic strategies such as graph clustering~\cite{von2015mobilitygraphs} are applied to achieve a flexible aggregation results. However, aggregation-based methods may cause unexpected information loss. For instance, the continuous spatial traces of the moving objects are always missing, and the abnormal trajectories are easily ignored since they can be aggregated with the normal trajectories. Our problem and solutions are different from these research works as we focus on visualizing the raw input data, instead of the aggregated results.}
-
-
 \stitle{Sampling-based techniques}
-Sampling is a de-facto standard solution for the interactive visualization problems with large-scale input data.
+Sampling techniques are commonly used in the interactive visualization problems with large-scale input data.
 It is widely studied in both visualization and database communities ~\cite{battle2013dynamic,chen2014visual,park2016visualization},
 In particular, ~\cite{chen2014visual} devised a sampling algorithm to preserve the meaningful data items according to the analyzing requirement such as the multi-class data analysis and hierarchical exploration.
 %\TB{In addition, the usage of others visual channels of the points, e.g., color and size and opacity are discussed in it~\cite{chen2014visual,woodruff1998constant}}.
@@ -103,9 +93,9 @@ For trajectory visual analysis,  most of the existing trajectory sampling techni
 then select the most representative trajectories from each cluster and visualize them.
 It is impractical to provide interactive visualizations for real-world applications as
 (i) the trajectory similarity computation and clustering algorithms are very expensive~\cite{pelekis2007similarity},
-and (ii) the trajectory clustering is still an open problem in both communities~\cite{panagiotakis2011segmentation,agarwal2018subtrajectory}.
-Unlike the above research works, in this paper, we propose a visual fidelity guaranteed sampling approach ($\vats{}$) for the large-scale trajectory visualization problem,
-we demonstrate the superiority of our proposal by both case- and user- studies in real world datasets.
+and (ii) the trajectory clustering is still an open problem in both database and visualization communities~\cite{panagiotakis2011segmentation,agarwal2018subtrajectory}.
+Unlike the above research works, in this paper, we propose visual fidelity guaranteed sampling approaches for the large-scale trajectory visualization problem,
+we demonstrate the superiority of our proposals by case-, user- and qualitative studies in real world datasets.
 % Some techniques further focus on the clustering and sampling of trajectory segments instead of the whole trajectories.
 
 
