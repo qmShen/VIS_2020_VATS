@@ -1,8 +1,20 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: VATS.aux
 The style file: abbrv-doi.bst
 Database file #1: ref.bib
+Warning--I didn't find a database entry for "xxx"
+Warning--to sort, need author or key in sz
+Warning--to sort, need author or key in pt
+Warning--to sort, need author or key in clutter
+Warning--to sort, need author or key in Spotfire
+Warning--to sort, need author or key in Tableau
+Warning--to sort, need author or key in d3
+Warning--to sort, need author or key in spark
+Warning--to sort, need author or key in setcover
+Warning--to sort, need author or key in googlemap
+Warning--to sort, need author or key in p3
 Warning--can't use both volume and number fields in ferreira2013vector
 Warning--can't use both volume and number fields in kruger2013trajectorylenses
+Warning--empty booktitle in tang2017efficient
 Warning--can't use both volume and number fields in zeng2013visualizing
 Warning--can't use both volume and number fields in zeng2019route
-(There were 4 warnings)
+(There were 16 warnings)

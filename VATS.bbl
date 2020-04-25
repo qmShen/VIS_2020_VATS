@@ -1,15 +1,49 @@
 \begin{thebibliography}{10}
 
+\bibitem{spark}
+Apache spark.
+\newblock \url{https://spark.apache.org/}.
+
+\bibitem{d3}
+D3.
+\newblock \url{https://d3js.org/}.
+
+\bibitem{googlemap}
+Google map.
+\newblock \url{https://www.google.com/maps/preview}.
+
+\bibitem{p3}
+The open-source graphical library.
+\newblock \url{https://processing.org}.
+
+\bibitem{pt}
+Porto taxi trajectory dataset.
+\newblock \url{http://www.geolink.pt/ecmlpkdd2015-challenge/dataset.html}.
+
+\bibitem{setcover}
+Set cover maximization.
+\newblock \url{https://en.wikipedia.org/wiki/Maximum_coverage_problem}.
+
+\bibitem{sz}
+Shenzhen taxi trajectory dataset.
+\newblock {http://jtys.sz.gov.cn/}.
+
+\bibitem{Spotfire}
+Spotfire.
+\newblock \url{https://www.tibco.com/products/tibco-spotfire}.
+
+\bibitem{Tableau}
+Tableau.
+\newblock \url{https://www.tableau.com/}.
+
+\bibitem{clutter}
+Visual clutter.
+\newblock \url{https://infovis-wiki.net/wiki/Visual_Clutter}.
+
 \bibitem{agarwal2018subtrajectory}
 P.~K. Agarwal, K.~Fox, K.~Munagala, A.~Nath, J.~Pan, and E.~Taylor.
 \newblock Subtrajectory clustering: Models and algorithms.
 \newblock In {\em PODS}, pp. 75--87, 2018.
-
-\bibitem{andrienko2017clustering}
-G.~Andrienko, N.~Andrienko, G.~Fuchs, and J.~M.~C. Garcia.
-\newblock Clustering trajectories by relevant parts for air traffic analysis.
-\newblock {\em IEEE transactions on visualization and computer graphics},
-  24(1):34--44, 2017.
 
 \bibitem{battle2013dynamic}
 L.~Battle, M.~Stonebraker, and R.~Chang.
@@ -155,6 +189,12 @@ R.~Scheepens, N.~Willems, H.~van~de Wetering, and J.~J. van Wijk.
 \newblock In {\em 2011 IEEE Pacific Visualization Symposium}, pp. 147--154.
   IEEE, 2011.
 
+\bibitem{tang2017efficient}
+B.~Tang, M.~L. Yiu, K.~Mouratidis, and K.~Wang.
+\newblock Efficient motif discovery in spatial trajectories using discrete
+  fr{\'e}chet distance.
+\newblock EDBT, 2017.
+
 \bibitem{thony2015vector}
 M.~Th{\"o}ny and R.~Pajarola.
 \newblock Vector map constrained path bundling in 3d environments.
@@ -180,12 +220,6 @@ J.~Wood, J.~Dykes, and A.~Slingsby.
 \newblock Visualisation of origins, destinations and flows with od maps.
 \newblock {\em The Cartographic Journal}, 47(2):117--129, 2010.
 
-\bibitem{woodruff1998constant}
-A.~Woodruff, J.~Landay, and M.~Stonebraker.
-\newblock Constant density visualizations of non-uniform distributions of data.
-\newblock In {\em Proceedings of the 11th annual ACM symposium on User
-  interface software and technology}, pp. 19--28, 1998.
-
 \bibitem{xie2008kernel}
 Z.~Xie and J.~Yan.
 \newblock Kernel density estimation of traffic accidents in a network space.
@@ -195,6 +229,12 @@ Z.~Xie and J.~Yan.
 C.~Xu, B.~Tang, and M.~L. Yiu.
 \newblock Diversified caching for replicated web search engines.
 \newblock In {\em ICDE}, pp. 207--218. IEEE, 2015.
+
+\bibitem{yang2019vaite}
+C.~Yang, Y.~Zhang, B.~Tang, and M.~Zhu.
+\newblock Vaite: A visualization-assisted interactive big urban trajectory data
+  exploration system.
+\newblock In {\em ICDE}, pp. 2036--2039, 2019.
 
 \bibitem{yang2016exploring}
 X.~Yang, Z.~Zhao, and S.~Lu.
