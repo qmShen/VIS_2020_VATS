@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.9)  25 APR 2020 19:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.9)  25 APR 2020 19:57
 entering extended mode
 **./VATS.tex
 (VATS.tex
@@ -720,11 +720,11 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 \abstractwidth=\skip63
-<pictures/Teaser.pdf, id=87, 3759.63605pt x 2579.00525pt>
+<pictures/Teaser.pdf, id=87, 3745.65364pt x 2484.02026pt>
 File: pictures/Teaser.pdf Graphic file (type pdf)
 <use pictures/Teaser.pdf>
 Package pdftex.def Info: pictures/Teaser.pdf  used on input line 157.
-(pdftex.def)             Requested size: 467.22528pt x 320.48595pt.
+(pdftex.def)             Requested size: 467.22528pt x 309.81952pt.
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
  157.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\ot1ztmcm.fd"
@@ -804,7 +804,7 @@ LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 9
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ))
 (sections/RelatedWork.tex [2]
-<pictures/framework/framework.pdf, id=252, 563.10374pt x 170.6375pt>
+<pictures/framework/framework.pdf, id=260, 563.10374pt x 170.6375pt>
 File: pictures/framework/framework.pdf Graphic file (type pdf)
 <use pictures/framework/framework.pdf>
 Package pdftex.def Info: pictures/framework/framework.pdf  used on input line 4
@@ -828,23 +828,23 @@ Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 13.
  [4]
-<pictures/1st.pdf, id=364, 216.81pt x 172.2435pt>
+<pictures/1st.pdf, id=372, 216.81pt x 172.2435pt>
 File: pictures/1st.pdf Graphic file (type pdf)
 <use pictures/1st.pdf>
 Package pdftex.def Info: pictures/1st.pdf  used on input line 146.
 (pdftex.def)             Requested size: 110.58096pt x 87.85089pt.
-<pictures/2nd.pdf, id=365, 216.81pt x 172.2435pt>
+<pictures/2nd.pdf, id=373, 216.81pt x 172.2435pt>
 File: pictures/2nd.pdf Graphic file (type pdf)
 <use pictures/2nd.pdf>
 Package pdftex.def Info: pictures/2nd.pdf  used on input line 148.
 (pdftex.def)             Requested size: 110.58096pt x 87.85089pt.
-<pictures/problemsolveing/delta_motivation.pdf, id=375, 3755.28973pt x 923.45pt
->
+<pictures/problemsolveing/delta_motivation.pdf, id=383, 3689.2128pt x 901.42471
+pt>
 File: pictures/problemsolveing/delta_motivation.pdf Graphic file (type pdf)
 <use pictures/problemsolveing/delta_motivation.pdf>
 Package pdftex.def Info: pictures/problemsolveing/delta_motivation.pdf  used on
  input line 191.
-(pdftex.def)             Requested size: 489.17596pt x 120.29225pt.
+(pdftex.def)             Requested size: 489.17596pt x 119.51385pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -867,14 +867,14 @@ Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 pdfTeX warning: pdflatex.exe (file ./pictures/2nd.pdf): PDF inclusion: multiple
  pdfs with page group included in a single page
 >]
-<pictures/problemsolveing/one_to_many.pdf, id=443, 1419.24222pt x 495.25426pt>
+<pictures/problemsolveing/one_to_many.pdf, id=451, 1419.24222pt x 495.25426pt>
 File: pictures/problemsolveing/one_to_many.pdf Graphic file (type pdf)
 <use pictures/problemsolveing/one_to_many.pdf>
 Package pdftex.def Info: pictures/problemsolveing/one_to_many.pdf  used on inpu
 t line 308.
 (pdftex.def)             Requested size: 205.96634pt x 71.8667pt.
 ) (sections/Evaluation.tex
-<pictures/experiment_study/case_porto.pdf, id=457, 5294.28918pt x 4195.78528pt>
+<pictures/experiment_study/case_porto.pdf, id=465, 5294.28918pt x 4195.78528pt>
 
 File: pictures/experiment_study/case_porto.pdf Graphic file (type pdf)
 <use pictures/experiment_study/case_porto.pdf>
@@ -883,7 +883,7 @@ t line 23.
 (pdftex.def)             Requested size: 463.4282pt x 367.23274pt.
  [6 <./pictures/problemsolveing/delta_motivation.pdf> <./pictures/problemsolvei
 ng/one_to_many.pdf>]
-<pictures/experiment_study/case_shenzhen.pdf, id=537, 5073.61513pt x 2851.83435
+<pictures/experiment_study/case_shenzhen.pdf, id=540, 5073.61513pt x 2851.83435
 pt>
 File: pictures/experiment_study/case_shenzhen.pdf Graphic file (type pdf)
 <use pictures/experiment_study/case_shenzhen.pdf>
@@ -896,14 +896,14 @@ Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 
 [7 <./pictures/experiment_study/case_porto.pdf>]
 (sections/Evaluation_user_study.tex
-<pictures/user_study/interface.pdf, id=651, 2670.54721pt x 1870.75916pt>
+<pictures/user_study/interface.pdf, id=671, 2596.20943pt x 1826.7146pt>
 File: pictures/user_study/interface.pdf Graphic file (type pdf)
 <use pictures/user_study/interface.pdf>
 Package pdftex.def Info: pictures/user_study/interface.pdf  used on input line 
 10.
-(pdftex.def)             Requested size: 247.16118pt x 173.12814pt.
+(pdftex.def)             Requested size: 247.16118pt x 173.90204pt.
  [8 <./pictures/experiment_study/case_shenzhen.pdf>]
-<pictures/user_study/accuracy.pdf, id=753, 724.07611pt x 444.4876pt>
+<pictures/user_study/accuracy.pdf, id=772, 724.07611pt x 444.4876pt>
 File: pictures/user_study/accuracy.pdf Graphic file (type pdf)
 <use pictures/user_study/accuracy.pdf>
 Package pdftex.def Info: pictures/user_study/accuracy.pdf  used on input line 1
@@ -914,12 +914,12 @@ Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 
 
 [9 <./pictures/user_study/interface.pdf> <./pictures/user_study/accuracy.pdf>]
-<pictures/fporto.pdf, id=785, 361.35pt x 252.945pt>
+<pictures/fporto.pdf, id=797, 361.35pt x 252.945pt>
 File: pictures/fporto.pdf Graphic file (type pdf)
 <use pictures/fporto.pdf>
 Package pdftex.def Info: pictures/fporto.pdf  used on input line 178.
 (pdftex.def)             Requested size: 120.63203pt x 84.44087pt.
-<pictures/fshenzhen.pdf, id=786, 361.35pt x 252.945pt>
+<pictures/fshenzhen.pdf, id=798, 361.35pt x 252.945pt>
 File: pictures/fshenzhen.pdf Graphic file (type pdf)
 <use pictures/fshenzhen.pdf>
 Package pdftex.def Info: pictures/fshenzhen.pdf  used on input line 180.
@@ -929,12 +929,12 @@ Overfull \hbox (13.94511pt too wide) in paragraph at lines 177--186
  [][] 
  []
 
-<pictures/tporto.pdf, id=789, 361.35pt x 252.945pt>
+<pictures/tporto.pdf, id=801, 361.35pt x 252.945pt>
 File: pictures/tporto.pdf Graphic file (type pdf)
 <use pictures/tporto.pdf>
 Package pdftex.def Info: pictures/tporto.pdf  used on input line 208.
 (pdftex.def)             Requested size: 120.63203pt x 84.44087pt.
-<pictures/tshenzhen.pdf, id=790, 361.35pt x 252.945pt>
+<pictures/tshenzhen.pdf, id=802, 361.35pt x 252.945pt>
 File: pictures/tshenzhen.pdf Graphic file (type pdf)
 <use pictures/tshenzhen.pdf>
 Package pdftex.def Info: pictures/tshenzhen.pdf  used on input line 210.
@@ -993,7 +993,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 176.
 Here is how much of TeX's memory you used:
  11314 strings out of 492452
  166821 string characters out of 3129805
- 306504 words of memory out of 3000000
+ 305504 words of memory out of 3000000
  14970 multiletter control sequences out of 15000+200000
  71869 words of font info for 353 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1010,9 +1010,9 @@ Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2
 /symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on VATS.pdf (11 pages, 14488527 bytes).
+Output written on VATS.pdf (11 pages, 15289090 bytes).
 PDF statistics:
- 894 PDF objects out of 1000 (max. 8388607)
+ 906 PDF objects out of 1000 (max. 8388607)
  99 named destinations out of 1000 (max. 500000)
  51444 words of extra memory for PDF output out of 51595 (max. 10000000)
 
