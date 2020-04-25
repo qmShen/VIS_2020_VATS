@@ -44,12 +44,13 @@ In the literature, many works are proposed to achieve interactive visualization 
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.45\textwidth]{pictures/framework/framework.pdf}
+	\includegraphics[width=0.40\textwidth]{pictures/framework/framework.pdf}
+	\vspace{-3mm}
 	\caption{Interactive visualization system architecture for large dataset} \label{fig:framework}
-    \vspace{-4mm}
+    \vspace{-6mm}
 \end{figure}
 
-Figure~\ref{fig:framework} illustrates the architecture of interactive visualization systems for large-scale datasets,
+Fig.~\ref{fig:framework} illustrates the architecture of interactive visualization systems for large-scale datasets,
 e.g., Spotfire~\cite{Spotfire}, Tableau~\cite{Tableau}, ATLAS~\cite{chan2008maintaining}, Viate~\cite{yang2019vaite}.
 It consists of three layers: the user interface in front-end, the optimization techniques in middle-layer, and the (cloud-based) database management system in the back-end.
 Typically, the researchers in visualization community focused on improving the information visualization effectiveness at the front-end,
@@ -57,7 +58,7 @@ e.g., designing novel visualization methods to assist data analysts to obtain da
 For the researchers in database community, they are working on the efficiency aspect for large data processing,
 e.g., devising big data processing systems and techniques for efficient query processing at back-end (Spark~\cite{spark}).
 In recent year, both visualization and database communities are dedicating to advance the techniques in interactive visual analysis for large-scale dataset,
-e.g., the optimizations in the middle-layer (see Figure~\ref{fig:framework}).
+e.g., the optimizations in the middle-layer (see Fig.~\ref{fig:framework}).
 We briefly elaborate these optimization techniques in middle-layer in subsequent. %as they are relevant to our technqiues in this work.
 
 \stitle{Aggregating-based techniques}
@@ -67,7 +68,7 @@ It achieves by preprocessing the raw data with aggregation techniques (e.g., clu
 Returning to the trajectory visual analysis,
 many works~\cite{wood2010visualisation,guo2009flow,von2015mobilitygraphs} partition the spatial space into basic units,
 then visualize the information upon them by aggregation algorithms.
-For more details of other aggregating-based techniques, we refer the reader to surveys~\cite{xxx}.
+For more details of other aggregating-based techniques, we refer the reader to surveys~\cite{andrienko2008spatio}.
 However, aggregating-based methods will cause information loss definitely.
 For instance, the continuous spatial traces of the moving objects are always missing and the rarely appeared trajectories are easily to be ignored.
 %the aggregating techniques can be further distinguished by how to generate the spatial partitions.

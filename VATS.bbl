@@ -45,6 +45,12 @@ P.~K. Agarwal, K.~Fox, K.~Munagala, A.~Nath, J.~Pan, and E.~Taylor.
 \newblock Subtrajectory clustering: Models and algorithms.
 \newblock In {\em PODS}, pp. 75--87, 2018.
 
+\bibitem{andrienko2008spatio}
+G.~Andrienko and N.~Andrienko.
+\newblock Spatio-temporal aggregation for visual analysis of movements.
+\newblock In {\em 2008 IEEE symposium on visual analytics science and
+  technology}, pp. 51--58. IEEE, 2008.
+
 \bibitem{battle2013dynamic}
 L.~Battle, M.~Stonebraker, and R.~Chang.
 \newblock Dynamic reduction of query result sets for interactive visualizaton.

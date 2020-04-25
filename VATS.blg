@@ -1,7 +1,6 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: VATS.aux
 The style file: abbrv-doi.bst
 Database file #1: ref.bib
-Warning--I didn't find a database entry for "xxx"
 Warning--to sort, need author or key in sz
 Warning--to sort, need author or key in pt
 Warning--to sort, need author or key in clutter
@@ -17,4 +16,4 @@ Warning--can't use both volume and number fields in kruger2013trajectorylenses
 Warning--empty booktitle in tang2017efficient
 Warning--can't use both volume and number fields in zeng2013visualizing
 Warning--can't use both volume and number fields in zeng2019route
-(There were 16 warnings)
+(There were 15 warnings)

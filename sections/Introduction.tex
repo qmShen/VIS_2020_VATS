@@ -3,7 +3,7 @@ Nowadays, the widely used location-acquisition devices lead to an explosive incr
 Trajectory visual analysis have been employed in many smart city applications, e.g.,  traffic management~\cite{wang2014visual}, urban planning~\cite{tang2017efficient}, route recommendation~\cite{zheng2011learning} and location-based services~\cite{liu2016smartadp, zheng2010collaborative}.
 Line-based trajectory visualization, i.e., connecting the GPS points of a movement object by polylines, is a popular and conventional visualization method~\cite{chen2015survey}.
 %we should focus on line-based trajectory visualization here.
-However, efficient and effective large-scale line-based trajectory visualization is very challenging.
+However, efficient and effective large-scale line-based trajectory visualization is challenging.
 The reasons are (i) large trajectory data size, (ii) limited rendering ability of graphics device and (iii) visual clutter in large data visualization.
 We elaborate them as follows:
 
@@ -33,12 +33,11 @@ Thus, it is impractical to visualize billion-level GPS points via the commodity 
 		100,000& 3,262,278 & 1.416\\ \hline
 		1,000,000& 32,660,845 & 13.950\\ \hline
 	\end{tabular}	\label{tab:gpu}
-    \vspace{-4mm}
 \end{table}
 
 \stitle{Visual clutter in data visualization}
 Visual clutter is a common issue in data visualization~\cite{clutter}.
-Figure~\ref{fig:teaser}A is the visualization result of the full \pt{} taxi trajectory dataset.
+Fig.~\ref{fig:teaser}A is the visualization result of the full \pt{} taxi trajectory dataset.
 Intuitively, the region shown in the embedded figure of A suffers visual clutter issue seriously,
 i.e., the road network almost cannot be recognized in it,
 which hinders the abilities of human-users to explore the dataset and identify the underlying data insights.
@@ -62,9 +61,9 @@ For example, ScalaR~\cite{battle2013dynamic} employs a reduction layer between v
 The reduction layer embedded an uniform random sampling algorithm to sample data randomly when the query results are large enough.
 It then reduces the amount of data to be visualized.
 However, the uniform random sampling method does not work well in our large trajectory data visualization problem as it does not have any guarantees about the sampling results.
-Take Figure~\ref{fig:teaser}(B) and (C) as an example,
+Take Fig.~\ref{fig:teaser}(B) and (C) as an example,
 they are the visualization results of uniform random sampling method on \pt{} taxi trajectory dataset with sampling rate $0.1\%$ and $1\%$, respectively.
-Visually, both visualized results cannot capture the overview of the input data, as shown in Figure~\ref{fig:teaser}(A).
+Visually, both visualized results cannot capture the overview of the input data, as shown in Fig.~\ref{fig:teaser}(A).
 
 In database community,  Park et al. devised a visualization-aware sampling algorithm (VAS) for large-scale scatter points visualization problem in~\cite{park2016visualization},
 which offers theoretical quality guarantee on the visualization result.
@@ -81,16 +80,16 @@ Specifically, we first define a novel the visual fidelity loss function between 
 With the visual fidelity loss function, we then prove it is NP-hardness to select a sized-$k$ subset of trajectories which has the minimal visual fidelity loss.
 Next, we devise an approximate algorithm ($\vats$) which returns a sized-$k$ subset of trajectories and offers theoretical visual fidelity guarantee on the returning result.
 Last, we address the visual clutter issue explicitly and overcome it by taking data distribution and human perception capability into consideration in the advance approach ($\avats$).
-Figure~\ref{fig:teaser}(D) and (E) show the visualization results of our proposal $\avats{}$ on \pt{} taxi trajectory dataset with sampling rate $0.1\%$ and $1\%$, respectively.
-Obviously, the visualization fidelity of them (comparing with the visualization result of full dataset in Figure~\ref{fig:teaser}(A)) is much better than
-the uniform random sampling visualization results with the same sampling rate, see (B) and (C) in Figure~\ref{fig:teaser}.
-Figure~\ref{fig:teaser}(F) is the returning result of our proposal which colors the trajectories with different representativeness.
-It has the same input parameters of Figure~\ref{fig:teaser}(E).
-Intuitively, the visual clutter in Figure~\ref{fig:teaser}(A) and (E) is almost removed in Figure~\ref{fig:teaser}(F).
+Fig.~\ref{fig:teaser}(D) and (E) show the visualization results of our proposal $\avats{}$ on \pt{} taxi trajectory dataset with sampling rate $0.1\%$ and $1\%$, respectively.
+Obviously, the visualization fidelity of them (comparing with the visualization result of full dataset in Fig.~\ref{fig:teaser}(A)) is much better than
+the uniform random sampling visualization results with the same sampling rate, see (B) and (C) in Fig.~\ref{fig:teaser}.
+Fig.~\ref{fig:teaser}(F) is the returning result of our proposal which colors the trajectories with different representativeness.
+It has the same input parameters of Fig.~\ref{fig:teaser}(E).
+Intuitively, the visual clutter in Fig.~\ref{fig:teaser}(A) and (E) is almost removed in Fig.~\ref{fig:teaser}(F).
 In addition, our proposals are robustness with different zoom levels.
-Figure~\ref{fig:teaser}(G), (H), and (I) depict the visualization results of the full \pt{} dataset, the returning result of uniform random sampling $\rand$ and the returning result of $\avats$ with color encoding at zoom-level 15, e.g., we can obtain them by zooming in the visualization result in Figure~\ref{fig:teaser}(A), (C), and (F), respectively.
-Intuitively, the visualization result of our proposal $\avats$ in Figure~\ref{fig:teaser}(F) outperforms the uniform random sampling method $\rand$ in Figure~\ref{fig:teaser}(H) significantly.
-It even performs better than Figure~\ref{fig:teaser}(G), the visualized result of the full dataset, as it reduces visual clutter in G by using color encoding scheme to capture the representativeness of different roads.
+Fig.~\ref{fig:teaser}(G), (H), and (I) depict the visualization results of the full \pt{} dataset, the returning result of uniform random sampling $\rand$ and the returning result of $\avats$ with color encoding at zoom-level 15, e.g., we can obtain them by zooming in the visualization result in Fig.~\ref{fig:teaser}(A), (C), and (F), respectively.
+Intuitively, the visualization result of our proposal $\avats$ in Fig.~\ref{fig:teaser}(F) outperforms the uniform random sampling method $\rand$ in Fig.~\ref{fig:teaser}(H) significantly.
+It even performs better than Fig.~\ref{fig:teaser}(G), the visualized result of the full dataset, as it reduces visual clutter in G by using color encoding scheme to capture the representativeness of different roads.
 
 The contributions of this paper are:
 \setlist{nolistsep}
