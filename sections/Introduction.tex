@@ -1,21 +1,21 @@
 \section{Introduction}\label{sec:intro}
-Nowadays, the widely used location-acquisition devices lead to an explosive increase of the movement data (i.e., GPS trajectories) from urban moving objects, e.g., cars, sharing bikes, and pedestrians.
-Trajectory visual analysis have been employed in many smart city applications, e.g.,  traffic management~\cite{wang2014visual}, urban planning~\cite{tang2017efficient}, route recommendation~\cite{zheng2011learning} and location-based services~\cite{liu2016smartadp, zheng2010collaborative}.
-Line-based trajectory visualization, i.e., connecting the GPS points of a movement object by polylines, is a popular and conventional visualization method~\cite{chen2015survey}.
+Nowadays, the \ZW{ubiquitous} location-acquisition devices lead to an explosive increase of movement data (\ZW{e.g.}, GPS trajectories) \ZW{for} urban moving objects, e.g., \ZW{vehicles}, sharing bikes, and pedestrians.
+Trajectory \ZW{visualization has} been employed in many smart city applications, e.g.,  traffic management~\cite{wang2014visual}, urban planning~\cite{tang2017efficient}, route recommendation~\cite{zheng2011learning}, and location-based services~\cite{liu2016smartadp, zheng2010collaborative}.
+Line-based trajectory visualization, i.e., connecting the \ZW{locations} of a \ZW{moving} object by polylines, is a popular and conventional visualization method~\cite{chen2015survey}.
 %we should focus on line-based trajectory visualization here.
-However, efficient and effective large-scale line-based trajectory visualization is challenging.
-The reasons are (i) large trajectory data size, (ii) limited rendering ability of graphics device and (iii) visual clutter in large data visualization.
+However, \ZW{large-scale} line-based trajectory visualization is challenging.
+The reasons are (i) large trajectory data size, (ii) limited rendering capability of graphics device, and (iii) visual clutter in large data visualization.
 We elaborate them as follows:
 
 \stitle{Large trajectory data size} The trajectory data size is extremely huge.
-For example, Shenzhen has 24,237 taxis and generates more than 82.8 millions GPS locations (e.g., taxi trajectories) in each day~\cite{sz}. %\footnote{\url{http://jtys.sz.gov.cn/}}.
-In New York City, it has 13,000 taxis, averagely, they carry over 1.0 million passengers and make 500,000 trips per day~\cite{ferreira2013visual}.
+For example, Shenzhen has 24,237 taxis and generates more than 82.8 million GPS locations (e.g., taxi trajectories) in each day~\cite{sz}. %\footnote{\url{http://jtys.sz.gov.cn/}}.
+In New York City, \ZW{there are} over 13,000 taxis \ZW{that} averagely \ZW{carry} over 1.0 million passengers and make 500,000 trips per day~\cite{ferreira2013visual}.
 
-\stitle{Limited rendering ability of graphics device}
-Rendering refers to the use of hardware device (e.g., GPU) in the automatic generation of visualization result.
-However, due to the hardware limitation, the rendering ability of modern commodity GPU is limited.
-We did a benchmark experiment to evaluate the rendering ability of NVIDIA GeForce GTX 1080 with 8GB video memory.
-We vary the number of trajectories from 1,000 to 1 millions, which are randomly selected from \pt{} taxi trajectory dataset~\cite{pt}.%\footnote{\url{http://www.geolink.pt/ecmlpkdd2015-challenge/dataset.html}}.
+\stitle{Limited rendering capability of graphics device}
+Rendering refers to the use of hardware device (e.g., GPU) in the \ZW{generation} of \ZW{visualizations}.
+However, due to the hardware limitation, the rendering capability of modern commodity GPU is limited.
+We did a benchmark experiment to evaluate the rendering capability of NVIDIA GeForce GTX 1080 with 8GB video memory.
+We varied the number of trajectories from 1,000 to 1 million, which are randomly selected from \pt{} taxi trajectory dataset~\cite{pt}.%\footnote{\url{http://www.geolink.pt/ecmlpkdd2015-challenge/dataset.html}}.
 The experimental results are summarized in Table~\ref{tab:gpu}.
 Obviously, it cannot support interactive visual exploration in large-scale trajectory dataset, e.g.,
 it needs 13.95 seconds to render 1 million trajectories with 32.67 millions GPS points (almost 40\% of \sz{} taxi trajectory GPS points in one day).
@@ -92,14 +92,16 @@ Intuitively, the visualization result of our proposal $\avats$ in Fig.~\ref{fig:
 It even performs better than Fig.~\ref{fig:teaser}(G), the visualized result of the full dataset, as it reduces visual clutter in G by using color encoding scheme to capture the representativeness of different roads.
 
 The contributions of this paper are:
-\setlist{nolistsep}
-\begin{itemize}[noitemsep]
+%\setlist{nolistsep}
+%\begin{itemize}[noitemsep]
+\squishlist
   \item We formulate the visual fidelity guaranteed sampling problem for large trajectory data visualization, and prove it is NP hard in Section~\ref{sec:pro}.
   \item We devise an approximation algorithm for it with a suite of optimization techniques, e.g., submodularity, lazy computing in Section~\ref{sec:sol}.
   \item We propose an advanced approach to further enhance the effectiveness of our approximate algorithm, which address the visual clutter by introducing perception tolerance parameter,
   and encodes the representativeness of each road by different colors in Section~\ref{sec:aa}.
   \item We conduct extensive experiments on real-world trajectory datasets to demonstrate the superiority of our proposals in Section~\ref{sec:exp}. Especially, we conduct qualitative user studies to show their effectiveness on three real-world applications.
-\end{itemize}
+\squishend
+%\end{itemize}
 
 %Our proposal demonstrates their superiority over existing methods
 %With the same sampling set size($1\%$), the proposed method generates a higher-fidelity visualization and .

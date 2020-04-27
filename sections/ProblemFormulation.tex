@@ -17,7 +17,7 @@ Section~\ref{sec:hard} analyzes its hardness.
 
 
 \subsection{Problem Definition}\label{sec:def}
-As we analyzed in Section~\ref{sec:intro}, the large-scale (e.g., hundreds of millions GPS points) line-based trajectory visualization problem is very challenging due to the large data size and limited rendering ability of graphics devices.
+As we analyzed in Section~\ref{sec:intro}, the large-scale (e.g., hundreds of millions GPS points) line-based trajectory visualization problem is very challenging due to the large data size and limited rendering capability of graphics devices.
 To make matters worse, the visualization result of large-scale trajectory dataset suffers visual clutter seriously.
 In this work, we focus on how to visualize large-scale trajectory dataset efficiently and effectively.
 In particular, our objective is to devise a visual fidelity guaranteed sampling method for large trajectory data visualization.
@@ -43,7 +43,7 @@ Given an empty canvas (e.g., displaying device) with a user specified level of d
 the visualization process is rendering the trajectories into canvas with the given level of details (e.g., the number of pixels in each row and each column).
 Considering a trajectory data set $\D$ and a subset of trajectories $\oR \subseteq \D$,
 The visual fidelity loss between $\oR$ and $\D$ is defining as the different pixels of the visualization results about $\oR$ and $\D$ in the canvas with specified LOD.
-We then define the visual fidelity loss function of sampling-based trajectory visualization problem as $loss(\D, \oR) = \frac{\V(\D) - \V(\oR)}{\V(\D)}$,
+We then define the visual fidelity loss function of sampling-based trajectory visualization problem as $loss(\D, \oR) = \frac{|\V(\D) - \V(\oR)|}{|\V(\D)|}$,
 where $\V()$ measures the rendered pixels in the canvas of the input trajectory dataset.
 
 Thus, given a trajectory data set $\D$ and a sampling rate $\alpha$,
