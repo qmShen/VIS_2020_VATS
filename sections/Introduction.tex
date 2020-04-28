@@ -15,8 +15,8 @@ In New York City, \ZW{there are} over 13,000 taxis \ZW{that} averagely \ZW{carry
 Rendering refers to the use of hardware device (e.g., GPU) in the \ZW{generation} of \ZW{visualizations}.
 However, due to the hardware limitation, the rendering capability of modern commodity GPU is limited.
 We did a benchmark experiment to evaluate the rendering capability of NVIDIA GeForce GTX 1080 with 8GB video memory.
-We varied the number of trajectories from 1,000 to 1 million, which are randomly selected from \pt{} taxi trajectory dataset~\cite{pt}.%\footnote{\url{http://www.geolink.pt/ecmlpkdd2015-challenge/dataset.html}}.
-The experimental results are summarized in Table~\ref{tab:gpu}.
+We varied the number of trajectories from 1,000 to 1 million, which are randomly selected from \pt{} taxi trajectory dataset~\cite{pt}.%\footnote{\url{http://www.geolink.pt/ecmlpkdd2015-challenge/dataset.html}}. 
+ The experimental results are summarized in Table~\ref{tab:gpu}.
 Obviously, it cannot support interactive visual exploration in large-scale trajectory dataset, e.g.,
 it needs 13.95 seconds to render 1 million trajectories with 32.67 millions GPS points (almost 40\% of \sz{} taxi trajectory GPS points in one day).
 Moreover, the rendering cost is linear with the input data trajectories.
@@ -55,7 +55,7 @@ In recent years, many visualization research works are proposed to address visua
 e.g., edge bundling~\cite{zeng2019route, thony2015vector} and density map~\cite{lampe2011interactive, scheepens2011interactive}.
 However, these works neither focus on line-based trajectory visualization nor designed for large-scale trajectory dataset.
 
-Sampling techniques is a de-facto standard for large-scale data analysis in both database and visualization community.
+\QM{Sampling techniques are a de-facto standards} for large-scale data analysis in both database and visualization community.
 In general, it samples a subset of data from the raw large-scale dataset, then it could be rendered efficiently by the graphics device.
 For example, ScalaR~\cite{battle2013dynamic} employs a reduction layer between visualization layer and data management layer.
 The reduction layer embedded an uniform random sampling algorithm to sample data randomly when the query results are large enough.
@@ -85,7 +85,7 @@ Obviously, the visualization fidelity of them (comparing with the visualization 
 the uniform random sampling visualization results with the same sampling rate, see (B) and (C) in Fig.~\ref{fig:teaser}.
 Fig.~\ref{fig:teaser}(F) is the returning result of our proposal which colors the trajectories with different representativeness.
 It has the same input parameters of Fig.~\ref{fig:teaser}(E).
-Intuitively, the visual clutter in Fig.~\ref{fig:teaser}(A) and (E) is almost removed in Fig.~\ref{fig:teaser}(F).
+Intuitively, the visual clutter in Fig.~\ref{fig:teaser}(A) and (E) \QM{is alleviate} in Fig.~\ref{fig:teaser}(F).
 In addition, our proposals are robustness with different zoom levels.
 Fig.~\ref{fig:teaser}(G), (H), and (I) depict the visualization results of the full \pt{} dataset, the returning result of uniform random sampling $\rand$ and the returning result of $\avats$ with color encoding at zoom-level 15, e.g., we can obtain them by zooming in the visualization result in Fig.~\ref{fig:teaser}(A), (C), and (F), respectively.
 Intuitively, the visualization result of our proposal $\avats$ in Fig.~\ref{fig:teaser}(F) outperforms the uniform random sampling method $\rand$ in Fig.~\ref{fig:teaser}(H) significantly.

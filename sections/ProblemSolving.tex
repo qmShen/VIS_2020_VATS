@@ -163,8 +163,8 @@ Hence, it holds $\Delta(\oR, t) = |\oR \cup t| - |\oR| \geq |\oR^{'} \cup t| - |
 
 
 With the help of submodularity in Lemma~\ref{lem:submodular}, it reduces many unnecessary trajectory contribution value computations.
-In particular, we maintains a max-heap for the number of uncovered pixels of each trajectory,
-we employ lazy computing manner, i.e., only compute the contributions of a given trajectory when it is necessary.
+In particular, we maintain a max-heap for the number of uncovered pixels of each trajectory,
+we employ a lazy computing manner, i.e., only compute the contributions of a given trajectory when it is necessary.
 Fig.~\ref{fig:heap}(a) shows a tiny max-heap example about the numbers of uncovered pixels of each trajectory from $t_1$ to $t_7$ with result set $\oR=\emptyset$.
 At the 1st iteration, the root node of the max-heap will be selected, i.e., $t_3$ in Fig.~\ref{fig:heap}(A).
 At the 2nd iteration, the number of uncovered pixels of the root node $t_1$ is updated to 7 w.r.t. result set $\oR = \{t_3 \}$ (see gray node at Fig.~\ref{fig:heap}(B)).

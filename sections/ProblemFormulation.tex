@@ -23,7 +23,7 @@ In this work, we focus on how to visualize large-scale trajectory dataset effici
 In particular, our objective is to devise a visual fidelity guaranteed sampling method for large trajectory data visualization.
 The major challenges to achieve this goal are:
 (I) how to define visual fidelity theoretically? (II) how to guarantee the visual fidelity of the sampling-based visualization result?
-We commence our presentation by define our research problem formally as follows.
+We commence our presentation by defining our research problem formally as follows.
 
 \begin{problem}[Large-scale trajectory visualization problem]\label{prob:def}
 Given a large-scale trajectory dataset $\D$ and a sampling rate $\alpha$,
@@ -37,12 +37,12 @@ such that visual fidelity loss function $loss(\oR,\D)$ is minimized.
 %In order to address that, we propose an novel loss function for trajectory visualization problem.
 
 
-The key to solve the large-scale trajectory visualization problem (see Problem~\ref{prob:def}) is defining the visual fidelity loss function properly.
-Intuitively, the visual fidelity of the sampled visualization results $\oR$ w.r.t. to the original dataset $\D$ depends on the user specified visualization level of details (a.k.a., LOD).
+The key to solving the large-scale trajectory visualization problem (see Problem~\ref{prob:def}) is defining the visual fidelity loss function properly.
+Intuitively, the visual fidelity of the sampled visualization results $\oR$ w.r.t. the original dataset $\D$ depends on the user specified visualization level of details (a.k.a., LOD).
 Given an empty canvas (e.g., displaying device) with a user specified level of details,
 the visualization process is rendering the trajectories into canvas with the given level of details (e.g., the number of pixels in each row and each column).
 Considering a trajectory data set $\D$ and a subset of trajectories $\oR \subseteq \D$,
-The visual fidelity loss between $\oR$ and $\D$ is defining as the different pixels of the visualization results about $\oR$ and $\D$ in the canvas with specified LOD.
+the visual fidelity loss between $\oR$ and $\D$ is defining as the different pixels of the visualization results about $\oR$ and $\D$ in the canvas with specified LOD.
 We then define the visual fidelity loss function of sampling-based trajectory visualization problem as $loss(\D, \oR) = \frac{|\V(\D) - \V(\oR)|}{|\V(\D)|}$,
 where $\V()$ measures the rendered pixels in the canvas of the input trajectory dataset.
 
