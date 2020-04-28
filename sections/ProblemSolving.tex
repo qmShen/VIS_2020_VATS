@@ -249,17 +249,17 @@ However, it only needs 1.2 seconds in our performance optimized $\vats$.
 \section{Advance Approach: $\avats$}\label{sec:aa}
 Until now, $\vats$ in Algorithm~\ref{alg:greedy} offers a visual fidelity guaranteed sampling approach for large-scale trajectory visualization problem (see Problem~\ref{prob:def}),
 which returns the visual fidelity guaranteed result efficiently via the optimization techniques in Section~\ref{sec:opt}.
-It means that the challenges (i) large trajectory dataset and (ii) limited rendering ability of graphics device (see Section~\ref{sec:intro}) have been addressed.
+It means that the challenges (i) large trajectory dataset and (ii) limited rendering capability of graphics device (see Section~\ref{sec:intro}) have been addressed.
 In this section, we focus on the third challenge of it, i.e.,  visual clutter.
 In particular, we devise an advance approach $\avats$ to alleviate it by considering
-(i) trajectory data distribution, and (ii) human perception ability.
+(i) trajectory data distribution, and (ii) human perception capability.
 We elaborate (i) and (ii) by the examples in Fig.~\ref{fig:delta} shortly.
 
 \stitle{Trajectory data distribution} Considering \pt{} trajectory dataset, Fig.~\ref{fig:delta}(A) is the visualization result of $\vats$ with sampling ratio $0.5\%$.
 Obviously, the real-world trajctory dataset is non-uniform distributed.
 For example, the trajectories in the dense region is much more than these in the sparse region, as illustrated by the rectangles in Fig.~\ref{fig:delta}(A).
 
-\stitle{Human perception ability} Intuitively, it is much easier for humans to distinguish the difference between sparse regions rather than dense regions in Fig.~\ref{fig:delta}(A) and (B).
+\stitle{Human perception capability} Intuitively, it is much easier for humans to distinguish the difference between sparse regions rather than dense regions in Fig.~\ref{fig:delta}(A) and (B).
 The core reason is the perception capability of human beings is limited.
 In particular, the visual difference of human beings will be diminished when the visualized trajectories is large enough with a given level of details,
 i.e., the difference between two dense regions in Fig.~\ref{fig:delta}(A) and (B).

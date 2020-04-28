@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.9)  26 APR 2020 20:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.9)  28 APR 2020 19:22
 entering extended mode
 **./VATS.tex
 (VATS.tex
@@ -477,6 +477,10 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@count@id=\count122
 \enitdp@description=\count123
 )
+("C:\Program Files\MiKTeX 2.9\tex/latex/preprint\balance.sty"
+Package: balance 1999/02/23 4.3 (PWD)
+\oldvsize=\dimen144
+)
 \c@problem=\count124
 \c@lemma=\count125
 \c@theorem=\count126
@@ -533,7 +537,7 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\kvoptions.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen144
+\@linkdim=\dimen145
 \Hy@linkcounter=\count127
 \Hy@pagecounter=\count128
 
@@ -561,10 +565,10 @@ Package hyperref Info: Bookmarks ON on input line 4793.
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5152.
-\XeTeXLinkMargin=\dimen145
+\XeTeXLinkMargin=\dimen146
 \Fld@menulength=\count131
-\Field@Width=\dimen146
-\Fld@charsize=\dimen147
+\Field@Width=\dimen147
+\Fld@charsize=\dimen148
 Package hyperref Info: Hyper figures OFF on input line 6423.
 Package hyperref Info: Link nesting OFF on input line 6428.
 Package hyperref Info: Hyper index ON on input line 6431.
@@ -594,56 +598,56 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 
 Package hyperref Warning: Option `pdftex' has already been used,
-(hyperref)                setting the option has no effect on input line 135.
+(hyperref)                setting the option has no effect on input line 173.
 
 
 Package hyperref Warning: Option `pagebackref' has already been used,
-(hyperref)                setting the option has no effect on input line 135.
+(hyperref)                setting the option has no effect on input line 173.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 135.
+(hyperref)                removing `\\' on input line 173.
 
-Package hyperref Info: Option `pageanchor' set `true' on input line 135.
-Package hyperref Info: Option `plainpages' set `false' on input line 135.
-Package hyperref Info: Option `hypertexnames' set `false' on input line 135.
+Package hyperref Info: Option `pageanchor' set `true' on input line 173.
+Package hyperref Info: Option `plainpages' set `false' on input line 173.
+Package hyperref Info: Option `hypertexnames' set `false' on input line 173.
 
 Package hyperref Warning: Option `bookmarks' has already been used,
-(hyperref)                setting the option has no effect on input line 135.
+(hyperref)                setting the option has no effect on input line 173.
 
-Package hyperref Info: Option `bookmarksnumbered' set `false' on input line 135
+Package hyperref Info: Option `bookmarksnumbered' set `false' on input line 173
 .
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 135.
-Package hyperref Info: Option `breaklinks' set `true' on input line 135.
-Package hyperref Info: Option `colorlinks' set `false' on input line 135.
-Package hyperref Info: Option `nesting' set `true' on input line 135.
-Package hyperref Info: Option `linktocpage' set `true' on input line 135.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 173.
+Package hyperref Info: Option `breaklinks' set `true' on input line 173.
+Package hyperref Info: Option `colorlinks' set `false' on input line 173.
+Package hyperref Info: Option `nesting' set `true' on input line 173.
+Package hyperref Info: Option `linktocpage' set `true' on input line 173.
 (VATS.aux)
 \openout1 = `VATS.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 152.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 190.
+LaTeX Font Info:    ... okay on input line 190.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 190.
+LaTeX Font Info:    ... okay on input line 190.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 190.
+LaTeX Font Info:    ... okay on input line 190.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 190.
+LaTeX Font Info:    ... okay on input line 190.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 190.
+LaTeX Font Info:    ... okay on input line 190.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 190.
+LaTeX Font Info:    ... okay on input line 190.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 190.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-52.
+90.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 152.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 152.
-LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    ... okay on input line 190.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 190.
+LaTeX Font Info:    ... okay on input line 190.
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
-52.
+90.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -651,13 +655,13 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count137
-\scratchdimen=\dimen148
+\scratchdimen=\dimen149
 \scratchbox=\box39
 \nofMPsegments=\count138
 \nofMParguments=\count139
 \everyMPshowfont=\toks34
 \MPscratchCnt=\count140
-\MPscratchDim=\dimen149
+\MPscratchDim=\dimen150
 \MPnumerator=\count141
 \makeMPintoPDFobject=\count142
 \everyMPtoPDFconversion=\toks35
@@ -673,7 +677,7 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.jpeg,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-LaTeX Info: Redefining \microtypecontext on input line 152.
+LaTeX Info: Redefining \microtypecontext on input line 190.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -692,7 +696,7 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
 \AtBeginShipoutBox=\box40
-Package hyperref Info: Link coloring OFF on input line 152.
+Package hyperref Info: Link coloring OFF on input line 190.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -702,16 +706,16 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count143
 )
-LaTeX Info: Redefining \ref on input line 152.
-LaTeX Info: Redefining \pageref on input line 152.
-LaTeX Info: Redefining \nameref on input line 152.
+LaTeX Info: Redefining \ref on input line 190.
+LaTeX Info: Redefining \pageref on input line 190.
+LaTeX Info: Redefining \nameref on input line 190.
 
 (VATS.out) (VATS.out)
 \@outlinefile=\write3
 \openout3 = `VATS.out'.
 
 LaTeX Font Info:    Trying to load font information for OT1+phv on input line 1
-58.
+96.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\ot1phv.fd"
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
@@ -723,10 +727,10 @@ Package microtype Info: Loading generic protrusion settings for font family
 <pictures/Teaser.pdf, id=87, 3745.65364pt x 2484.02026pt>
 File: pictures/Teaser.pdf Graphic file (type pdf)
 <use pictures/Teaser.pdf>
-Package pdftex.def Info: pictures/Teaser.pdf  used on input line 158.
+Package pdftex.def Info: pictures/Teaser.pdf  used on input line 196.
 (pdftex.def)             Requested size: 420.4999pt x 278.85272pt.
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 158.
+ 196.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\ot1ztmcm.fd"
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
@@ -735,29 +739,29 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 158.
+ 196.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\omlztmcm.fd"
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 158.
+ 196.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\omsztmcm.fd"
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 158.
+ 196.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\omxztmcm.fd"
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 158.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 196.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 158.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 196.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 158.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 196.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/microtype\mt-msa.cfg"
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
@@ -770,15 +774,15 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 158.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 196.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 158.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 196.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 158.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 196.
 <diamondrule.pdf, id=88, 213.79875pt x 12.045pt>
 File: diamondrule.pdf Graphic file (type pdf)
 <use diamondrule.pdf>
-Package pdftex.def Info: diamondrule.pdf  used on input line 158.
+Package pdftex.def Info: diamondrule.pdf  used on input line 196.
 (pdftex.def)             Requested size: 213.79822pt x 12.04495pt.
 
 (sections/Introduction.tex
@@ -787,7 +791,10 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9> not available
 LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <9> not available
 (Font)              Font shape `OT1/phv/b/sc' tried instead on input line 1.
 
-Underfull \vbox (badness 4429) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 3471) has occurred while \output is active []
 
 
 Overfull \vbox (2.32803pt too high) has occurred while \output is active []
@@ -796,15 +803,8 @@ Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 [1{C:/Users/Qiaomu/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
- <./pictures/Teaser.pdf> <./diamondrule.pdf>]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 9
-7.
-
-("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\ts1ptm.fd"
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-))
-(sections/RelatedWork.tex [2]
-<pictures/framework/framework.pdf, id=260, 563.10374pt x 170.6375pt>
+ <./pictures/Teaser.pdf> <./diamondrule.pdf>]) (sections/RelatedWork.tex [2]
+<pictures/framework/framework.pdf, id=261, 563.10374pt x 170.6375pt>
 File: pictures/framework/framework.pdf Graphic file (type pdf)
 <use pictures/framework/framework.pdf>
 Package pdftex.def Info: pictures/framework/framework.pdf  used on input line 4
@@ -905,39 +905,33 @@ Package pdftex.def Info: pictures/user_study/interface.pdf  used on input line
 (pdftex.def)             Requested size: 226.56769pt x 159.40788pt.
  [8 <./pictures/experiment_study/case_shenzhen.pdf> <./pictures/user_study/inte
 rface.pdf>]
-<pictures/user_study/accuracy.png, id=797, 1076.02pt x 533.995pt>
-File: pictures/user_study/accuracy.png Graphic file (type png)
-<use pictures/user_study/accuracy.png>
-Package pdftex.def Info: pictures/user_study/accuracy.png  used on input line 1
-35.
-(pdftex.def)             Requested size: 205.96634pt x 102.20972pt.
-<pictures/fporto.pdf, id=799, 361.35pt x 252.945pt>
+<pictures/userstudy.pdf, id=797, 361.35pt x 252.945pt>
+File: pictures/userstudy.pdf Graphic file (type pdf)
+<use pictures/userstudy.pdf>
+Package pdftex.def Info: pictures/userstudy.pdf  used on input line 144.
+(pdftex.def)             Requested size: 154.47868pt x 108.1351pt.
+<pictures/fporto.pdf, id=798, 361.35pt x 252.945pt>
 File: pictures/fporto.pdf Graphic file (type pdf)
 <use pictures/fporto.pdf>
-Package pdftex.def Info: pictures/fporto.pdf  used on input line 186.
+Package pdftex.def Info: pictures/fporto.pdf  used on input line 193.
 (pdftex.def)             Requested size: 110.58096pt x 77.40477pt.
-<pictures/fshenzhen.pdf, id=800, 361.35pt x 252.945pt>
+<pictures/fshenzhen.pdf, id=799, 361.35pt x 252.945pt>
 File: pictures/fshenzhen.pdf Graphic file (type pdf)
 <use pictures/fshenzhen.pdf>
-Package pdftex.def Info: pictures/fshenzhen.pdf  used on input line 188.
+Package pdftex.def Info: pictures/fshenzhen.pdf  used on input line 195.
 (pdftex.def)             Requested size: 110.58096pt x 77.40477pt.
-<pictures/tporto.pdf, id=803, 361.35pt x 252.945pt>
+<pictures/tporto.pdf, id=802, 361.35pt x 252.945pt>
 File: pictures/tporto.pdf Graphic file (type pdf)
 <use pictures/tporto.pdf>
-Package pdftex.def Info: pictures/tporto.pdf  used on input line 217.
+Package pdftex.def Info: pictures/tporto.pdf  used on input line 224.
 (pdftex.def)             Requested size: 110.58096pt x 77.40477pt.
-<pictures/tshenzhen.pdf, id=804, 361.35pt x 252.945pt>
+<pictures/tshenzhen.pdf, id=803, 361.35pt x 252.945pt>
 File: pictures/tshenzhen.pdf Graphic file (type pdf)
 <use pictures/tshenzhen.pdf>
-Package pdftex.def Info: pictures/tshenzhen.pdf  used on input line 219.
+Package pdftex.def Info: pictures/tshenzhen.pdf  used on input line 226.
 (pdftex.def)             Requested size: 110.58096pt x 77.40477pt.
 ))
 (sections/ConclusionFutureWork.tex) (VATS.bbl
-Overfull \vbox (2.32803pt too high) has occurred while \output is active []
-
-
-[9 <./pictures/user_study/accuracy.png> <./pictures/fporto.pdf> <./pictures/fsh
-enzhen.pdf> <./pictures/tporto.pdf> <./pictures/tshenzhen.pdf>]
 LaTeX Font Info:    Trying to load font information for OT1+txtt on input line 
 5.
 
@@ -949,6 +943,16 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
+
+Package balance Warning: You have called \balance in second column
+(balance)                Columns might not be balanced.
+
+
+Overfull \vbox (2.32803pt too high) has occurred while \output is active []
+
+
+[9 <./pictures/userstudy.pdf> <./pictures/fporto.pdf> <./pictures/fshenzhen.pdf
+> <./pictures/tporto.pdf> <./pictures/tshenzhen.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 20--22
 []\OT1/ptm/m/n/8 (+20) Porto taxi tra-jec-tory dataset.  []$\OT1/txtt/m/n/8 htt
 p : / / www . geolink . pt /
@@ -960,25 +964,29 @@ Underfull \hbox (badness 6995) in paragraph at lines 24--26
  / en . wikipedia . org / wiki /
  []
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 177.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 219.
  [10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 177.
- (VATS.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 177.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 177.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 219.
+
+(VATS.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 219.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 219.
 Package rerunfilecheck Info: File `VATS.out' has not changed.
 (rerunfilecheck)             Checksum: 3764536335BC30155575302926115F91;1440.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 177.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 219.
  ) 
 Here is how much of TeX's memory you used:
- 11312 strings out of 492452
- 166798 string characters out of 3129805
- 305500 words of memory out of 3000000
- 14970 multiletter control sequences out of 15000+200000
- 71668 words of font info for 351 fonts, out of 3000000 for 9000
+ 11306 strings out of 492452
+ 166700 string characters out of 3129805
+ 343787 words of memory out of 3000000
+ 14962 multiletter control sequences out of 15000+200000
+ 71467 words of font info for 352 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,12n,42p,1205b,450s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,12n,42p,1205b,458s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
@@ -991,9 +999,9 @@ Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2
 /symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on VATS.pdf (10 pages, 15230444 bytes).
+Output written on VATS.pdf (10 pages, 15209676 bytes).
 PDF statistics:
- 910 PDF objects out of 1000 (max. 8388607)
+ 911 PDF objects out of 1000 (max. 8388607)
  99 named destinations out of 1000 (max. 500000)
- 51444 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 50932 words of extra memory for PDF output out of 51595 (max. 10000000)
 
