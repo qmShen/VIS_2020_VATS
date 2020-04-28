@@ -42,18 +42,18 @@ In each task, we use the identical regions with different visualized trajectorie
 
 
 \stitle{User study tasks}
-All participants perform three tasks:  (T1) region center identification , (T2) reachable route inspection, and (T3) traffic flow estimation.
+All participants perform three tasks:  (T1) region center identification, (T2) reachable route inspection, and (T3) traffic flow estimation.
 %as shown in Fig.~\ref{fig:apps}(A), (B), and (C), respectively.
 
 \sstitle{(T1) region center identification}
 The center of the city or commercial region plays an important role in traffic management.
-Consequently, the passing taxi trajectories of these centers are more than its surrounding regions, and results a star-shape cluster of trajectories in the visualization.
+Consequently, the passing taxi trajectories of these centers are more than its surrounding regions, and results in a star-shape cluster of trajectories in the visualization.
 In this task, we randomly select 6 different regions which include city or commercial centers from \pt{} and \sz{}.
 For each region, we ask the participants to identify the correct city/region center(s) in it.
 As shown in Fig.~\ref{fig:apps}(A), it asks the participants to identify 3 correct centers among these 6 cycles by clicking the corresponding cycles.
 Specifically, T1 has 30 visualization views in total.
 For each region of the visualization views,  we label the locations of the centers in it as the correct centers at first.
-We then randomly select other areas which are not centers and far way from the correct centers, and label them as incorrect ones.
+We then randomly select other areas which are not centers and far away from the correct centers, and label them as incorrect ones.
 The number of correct centers in each visualization view is given to all participates.
 
 %and remove these areas which too close to the correct ones,
@@ -63,22 +63,22 @@ The number of correct centers in each visualization view is given to all partici
 
 \sstitle{(T2) reachable route inspection}
 Intuitively, the visualized trajectories indicate the reachable routes of different regions.
-In this task, we given a visualization view with two circular areas, as illustrated in Fig.~\ref{fig:apps}(B),
+In this task, we give a visualization view with two circular areas, as illustrated in Fig.~\ref{fig:apps}(B),
 then ask the participates to inspect the representative reachable routes between these two areas.
 We assume the more trajectories in that route, the more representative it is.
 For each visualization view, the number of reachable routes is given.
 In T2, we randomly select 7 visualizations of 7 different regions which include two or more cities/commercial districts.
-In each region, we choose the identical two circular areas randomly for its 5 different visualization results.
+In each region, we choose the identical two circular areas randomly for its \UC{5 different visualization results}.
 %, which visualized the returned trajectory set of different approaches.
 
 
 \sstitle{(T3) traffic flow comparison}
-In practice, a road with large traffic flow has many passing trajectories, thus results to a denser and broader trajectory brunch in the visualization.
-In the trajectory visualization with color encoding, such kind of pattern can also be highlighted by a concentration of trajectories with deep color.
+In practice, a road with large traffic flow has many passing trajectories, thus results in a denser and broader trajectory brunch in the visualization.
+In the trajectory visualization with color encoding, such kind of pattern can also be highlighted by a concentration of trajectories with \QM{dark} color.
 %It is important to preserve the traffic flow information during large trajectory visualization.
 In this task, we ask the participates to compare the traffic flows in two roads by the given visualization results, as shown in Fig.~\ref{fig:apps}(C).
 In particular, the participants are asked to choose the road with larger traffic flow by clicking the radio box.
-They also can choose ``I am not sure'' if they cannot decided the answer.
+They also can choose ``I am not sure'' if they cannot decide the answer.
 T3 includes 5 randomly selected regions and each of them has clear road structure.
 It has 25 visualization views and 60 road pair comparison in total.
 We count the number of passing through trajectories in each road as the exact traffic flow in it.
@@ -118,7 +118,7 @@ In each task, we include a tutorial (with correct result) to help the participan
 For example, Fig.~\ref{fig:apps}(D) shows a tutorial of T3 in Fig.~\ref{fig:apps}(C), where the traffic flow in road A is smaller than it in road B, as the correct answer shown.
 We then randomly choose different views with different questions in each task for different participates.
 After they completed all the questions, their answers are collected and saved in the database for the result analysis.
-At last, a post-interview were conducted to collect the feedback of the participants.
+At last, a post-interview was conducted to collect the feedback of the participants.
 To evaluate the answers given by the participants, we refer the reviewers to our supplementary video for details of our user study procedure.
 
 %The user study began with the introduction which introduces the motivation, tasks and visual encoding.
@@ -148,8 +148,8 @@ Figure~\ref{fig:accuracy} depicts the average accuracy of all five approaches ap
 	\vspace{-6mm}
 \end{figure}
 
-For (T1) region center identification, the average accuracy of our proposed approaches (i.e., $\vats$, $\avats$, and $\cavats$) are higher than its of $\rand{}$ algorithm.
-Moreover, our proposed approaches has a very close similar performance with visualizing the full dataset $\full$.
+For (T1) region center identification, the average accuracy of our proposed approaches (i.e., $\vats$, $\avats$, and $\cavats$) is higher than its of $\rand{}$ algorithm.
+Moreover, our proposed approaches have a very close similar performance with visualizing the full dataset $\full$.
 It means the visualized returning results of our proposed approaches worked as excellent as the full data visualization for the exploration of human activity center application.
 We observed that the performance of $\cavats$ is slightly worse than performances of $\avats$ and $\full$.
 In the post-interview, some of the participants say that the color of trajectories may distract user's attentions and make the cluster characteristics not obvious.

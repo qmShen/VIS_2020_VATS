@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.9)  28 APR 2020 19:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.9)  28 APR 2020 20:25
 entering extended mode
 **./VATS.tex
 (VATS.tex
@@ -779,6 +779,12 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 196.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 196.
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <8> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 196.
+LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <8> not available
+(Font)              Font shape `OT1/phv/b/it' tried instead on input line 196.
+LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <8> not available
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 196.
 <diamondrule.pdf, id=88, 213.79875pt x 12.045pt>
 File: diamondrule.pdf Graphic file (type pdf)
 <use diamondrule.pdf>
@@ -804,7 +810,7 @@ Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 
 
  <./pictures/Teaser.pdf> <./diamondrule.pdf>]) (sections/RelatedWork.tex [2]
-<pictures/framework/framework.pdf, id=261, 563.10374pt x 170.6375pt>
+<pictures/framework/framework.pdf, id=262, 563.10374pt x 170.6375pt>
 File: pictures/framework/framework.pdf Graphic file (type pdf)
 <use pictures/framework/framework.pdf>
 Package pdftex.def Info: pictures/framework/framework.pdf  used on input line 4
@@ -824,17 +830,17 @@ Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 13.
  [4]
-<pictures/1st.pdf, id=374, 216.81pt x 172.2435pt>
+<pictures/1st.pdf, id=375, 216.81pt x 172.2435pt>
 File: pictures/1st.pdf Graphic file (type pdf)
 <use pictures/1st.pdf>
 Package pdftex.def Info: pictures/1st.pdf  used on input line 151.
 (pdftex.def)             Requested size: 87.96317pt x 69.88176pt.
-<pictures/2nd.pdf, id=375, 216.81pt x 172.2435pt>
+<pictures/2nd.pdf, id=376, 216.81pt x 172.2435pt>
 File: pictures/2nd.pdf Graphic file (type pdf)
 <use pictures/2nd.pdf>
 Package pdftex.def Info: pictures/2nd.pdf  used on input line 153.
 (pdftex.def)             Requested size: 87.96317pt x 69.88176pt.
-<pictures/problemsolveing/delta_motivation.pdf, id=385, 2733.87364pt x 903.0307
+<pictures/problemsolveing/delta_motivation.pdf, id=386, 2733.87364pt x 903.0307
 pt>
 File: pictures/problemsolveing/delta_motivation.pdf Graphic file (type pdf)
 <use pictures/problemsolveing/delta_motivation.pdf>
@@ -867,21 +873,21 @@ pdfTeX warning: pdflatex.exe (file ./pictures/2nd.pdf): PDF inclusion: multiple
 pdfTeX warning: pdflatex.exe (file ./pictures/problemsolveing/delta_motivation.
 pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<pictures/problemsolveing/one_to_many.pdf, id=483, 1419.24222pt x 495.25426pt>
+<pictures/problemsolveing/one_to_many.pdf, id=484, 1419.24222pt x 495.25426pt>
 File: pictures/problemsolveing/one_to_many.pdf Graphic file (type pdf)
 <use pictures/problemsolveing/one_to_many.pdf>
 Package pdftex.def Info: pictures/problemsolveing/one_to_many.pdf  used on inpu
 t line 317.
 (pdftex.def)             Requested size: 205.96634pt x 71.8667pt.
 ) (sections/Evaluation.tex
-<pictures/experiment_study/case_porto.pdf, id=497, 5294.28918pt x 4195.78528pt>
+<pictures/experiment_study/case_porto.pdf, id=498, 5294.28918pt x 4195.78528pt>
 
 File: pictures/experiment_study/case_porto.pdf Graphic file (type pdf)
 <use pictures/experiment_study/case_porto.pdf>
 Package pdftex.def Info: pictures/experiment_study/case_porto.pdf  used on inpu
 t line 23.
 (pdftex.def)             Requested size: 437.68831pt x 346.87361pt.
-<pictures/experiment_study/case_shenzhen.pdf, id=535, 5113.64456pt x 2851.83435
+<pictures/experiment_study/case_shenzhen.pdf, id=536, 5113.64456pt x 2851.83435
 pt>
 File: pictures/experiment_study/case_shenzhen.pdf Graphic file (type pdf)
 <use pictures/experiment_study/case_shenzhen.pdf>
@@ -897,7 +903,7 @@ Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 
 
 [7 <./pictures/experiment_study/case_porto.pdf>]
-<pictures/user_study/interface.pdf, id=686, 2596.20943pt x 1826.7146pt>
+<pictures/user_study/interface.pdf, id=687, 2596.20943pt x 1826.7146pt>
 File: pictures/user_study/interface.pdf Graphic file (type pdf)
 <use pictures/user_study/interface.pdf>
 Package pdftex.def Info: pictures/user_study/interface.pdf  used on input line 
@@ -905,27 +911,27 @@ Package pdftex.def Info: pictures/user_study/interface.pdf  used on input line
 (pdftex.def)             Requested size: 226.56769pt x 159.40788pt.
  [8 <./pictures/experiment_study/case_shenzhen.pdf> <./pictures/user_study/inte
 rface.pdf>]
-<pictures/userstudy.pdf, id=797, 361.35pt x 252.945pt>
+<pictures/userstudy.pdf, id=798, 361.35pt x 252.945pt>
 File: pictures/userstudy.pdf Graphic file (type pdf)
 <use pictures/userstudy.pdf>
 Package pdftex.def Info: pictures/userstudy.pdf  used on input line 144.
 (pdftex.def)             Requested size: 154.47868pt x 108.1351pt.
-<pictures/fporto.pdf, id=798, 361.35pt x 252.945pt>
+<pictures/fporto.pdf, id=799, 361.35pt x 252.945pt>
 File: pictures/fporto.pdf Graphic file (type pdf)
 <use pictures/fporto.pdf>
 Package pdftex.def Info: pictures/fporto.pdf  used on input line 193.
 (pdftex.def)             Requested size: 110.58096pt x 77.40477pt.
-<pictures/fshenzhen.pdf, id=799, 361.35pt x 252.945pt>
+<pictures/fshenzhen.pdf, id=800, 361.35pt x 252.945pt>
 File: pictures/fshenzhen.pdf Graphic file (type pdf)
 <use pictures/fshenzhen.pdf>
 Package pdftex.def Info: pictures/fshenzhen.pdf  used on input line 195.
 (pdftex.def)             Requested size: 110.58096pt x 77.40477pt.
-<pictures/tporto.pdf, id=802, 361.35pt x 252.945pt>
+<pictures/tporto.pdf, id=803, 361.35pt x 252.945pt>
 File: pictures/tporto.pdf Graphic file (type pdf)
 <use pictures/tporto.pdf>
 Package pdftex.def Info: pictures/tporto.pdf  used on input line 224.
 (pdftex.def)             Requested size: 110.58096pt x 77.40477pt.
-<pictures/tshenzhen.pdf, id=803, 361.35pt x 252.945pt>
+<pictures/tshenzhen.pdf, id=804, 361.35pt x 252.945pt>
 File: pictures/tshenzhen.pdf Graphic file (type pdf)
 <use pictures/tshenzhen.pdf>
 Package pdftex.def Info: pictures/tshenzhen.pdf  used on input line 226.
@@ -980,11 +986,11 @@ Package rerunfilecheck Info: File `VATS.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 219.
  ) 
 Here is how much of TeX's memory you used:
- 11306 strings out of 492452
- 166700 string characters out of 3129805
- 343787 words of memory out of 3000000
- 14962 multiletter control sequences out of 15000+200000
- 71467 words of font info for 352 fonts, out of 3000000 for 9000
+ 11311 strings out of 492452
+ 166800 string characters out of 3129805
+ 343810 words of memory out of 3000000
+ 14969 multiletter control sequences out of 15000+200000
+ 73782 words of font info for 351 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,12n,42p,1205b,458s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
@@ -994,14 +1000,15 @@ pe1/public/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmss9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/txfonts/txtt.pf
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw
-/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on VATS.pdf (10 pages, 15209676 bytes).
+Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/urw/times/utmri8a.pfb>
+Output written on VATS.pdf (10 pages, 15218476 bytes).
 PDF statistics:
- 911 PDF objects out of 1000 (max. 8388607)
+ 915 PDF objects out of 1000 (max. 8388607)
  99 named destinations out of 1000 (max. 500000)
- 50932 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 53492 words of extra memory for PDF output out of 61914 (max. 10000000)
 

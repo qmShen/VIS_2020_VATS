@@ -18,7 +18,7 @@ We did a benchmark experiment to evaluate the rendering capability of NVIDIA GeF
 We varied the number of trajectories from 1,000 to 1 million, which are randomly selected from \pt{} taxi trajectory dataset~\cite{pt}.%\footnote{\url{http://www.geolink.pt/ecmlpkdd2015-challenge/dataset.html}}. 
  The experimental results are summarized in Table~\ref{tab:gpu}.
 Obviously, it cannot support interactive visual exploration in large-scale trajectory dataset, e.g.,
-it needs 13.95 seconds to render 1 million trajectories with 32.67 millions GPS points (almost 40\% of \sz{} taxi trajectory GPS points in one day).
+it needs 13.95 seconds to render 1 million trajectories with 32.66 millions GPS points (almost 40\% of \sz{} taxi trajectory GPS points in one day).
 Moreover, the rendering cost is linear with the input data trajectories.
 Thus, it is impractical to visualize billion-level GPS points via the commodity GPUs.
 

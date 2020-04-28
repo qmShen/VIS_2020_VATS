@@ -135,7 +135,7 @@
 \ZW{
 Visualizing large trajectory data surfers from limited rendering capability and visual clutter issues.
 Sampling can effectively mitigate the issues, yet existing methods generally adopt random sampling strategy that has an attenuating effect on visual fidelity.
-In this work, we propose a visual fidelity guaranteed sampling algorithm for line-based visualization of large trajectory data.
+In this work, we propose a \QM{\textit{\textbf{visual fidelity guaranteed sampling}}} ($\avats$) algorithm for line-based visualization of large trajectory data.
 We first define a novel fidelity loss function to capture the visual difference between two visualizations.
 We prove that it is NP-hard to select a sized-$k$ subset of trajectories with minimal visual fidelity loss.
 Next, we devise an approximation algorithm $\vats$ with a suite of optimization techniques, which returns fidelity-guaranteed visualizations efficiently.
@@ -160,9 +160,9 @@ Qualitative user studies further illustrate the superiority of $\vats$ in variou
   %  (II) G, H, and I are the visualizations of full \pt{} dataset, uniform random sampling $\rand$ result set, and our proposal $\avats$ result set at zoom level 15, respectively.
 \ZW{
 Comparison of random sampling and $\avats$. (i) A is the visualization of the \pt{} taxi trajectory dataset at zoom level 11.
-B and C are visualizations of random sampling with sampling rate $0.001$ and $0.01$, respectively.
+B and C are visualizations of random sampling with sampling rate $0.1\%$ and $1\%$, respectively.
 D, E, F are visualizations of our proposed $\avats$ with different parameters.
-(II) G, H, and I are visualizations of the whole \pt{} dataset, random sampling with sampling rate 0.01, and $\avats$ with sampling rate 0.01 at zoom level 15, respectively.
+(ii) G, H, and I are visualizations of the whole \pt{} dataset, random sampling with sampling rate $1\%$, and $\avats$ with sampling rate $1\%$ at zoom level 15, respectively.
 }
    }
 	\label{fig:teaser}

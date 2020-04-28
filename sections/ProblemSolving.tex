@@ -6,7 +6,7 @@ Last, we devise several optimizations to improve the efficiency and effectivenes
 
 \subsection{Uniform Random Sampling Algorithm}\label{sec:random}
 The straight forward solution for Problem~\ref{prob:def} is uniform random sampling $\rand$.
-As the pseudocode in Algorithm~\ref{alg:rand} shown, it selects $k$ trajectories from $\D$ randomly, which stores in $\oR$,
+As the pseudocode in Algorithm~\ref{alg:rand} shown, it selects $k$ trajectories from $\D$ randomly, which store in $\oR$,
 then render these selected trajectories in $\oR$ as the visualization result.
 
 \begin{algorithm}
@@ -256,8 +256,8 @@ In particular, we devise an advance approach $\avats$ to alleviate it by conside
 We elaborate (i) and (ii) by the examples in Fig.~\ref{fig:delta} shortly.
 
 \stitle{Trajectory data distribution} Considering \pt{} trajectory dataset, Fig.~\ref{fig:delta}(A) is the visualization result of $\vats$ with sampling ratio $0.5\%$.
-Obviously, the real-world trajctory dataset is non-uniform distributed.
-For example, the trajectories in the dense region is much more than these in the sparse region, as illustrated by the rectangles in Fig.~\ref{fig:delta}(A).
+Obviously, the real-world trajectory dataset is non-uniform distributed.
+For example, the trajectories in the dense region are much more than these in the sparse region, as illustrated by the rectangles in Fig.~\ref{fig:delta}(A).
 
 \stitle{Human perception capability} Intuitively, it is much easier for humans to distinguish the difference between sparse regions rather than dense regions in Fig.~\ref{fig:delta}(A) and (B).
 The core reason is the perception capability of human beings is limited.
@@ -268,7 +268,7 @@ i.e., the difference between two dense regions in Fig.~\ref{fig:delta}(A) and (B
 Taking the above two observations into consideration, the returning result of visual fidelity guaranteed sampling approach $\vats$ could be further improved by
 delivering richer information at sparse regions and reducing visual clutter in dense regions.
 In this section, we devise an advance approach $\avats$ (see Algorithm~\ref{alg:plus}) to achieve the above two objectives.
-Specifically, we introduce perception tolerance parameter $\delta$ in $\avats$, which models human's perception capability at the most highest level of details.
+Specifically, we introduce perception tolerance parameter $\delta$ in $\avats$, which models human's perception capability at the highest level of details.
 In other words, suppose the pixel $(x,y)$ in canvas is covered by result set $\oR$ at the highest level,
 the pixels around $(x,y)$, i.e., from $(x-\delta, y-\delta)$ to $(x+\delta, y+\delta)$, are not necessary to cover as they are in the perception tolerance of human beings.
 
@@ -299,18 +299,18 @@ The augmented set $\oR^{+}$ will be updated by the selected trajectory $tmp$ and
 
 Interestingly, the visual clutter large trajectory visualization problem can be further reduced
 by encoding representative trajectories in $\oR$ (the returning result of the advance approach $\avats$) with colors.
-In particular, $\avats$ selects the trajectory which has largest uncovered pixels by taking human's perception tolerance capability into account at each iteration,
-instead of only choosing the trajectory with largest uncovered pixels in $\vats$ (see Algorithm~\ref{alg:greedy}).
+In particular, $\avats$ selects the trajectory which has the largest uncovered pixels by taking human's perception tolerance capability into account at each iteration,
+instead of only choosing the trajectory with the largest uncovered pixels in $\vats$ (see Algorithm~\ref{alg:greedy}).
 During its selection process, some of trajectories will not be included into the result set $\oR$ even they have more uncovered pixels w.r.t. $\oR$.
 The reason is their uncovered pixels are too close to the pixels in the selected trajectories, i.e., within the tolerance area of selected pixels.
-Taken Fig.~\ref{fig:zoom}(A) as example, suppose $\delta=1$ and trajectory $a$ was selected at the first iteration,
+Taken Fig.~\ref{fig:zoom}(A) as an example, suppose $\delta=1$ and trajectory $a$ was selected at the first iteration,
 the selected trajectory in the second iteration is $c$ instead of $b$ as almost all pixels in $b$ is in the tolerance area of $a$'s.
 
 Inherently, the $\avats$ trajectory selection process embeds the representativeness of each trajectory in the result set $\oR$.
 We define the representativeness of a trajectory as the number of influenced trajectories in the dataset $\D$.
 We compute the representativeness of each trajectory in $\oR$ from Line~\ref{line:s} to Line~\ref{line:e} in Algorithm~\ref{alg:plus}, then visualize them by encoding with different colors.
 Fig.~\ref{fig:delta}(C) shows the visualized result of the  advance approach $\avats$ by encoding the trajectory representativeness with colors.
-Obviously, the trajectories in dense region have deeper color than these in sparse regions as there many trajectories in dense region, thus the selected trajectories in the dense region are more representative.
+Obviously, the trajectories in dense region have \QM{darker} color than these in sparse regions as there many trajectories in dense region, thus the selected trajectories in the dense region are more representative.
 
 \begin{figure}[t]
 	\centering
