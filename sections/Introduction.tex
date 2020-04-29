@@ -12,11 +12,11 @@ For example, Shenzhen has 24,237 taxis and generates more than 82.8 million GPS 
 In New York City, \ZW{there are} over 13,000 taxis \ZW{that} averagely \ZW{carry} over 1.0 million passengers and make 500,000 trips per day~\cite{ferreira2013visual}.
 
 \stitle{Limited rendering capability of graphics device}
-Rendering refers to the use of hardware device (e.g., GPU) in the \ZW{generation} of \ZW{visualizations}.
+Rendering refers to the use of the hardware device (e.g., GPU) in the \ZW{generation} of \ZW{visualizations}.
 However, due to the hardware limitation, the rendering capability of modern commodity GPU is limited.
 We did a benchmark experiment to evaluate the rendering capability of NVIDIA GeForce GTX 1080 with 8GB video memory.
 We varied the number of trajectories from 1,000 to 1 million, which are randomly selected from \pt{} taxi trajectory dataset~\cite{pt}.%\footnote{\url{http://www.geolink.pt/ecmlpkdd2015-challenge/dataset.html}}. 
- The experimental results are summarized in Table~\ref{tab:gpu}.
+The experimental results are summarized in Table~\ref{tab:gpu}.
 Obviously, it cannot support interactive visual exploration in large-scale trajectory dataset, e.g.,
 it needs 13.95 seconds to render 1 million trajectories with 32.66 millions GPS points (almost 40\% of \sz{} taxi trajectory GPS points in one day).
 Moreover, the rendering cost is linear with the input data trajectories.
@@ -37,7 +37,7 @@ Thus, it is impractical to visualize billion-level GPS points via the commodity 
 
 \stitle{Visual clutter in data visualization}
 Visual clutter is a common issue in data visualization~\cite{clutter}.
-Fig.~\ref{fig:teaser}A is the visualization result of the full \pt{} taxi trajectory dataset.
+Fig.~\ref{fig:teaser}(A) is the visualization result of the full \pt{} taxi trajectory dataset.
 Intuitively, the region shown in the embedded figure of A suffers visual clutter issue seriously,
 i.e., the road network almost cannot be recognized in it,
 which hinders the abilities of human-users to explore the dataset and identify the underlying data insights.
@@ -48,24 +48,24 @@ To overcome the above challenges, several visualization approaches have been pro
 Unfortunately, none of them could address these three challenges simultaneously and perfectly.
 In particular, the spatial aggregation based approaches~\cite{zeng2013visualizing,von2015mobilitygraphs} preprocess the massive movement data, and visualize the results after preprocessing.
 The aggregation based methods ignored the visual clutter in raw spatial data as they only visualize the aggregated/preprocessed results.
-In other words, their visualization results may lose detial information in raw data.
+In other words, their visualization results may lose the detail information in raw data.
 %These approaches alleviate the large data size and limited rendering ability issues in large-scale spatial data visualization.
 %Nevertheless, they ignored the visual clutter issue in raw spatial data as they only visualize the aggregated/preprocessed results.
 In recent years, many visualization research works are proposed to address visual clutter,
 e.g., edge bundling~\cite{zeng2019route, thony2015vector} and density map~\cite{lampe2011interactive, scheepens2011interactive}.
 However, these works neither focus on line-based trajectory visualization nor designed for large-scale trajectory dataset.
 
-\QM{Sampling techniques are a de-facto standards} for large-scale data analysis in both database and visualization community.
+\QM{Sampling techniques are de-facto standards} for large-scale data analysis in both database and visualization community.
 In general, it samples a subset of data from the raw large-scale dataset, then it could be rendered efficiently by the graphics device.
-For example, ScalaR~\cite{battle2013dynamic} employs a reduction layer between visualization layer and data management layer.
-The reduction layer embedded an uniform random sampling algorithm to sample data randomly when the query results are large enough.
+For example, ScalaR~\cite{battle2013dynamic} employs a areduction layer between the visualization layer and the data management layer.
+The reduction layer embedded a uniform random sampling algorithm to sample data randomly when the query results are large enough.
 It then reduces the amount of data to be visualized.
 However, the uniform random sampling method does not work well in our large trajectory data visualization problem as it does not have any guarantees about the sampling results.
 Take Fig.~\ref{fig:teaser}(B) and (C) as an example,
 they are the visualization results of uniform random sampling method on \pt{} taxi trajectory dataset with sampling rate $0.1\%$ and $1\%$, respectively.
 Visually, both visualized results cannot capture the overview of the input data, as shown in Fig.~\ref{fig:teaser}(A).
 
-In database community,  Park et al. devised a visualization-aware sampling algorithm (VAS) for large-scale scatter points visualization problem in~\cite{park2016visualization},
+In database community,  Park et al. devised a visualization-aware sampling algorithm (VAS) for large-scale scatter points visualization  in~\cite{park2016visualization},
 which offers theoretical quality guarantee on the visualization result.
 However, the VAS techniques cannot be adapted to our problem as  (i) trajectory data is  more complex than scatter points (e.g., varying lengths, lack of compact representation),
 and  (ii) the formulated visualization quality measure function in~\cite{park2016visualization} is only for scatter points, it cannot be used to measure the quality of trajectory visualization results.
@@ -80,12 +80,12 @@ Specifically, we first define a novel the visual fidelity loss function between 
 With the visual fidelity loss function, we then prove it is NP-hardness to select a sized-$k$ subset of trajectories which has the minimal visual fidelity loss.
 Next, we devise an approximate algorithm ($\vats$) which returns a sized-$k$ subset of trajectories and offers theoretical visual fidelity guarantee on the returning result.
 Last, we address the visual clutter issue explicitly and overcome it by taking data distribution and human perception capability into consideration in the advance approach ($\avats$).
-Fig.~\ref{fig:teaser}(D) and (E) show the visualization results of our proposal $\avats{}$ on \pt{} taxi trajectory dataset with sampling rate $0.1\%$ and $1\%$, respectively.
+Fig.~\ref{fig:teaser}(D) and (E) show the visualization results of our proposal $\avats{}$ on \pt{} taxi trajectory dataset with \QM{the} sampling rate $0.1\%$ and $1\%$, respectively.
 Obviously, the visualization fidelity of them (comparing with the visualization result of full dataset in Fig.~\ref{fig:teaser}(A)) is much better than
 the uniform random sampling visualization results with the same sampling rate, see (B) and (C) in Fig.~\ref{fig:teaser}.
-Fig.~\ref{fig:teaser}(F) is the returning result of our proposal which colors the trajectories with different representativeness.
+Fig.~\ref{fig:teaser}(F) is the returning result of our proposal which colors the trajectories \BQM{(with different representativeness)}\QM{according to the trajectory representativeness}.
 It has the same input parameters of Fig.~\ref{fig:teaser}(E).
-Intuitively, the visual clutter in Fig.~\ref{fig:teaser}(A) and (E) \QM{is alleviate} in Fig.~\ref{fig:teaser}(F).
+Intuitively, the visual clutter in Fig.~\ref{fig:teaser}(A) and (E) \QM{are alleviated shown as} Fig.~\ref{fig:teaser}(F).
 In addition, our proposals are robustness with different zoom levels.
 Fig.~\ref{fig:teaser}(G), (H), and (I) depict the visualization results of the full \pt{} dataset, the returning result of uniform random sampling $\rand$ and the returning result of $\avats$ with color encoding at zoom-level 15, e.g., we can obtain them by zooming in the visualization result in Fig.~\ref{fig:teaser}(A), (C), and (F), respectively.
 Intuitively, the visualization result of our proposal $\avats$ in Fig.~\ref{fig:teaser}(F) outperforms the uniform random sampling method $\rand$ in Fig.~\ref{fig:teaser}(H) significantly.
@@ -95,11 +95,11 @@ The contributions of this paper are:
 %\setlist{nolistsep}
 %\begin{itemize}[noitemsep]
 \squishlist
-  \item We formulate the visual fidelity guaranteed sampling problem for large trajectory data visualization, and prove it is NP hard in Section~\ref{sec:pro}.
+  \item We formulate the visual fidelity guaranteed sampling problem for large trajectory data visualization, and prove it is \BQM{(NP hard)}\QM{NP-hard} in Section~\ref{sec:pro}.
   \item We devise an approximation algorithm for it with a suite of optimization techniques, e.g., submodularity, lazy computing in Section~\ref{sec:sol}.
-  \item We propose an advanced approach to further enhance the effectiveness of our approximate algorithm, which address the visual clutter by introducing perception tolerance parameter,
-  and encodes the representativeness of each road by different colors in Section~\ref{sec:aa}.
-  \item We conduct extensive experiments on real-world trajectory datasets to demonstrate the superiority of our proposals in Section~\ref{sec:exp}. Especially, we conduct qualitative user studies to show their effectiveness on three real-world applications.
+  \item We propose an advanced approach to further enhance the effectiveness of our approximate algorithm, which \BQM{(address)}\QM{address} the visual clutter by introducing perception tolerance parameter,
+  and encodes the representativeness of each \BQM{(road)}\QM{trajectory} by different colors in Section~\ref{sec:aa}.
+  \item We conduct extensive experiments on real-world trajectory datasets to demonstrate the superiority of our proposals in Section~\ref{sec:exp}. Especially, we conduct qualitative user studies to show \BQM{(their)} \QM{the} effectiveness on three real-world applications.
 \squishend
 %\end{itemize}
 
