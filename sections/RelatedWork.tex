@@ -35,13 +35,13 @@ To the best of our knowledge, it is the first work which offers theoretical visu
 
 
 \subsection{Interactive Visualization for Large Dataset}\label{sec:interactive}
-
-\BQM{(With the recent advanceof location-acquisition technology, the size of available trajectory dataset becomes extremely huge.)}
-\QM{With the recent advancement of location-acquisition technology, the size of available trajectory dataset becomes extremely ubiquitous and huge.}
-For example, the operating taxis in Shenzhen generate \QM{$\sim$}9.3GB trajectory data per day.
+%\BQM{(With the recent advance of location-acquisition technology, the size of available trajectory dataset becomes extremely huge.)}
+{With the recent advancement of location-acquisition technology, the size of available trajectory dataset becomes ubiquitous and extremely huge.}
+For example, the operating taxis in Shenzhen generate {$\sim$}9.3GB trajectory data per day.
 Due to the limited rendering capability of modern commodity graphics device, generating visualizations for such scale of dataset takes considerable amount of time,
 or even impractical~\cite{park2016visualization}.
-In the literature, many works have been proposed to achieve interactive visualization \BQM{(in)}\QM{for} large dataset (not only trajectory dataset), we briefly elaborate the most representative pieces in \BQM{(this subsection)}\QM{the below}.
+In the literature, many works have been proposed to achieve interactive visualization {for} large dataset (not only trajectory dataset),
+we briefly elaborate the most representative pieces in subsequent section. %{(this subsection)}.
 
 \begin{figure}
 	\centering
@@ -53,24 +53,21 @@ In the literature, many works have been proposed to achieve interactive visualiz
 
 Fig.~\ref{fig:framework} illustrates the architecture of interactive visualization systems for large datasets,
 e.g., Spotfire~\cite{Spotfire}, Tableau~\cite{Tableau}, ATLAS~\cite{chan2008maintaining}, and Viate~\cite{yang2019vaite}.
-\BQM{(It)}\QM{The architecture} consists of three layers: the user interface in front-end, the optimization techniques in middle-layer, and the (cloud-based) database management system in the back-end.
-\BQM{Typically, the researchers in visualization community focused on improving the information visualization effectiveness at the front-end,
-e.g., designing novel visualization methods to assist data analysts to obtain data insights effectively (D3~\cite{d3}).}\QM{Theypically, the researchers in visualization community typically focusesd on improving the effectiveness of data visualization ininformation visualization effectiveness at the front-end, e.g., to designing novel visualization methods (e.g., D3~\cite{d3}) to assist users into assist data analysts to obtaining data insights from data effectively.}
-\BQM{For the researchers in database community, they are working on the efficiency aspect for large data processing,
-	e.g., devising big data processing systems and techniques for efficient query processing at back-end (Spark~\cite{spark}).}
-\QM{The database community, on the other hand, focuses on improving the efficiency of processing large datasets in the back-end (D3~\cite{d3}).
-For the researchers in database community, they are working on the efficiency aspect for large data processing, e.g., to deviseing big data processing systems and techniques for efficient query (e.g., processing at back-end (Spark~\cite{spark}).}
+{It} consists of three layers: the user interface in front-end, the optimization techniques in middle-layer, and the (cloud-based) database management system in the back-end.
+{Typically, the researchers in visualization community focus on improving the effectiveness of data visualization at the front-end,
+e.g., designing novel visualization methods to assist data analysts to obtain data insights effectively (D3~\cite{d3}).}
+For the researchers in database community, they are working on the efficiency aspect for large data processing, e.g., devising big data processing systems and techniques for efficient query processing at back-end (Spark~\cite{spark}).
 In recent years, both visualization and database communities are dedicating to advance the techniques in interactive visual analysis for large-scale dataset,
 e.g., the optimizations in the middle-layer (see Fig.~\ref{fig:framework}).
-We briefly elaborate these optimization techniques \BQM{(in the middle-layer in subsequent)}\QM{in subsequent}. %as they are relevant to our technqiues in this work.
+We briefly elaborate these optimization techniques {in this section}. %as they are relevant to our technqiues in this work.
 
 \stitle{Aggregating-based techniques}
-\BQM{(Aggregating-based optimization techniques~\cite{zeng2013visualizing,von2015mobilitygraphs} in the middle-layer support interactive visual analysis for large-scale data by
-	reducing the number of rendering data.)}
-\QM{Aggregating-based techniques pre-process raw data with aggregation techniques (e.g., clustering) in the middle-layer, yielding fewer rendering objects for interactive visual analytics.} 
+{Aggregating-based optimization techniques~\cite{zeng2013visualizing,von2015mobilitygraphs} in the middle-layer support interactive visual analysis for large-scale data by
+	reducing the number of rendering data.}
+%\QM{Aggregating-based techniques pre-process raw data with aggregation techniques (e.g., clustering) in the middle-layer, yield fewer rendering objects for interactive visual analytics.}
 It achieves by preprocessing the raw data with aggregation techniques (e.g., clustering).
 Returning to the trajectory visual analysis,
-many works~\cite{wood2010visualisation,guo2009flow,von2015mobilitygraphs} partition the \BQM{(spatial space)}\QM{underlying territory} into basic units,
+many works~\cite{wood2010visualisation,guo2009flow,von2015mobilitygraphs} partition the {spatial space} into basic units,
 then visualize the information upon them by aggregation algorithms.
 For more details of other aggregating-based techniques, we refer the reader to surveys~\cite{andrienko2008spatio}.
 However, aggregating-based methods will cause information loss definitely.
@@ -115,7 +112,7 @@ Chan et al. present ATLAS~\cite{chan2008maintaining} which utilizes caching tech
 In addition, it also exploits the powerful multi-core server to accelerate visual analysis task processing from the middle-layer to the back-end.
 Piringer et al.~\cite{piringer2009multi} propose a multi-threading architecture for the interactive visual exploration,
 which utilizes multi-core devices and avoids the multi-threading pitfalls to provide quick visual feedback.
-\BQM{(However, our)}\QM{Our} proposed techniques in this work are orthogonal to the researches in this category.
+{Our} proposed techniques in this work are orthogonal to the researches in this category.
 
 
 
