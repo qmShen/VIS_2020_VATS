@@ -6,7 +6,7 @@ Section~\ref{sec:trajvisana} and ~\ref{sec:interactive} summarize the related wo
 Trajectory is the most common representation of the object movements.
 Each trajectory consists of a sequence of spatial locations (i.e., GPS points).
 To support the understanding and analyzing of the trajectory dataset,
-many visualization and visual analytic systems are proposed in the literature.
+many visual analytical systems are proposed in the literature.
 As stated in~\cite{chen2015survey}, existing trajectory visual analysis techniques can be classified into three categories according to visualization form,
 i.e., point-based visualization, line-based visualization and region-based visualization.
 We briefly introduce the research works in these three categories, and refer the interested readers to a recent survey~\cite{chen2015survey} for detail discussions.
@@ -36,7 +36,7 @@ To the best of our knowledge, it is the first work which offers theoretical visu
 
 \subsection{Interactive Visualization for Large Dataset}\label{sec:interactive}
 %\BQM{(With the recent advance of location-acquisition technology, the size of available trajectory dataset becomes extremely huge.)}
-{With the recent advancement of location-acquisition technology, the size of available trajectory dataset becomes ubiquitous and extremely huge.}
+{With the recent advancement of location-acquisition technology, the size of available trajectory dataset becomes extremely huge.}
 For example, the operating taxis in Shenzhen generate {$\sim$}9.3GB trajectory data per day.
 Due to the limited rendering capability of modern commodity graphics device, generating visualizations for such scale of dataset takes considerable amount of time,
 or even impractical~\cite{park2016visualization}.
@@ -62,14 +62,13 @@ e.g., the optimizations in the middle-layer (see Fig.~\ref{fig:framework}).
 We briefly elaborate these optimization techniques {in this section}. %as they are relevant to our technqiues in this work.
 
 \stitle{Aggregating-based techniques}
-{Aggregating-based optimization techniques~\cite{zeng2013visualizing,von2015mobilitygraphs} in the middle-layer support interactive visual analysis for large-scale data by
-	reducing the number of rendering data.}
-%\QM{Aggregating-based techniques pre-process raw data with aggregation techniques (e.g., clustering) in the middle-layer, yield fewer rendering objects for interactive visual analytics.}
-It achieves by preprocessing the raw data with aggregation techniques (e.g., clustering).
+%{Aggregating-based optimization techniques~\cite{zeng2013visualizing,von2015mobilitygraphs} in the middle-layer support interactive visual analysis for large-scale data by reducing the number of rendering data.}
+{Aggregating-based techniques pre-process raw data with aggregation techniques (e.g., clustering) in the middle-layer, and yield fewer rendering objects for interactive visual analysis.}
+%It achieves by preprocessing the raw data with aggregation techniques (e.g., clustering).
 Returning to the trajectory visual analysis,
 many works~\cite{wood2010visualisation,guo2009flow,von2015mobilitygraphs} partition the {spatial space} into basic units,
 then visualize the information upon them by aggregation algorithms.
-For more details of other aggregating-based techniques, we refer the reader to surveys~\cite{andrienko2008spatio}.
+For more details of other aggregating-based techniques, we refer the reader to the survey work\TB{~\cite{andrienko2008spatio}}.
 However, aggregating-based methods will cause information loss definitely.
 For instance, the continuous spatial traces of the moving objects are always missing and the rarely appeared trajectories are easily to be ignored.
 %the aggregating techniques can be further distinguished by how to generate the spatial partitions.
@@ -82,8 +81,8 @@ Our problem and solutions are different from these research works as we focus on
 
 
 \stitle{Sampling-based techniques}
-Sampling techniques are commonly used in the interactive visualization problems with large-scale input data.
-It is widely studied in both visualization and database communities ~\cite{battle2013dynamic,chen2014visual,park2016visualization}.
+Sampling techniques are well-studied in the interactive visualization problems with large-scale input data.
+It is widely used in both visualization and database communities ~\cite{battle2013dynamic,chen2014visual,park2016visualization}.
 In particular, ~\cite{chen2014visual} devised a sampling algorithm to preserve the meaningful data items according to the analyzing requirement such as the multi-class data analysis and hierarchical exploration.
 %\TB{In addition, the usage of others visual channels of the points, e.g., color and size and opacity are discussed in it~\cite{chen2014visual,woodruff1998constant}}.
 The most relevant work of ours in the literature is~\cite{park2016visualization}, which designed for the scatter plot and aim to not only solve the overdrawing of the points but also try to preserve the information distribution of the original dataset.
