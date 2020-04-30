@@ -1,13 +1,13 @@
 \section{Visual Fidelity Guaranteed Sampling Approach}\label{sec:sol}
-Due to the hardness of the Problem~\ref{prob:def}, we first introduce a straight-forward solution (i.e., uniform random sampling) for it in Section~\ref{sec:random}.
-Then, we propose a visual fidelity guaranteed sampling approach in Section~\ref{sec:greedy}.
-Last, we devise several optimizations to improve the efficiency and effectiveness of our proposal in Section~\ref{sec:opt}.
+Due to the hardness of the Problem~\ref{prob:def}, we first introduce a straight-forward solution, i.e., uniform random sampling $\rand$, for it in Section~\ref{sec:random}.
+Then, we propose a visual fidelity guaranteed sampling approach $\vats$ in Section~\ref{sec:greedy}.
+Last, we devise several optimizations to improve the efficiency of our proposal $\vats$ in Section~\ref{sec:opt}.
 
 
 \subsection{Uniform Random Sampling Algorithm}\label{sec:random}
-The straight forward solution for Problem~\ref{prob:def} is uniform random sampling $\rand$.
-As the pseudocode in Algorithm~\ref{alg:rand} shown, it selects $k$ trajectories from $\D$ randomly, which store in $\oR$,
-then render these selected trajectories in $\oR$ as the visualization result.
+The straight-forward solution for Problem~\ref{prob:def} is uniform random sampling $\rand$.
+As the pseudocode in Algorithm~\ref{alg:rand} shown, it selects $k$ trajectories from $\D$ randomly and stores them in $\oR$.
+We last render these selected trajectories in $\oR$ as the visualization result.
 
 \begin{algorithm}
     \caption{$\rand(\D,k=\alpha |\D|)$} \label{alg:rand}
@@ -22,10 +22,8 @@ then render these selected trajectories in $\oR$ as the visualization result.
 
 \end{algorithm}
 
-
-
-Obviously, the uniform random sampling algorithm has good performance.
-However, it does not provide any guarantee on the visual fidelity of the sampled result set.
+Obviously, the uniform random sampling $\rand$ algorithm does not provide any guarantee on the visual fidelity of the sampled result set.
+%has good performance. However, it
 
 
 %Trajectory data $\D$\cite{xxx} consists of almost 10K trajectories which collected by Didi company.
@@ -51,8 +49,8 @@ However, it does not provide any guarantee on the visual fidelity of the sampled
 
 \subsection{Visual Fidelity Guaranteed Sampling Algorithm}\label{sec:greedy}
 In this section, we present our visual fidelity guaranteed sampling algorithm for Problem~\ref{prob:def}.
-We start our presentation by elaborating the correlation between visual fidelity of sampled set $\oR$ and user zoom level.
-For a given sampled set $\oR \subseteq \D$, it has different visual fidelity loss values at different user zoom levels.
+We first elaborate the correlation between visual fidelity of sampled set $\oR$ and user zoom level.
+For a given result sampled set $\oR \subseteq \D$, it has different visual fidelity loss values at different user zoom levels.
 The reason is the resolutions of $\oR$'s visualized result are different at different zoom levels.
 %The reason is the pixel size will be updated at different zoom level.
 %\QM{The reason is the map are of the same canvas region will be updated at different zoom level.}
@@ -62,7 +60,8 @@ In order to devise a zoom level oblivious visualization for sampled dataset $\oR
 we use the highest zoom level to define the size of each pixel in the canvas in our problem.
 It means for each trajectory $t_i \in \D$, it is a set of pixels in the canvas at the highest zoom level.
 
-The visual fidelity guaranteed sampling algorithm employs greedy paradigm.
+%The visual fidelity guaranteed sampling algorithm .
+With the above setting, we next describe our visual fidelity guaranteed sampling algorithm in Algorithm~\ref{alg:greedy}, which employs greedy paradigm.
 In particular, it finds the trajectory $tmp$ in $\D$ which maximize the result set of $|\oR \cup tmp|$ at each iteration, as Line~\ref{line:max} shown in Algorithm~\ref{alg:greedy}.
 It terminates after $k=\alpha |\D|$ iterations and returns $\oR$ as result set for rendering.
 
@@ -152,12 +151,12 @@ Hence, it holds $\Delta(\oR, t) = |\oR \cup t| - |\oR| \geq |\oR^{'} \cup t| - |
    &
    \includegraphics[width=0.35\columnwidth]{2nd}
    \\
-   (A) 1st iteration
+   A) 1st iteration
    &
-   (B) 2nd iteration
+   B) 2nd iteration
  \end{tabular}
  \vspace{-3mm}
- \caption{An illustration of lazy computing manner via Lemma~\ref{lem:submodular}} \label{fig:heap}
+ \caption{Lazy computing manner via the submodularity in Lemma~\ref{lem:submodular}.} \label{fig:heap}
  \vspace{-6mm}
 \end{figure}
 
@@ -169,7 +168,7 @@ Fig.~\ref{fig:heap}(a) shows a tiny max-heap example about the numbers of uncove
 At the 1st iteration, the root node of the max-heap will be selected, i.e., $t_3$ in Fig.~\ref{fig:heap}(A).
 At the 2nd iteration, the number of uncovered pixels of the root node $t_1$ is updated to 7 w.r.t. result set $\oR = \{t_3 \}$ (see gray node at Fig.~\ref{fig:heap}(B)).
 Then $t_1$ will be selected at the 2nd iteration without computing the number of uncovered pixels in other trajectories, i.e., all white nodes at Fig.~\ref{fig:heap}(B).
-The reason is their contributions will be less than 7 via the submodularity shown in Lemma~\ref{lem:submodular}.
+The reason is the contribution of the trajectories in all white nodes will be less than 7 according to the submodularity in Lemma~\ref{lem:submodular}.
 
 %In summary, the number of uncovered pixels in each trajectory will only be computed with the latest result set $\oR$ when it is necessary in the lazy computing manner,
 %e.g., only $t_1$ will be updated at the 2nd iteration in Figure~\ref{fig:heap}.
@@ -196,7 +195,7 @@ However, it only needs 1.2 seconds in our performance optimized $\vats$.
 	\centering
 	\includegraphics[width=0.48\textwidth]{pictures/problemsolveing/delta_motivation.pdf}
 	\vspace{-3mm}
-	\caption{Advance Approach $\avats$ with \pt{} trajectory dataset, sampling rate is $0.5\%$: (A) $\vats{}$, (B) $\avats$, and (C) $\cavats$}
+	\caption{Advance approach $\avats$ with \pt{}, sampling rate $\alpha = 0.5\%$.}
 	\label{fig:delta}
 	 \vspace{-3mm}
 \end{figure}
@@ -316,10 +315,11 @@ Obviously, the trajectories in dense region have {darker} color than these in sp
 	\centering
 	\includegraphics[width=0.4\textwidth]{pictures/problemsolveing/one_to_many.pdf}
 	\vspace{-3mm}
-	\caption{An illustration of $\avats$ with different zoom levels}
+	\caption{An illustration of $\avats$ with different zoom levels.}
 	\label{fig:zoom}
     \vspace{-6mm}
 \end{figure}
+
 
 Last but not least, it is worth to point out that our advance approach $\avats$ provides excellent visual fidelity over $\vats$ at arbitrary zooming resolutions naturally.
 The key technique to achieve that is it considers the zooming resolutions inherently when introducing the perception tolerance $\delta$.
