@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.9)  30 APR 2020 08:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.9)  30 APR 2020 09:58
 entering extended mode
 **./VATS.tex
 (VATS.tex
@@ -909,17 +909,17 @@ rface.pdf>]
 <pictures/userstudy.pdf, id=800, 361.35pt x 252.945pt>
 File: pictures/userstudy.pdf Graphic file (type pdf)
 <use pictures/userstudy.pdf>
-Package pdftex.def Info: pictures/userstudy.pdf  used on input line 144.
+Package pdftex.def Info: pictures/userstudy.pdf  used on input line 143.
 (pdftex.def)             Requested size: 154.47868pt x 108.1351pt.
 <pictures/fporto.pdf, id=801, 361.35pt x 252.945pt>
 File: pictures/fporto.pdf Graphic file (type pdf)
 <use pictures/fporto.pdf>
-Package pdftex.def Info: pictures/fporto.pdf  used on input line 193.
+Package pdftex.def Info: pictures/fporto.pdf  used on input line 192.
 (pdftex.def)             Requested size: 110.58096pt x 77.40477pt.
 <pictures/fshenzhen.pdf, id=802, 361.35pt x 252.945pt>
 File: pictures/fshenzhen.pdf Graphic file (type pdf)
 <use pictures/fshenzhen.pdf>
-Package pdftex.def Info: pictures/fshenzhen.pdf  used on input line 195.
+Package pdftex.def Info: pictures/fshenzhen.pdf  used on input line 194.
 (pdftex.def)             Requested size: 110.58096pt x 77.40477pt.
 
 Overfull \vbox (2.32803pt too high) has occurred while \output is active []
@@ -930,12 +930,12 @@ Overfull \vbox (2.32803pt too high) has occurred while \output is active []
 <pictures/tporto.pdf, id=820, 361.35pt x 252.945pt>
 File: pictures/tporto.pdf Graphic file (type pdf)
 <use pictures/tporto.pdf>
-Package pdftex.def Info: pictures/tporto.pdf  used on input line 224.
+Package pdftex.def Info: pictures/tporto.pdf  used on input line 223.
 (pdftex.def)             Requested size: 110.58096pt x 77.40477pt.
 <pictures/tshenzhen.pdf, id=821, 361.35pt x 252.945pt>
 File: pictures/tshenzhen.pdf Graphic file (type pdf)
 <use pictures/tshenzhen.pdf>
-Package pdftex.def Info: pictures/tshenzhen.pdf  used on input line 226.
+Package pdftex.def Info: pictures/tshenzhen.pdf  used on input line 225.
 (pdftex.def)             Requested size: 110.58096pt x 77.40477pt.
 )) (sections/ConclusionFutureWork.tex) (VATS.bbl
 LaTeX Font Info:    Trying to load font information for OT1+txtt on input line 
@@ -961,16 +961,16 @@ Underfull \hbox (badness 6995) in paragraph at lines 24--26
  []
 
 
-Overfull \vbox (1.42923pt too high) has occurred while \output is active []
+Overfull \vbox (1.19498pt too high) has occurred while \output is active []
 
 
-Overfull \vbox (6.7185pt too high) has occurred while \output is active []
+Overfull \vbox (9.98427pt too high) has occurred while \output is active []
 
 
 [10 <./pictures/tporto.pdf> <./pictures/tshenzhen.pdf>])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 231.
 
-Overfull \vbox (0.73193pt too high) has occurred while \output is active []
+Overfull \vbox (1.48193pt too high) has occurred while \output is active []
 
 
 Overfull \vbox (2.32803pt too high) has occurred while \output is active []
@@ -986,11 +986,11 @@ Package rerunfilecheck Info: File `VATS.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 231.
  ) 
 Here is how much of TeX's memory you used:
- 11326 strings out of 492452
- 166863 string characters out of 3129805
- 347612 words of memory out of 3000000
+ 11329 strings out of 492452
+ 166890 string characters out of 3129805
+ 347502 words of memory out of 3000000
  14963 multiletter control sequences out of 15000+200000
- 72145 words of font info for 364 fonts, out of 3000000 for 9000
+ 72258 words of font info for 366 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,12n,42p,1205b,462s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
@@ -1005,7 +1005,7 @@ Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2
 /symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on VATS.pdf (11 pages, 15214183 bytes).
+Output written on VATS.pdf (11 pages, 15214357 bytes).
 PDF statistics:
  918 PDF objects out of 1000 (max. 8388607)
  100 named destinations out of 1000 (max. 500000)
